@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>三. 新闻爬虫案例 | 前端学习笔记</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="前端学习笔记">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.b5f0b03a.css" as="style"><link rel="preload" href="/assets/js/app.bc1a357f.js" as="script"><link rel="preload" href="/assets/js/2.fd7d4a37.js" as="script"><link rel="preload" href="/assets/js/8.5b7c39c7.js" as="script"><link rel="prefetch" href="/assets/js/10.83510efe.js"><link rel="prefetch" href="/assets/js/11.0fef3d70.js"><link rel="prefetch" href="/assets/js/12.612a8851.js"><link rel="prefetch" href="/assets/js/13.60e0aab9.js"><link rel="prefetch" href="/assets/js/14.d5cfccac.js"><link rel="prefetch" href="/assets/js/15.263d9931.js"><link rel="prefetch" href="/assets/js/16.a186ce49.js"><link rel="prefetch" href="/assets/js/17.ec34714b.js"><link rel="prefetch" href="/assets/js/18.b7293c5c.js"><link rel="prefetch" href="/assets/js/19.5279892a.js"><link rel="prefetch" href="/assets/js/20.366ffae2.js"><link rel="prefetch" href="/assets/js/21.1f327a33.js"><link rel="prefetch" href="/assets/js/22.bdd863bb.js"><link rel="prefetch" href="/assets/js/23.df32a814.js"><link rel="prefetch" href="/assets/js/3.04af0606.js"><link rel="prefetch" href="/assets/js/4.4941866f.js"><link rel="prefetch" href="/assets/js/5.b639e1b5.js"><link rel="prefetch" href="/assets/js/6.be7e4e9a.js"><link rel="prefetch" href="/assets/js/7.529ae593.js"><link rel="prefetch" href="/assets/js/9.a3d34a13.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b5f0b03a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">Tools</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/tools/npm/" class="nav-link">
+  npm 使用笔记
+</a></li></ul></li><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/tools/git-cheat-sheet/" class="nav-link">
+  git 常用命令
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue Press
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/tools/vuepress/" class="nav-link">
+  Vue Press
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CentOS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/tools/centos/" class="nav-link">
+  CentOS
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">Tools</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          npm
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/tools/npm/" class="nav-link">
+  npm 使用笔记
+</a></li></ul></li><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/tools/git-cheat-sheet/" class="nav-link">
+  git 常用命令
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue Press
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/tools/vuepress/" class="nav-link">
+  Vue Press
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CentOS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/tools/centos/" class="nav-link">
+  CentOS
+</a></li></ul></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="三-新闻爬虫案例"><a href="#三-新闻爬虫案例" class="header-anchor">#</a> 三. 新闻爬虫案例</h1> <h2 id="_1-案例目标"><a href="#_1-案例目标" class="header-anchor">#</a> 1. 案例目标</h2> <h3 id="业务目标"><a href="#业务目标" class="header-anchor">#</a> 业务目标</h3> <ol><li><p>从 <a href="http://news.163.com/" target="_blank" rel="noopener noreferrer">http://news.163.com/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 抓取 10 条「热点排行」数据，包括：<strong>新闻标题</strong>和<strong>新闻 URL</strong>；</p></li> <li><p>将<strong>新闻标题</strong>和<strong>新闻 URL</strong> 保存至 <code>/data/news.json</code> 文件中，数据格式如下：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    time<span class="token operator">:</span> NewsInfo<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre></div></li></ol> <h3 id="技术方案"><a href="#技术方案" class="header-anchor">#</a> 技术方案</h3> <ol><li>使用 TypeScript 实现一个终端应用；</li> <li>使用 <code>ts-node</code> 编译并执行 TypeScript；</li> <li>使用 <code>axios</code> 实现网络请求；</li> <li>使用 <code>iconv-lite</code> 实现 GBK 编解码；</li> <li>使用 <code>cheerio</code> 实现页面节点解析。</li></ol> <h2 id="_2-新建项目及准备"><a href="#_2-新建项目及准备" class="header-anchor">#</a> 2. 新建项目及准备</h2> <ol><li><p>新建目录 <code>news-spider</code>；</p></li> <li><p>初始化项目：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> init -y
+</code></pre></div></li> <li><p>安装开发依赖包：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> i typescript ts-node -D
+</code></pre></div></li> <li><p>初始化 TypeScript 配置，生成 <code>tsconfig.ini</code>：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>npx tsc --init
+</code></pre></div></li> <li><p>新建 <code>src/index.ts</code> 作为系统入口，先输入以下代码：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'news spider'</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>修改 <code>package.json</code> 配置<strong>开发脚本</strong>和<strong>构架脚本</strong>，代码如下：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/index.ts&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ts-node src/index.ts&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tsc&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div></li> <li><p>执行 <code>npm run dev</code> 测试运行，确保控制台能够正确输出 <code>news spider</code>；</p></li> <li><p>修改 <code>tsconfig.json</code> 设置 <code>outDir</code> 指定编译结果的目标目录，代码如下：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;outDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./dist&quot;</span><span class="token punctuation">,</span>
+</code></pre></div></li> <li><p>执行 <code>npm run build</code> 确保能够在 <code>dist</code> 目录下编译生成 <code>index.js</code> 文件。</p></li></ol> <h2 id="_3-爬虫业务结构"><a href="#_3-爬虫业务结构" class="header-anchor">#</a> 3. 爬虫业务结构</h2> <p><img src="/assets/img/TopNewsSpider.be7e8381.png" alt="新闻爬虫案例业务结构图"></p> <h2 id="_4-爬虫业务实现"><a href="#_4-爬虫业务实现" class="header-anchor">#</a> 4. 爬虫业务实现</h2> <h3 id="_4-1-获取网页-html"><a href="#_4-1-获取网页-html" class="header-anchor">#</a> 4.1 获取网页 HTML</h3> <ol><li><p>安装开发包：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> i axios cheerio iconv-lite
+</code></pre></div></li> <li><p>在 <code>src/index.ts</code> 中输入以下代码：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/**
+ * 网易新闻排行爬虫
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">TopNewsSpider</span> <span class="token punctuation">{</span>
+  <span class="token comment">/// 爬取网站地址</span>
+  <span class="token keyword">private</span> url <span class="token operator">=</span> <span class="token string">'http://news.163.com/'</span>
+
+  <span class="token comment">/** 开始爬取工作 */</span>
+  <span class="token keyword">async</span> <span class="token function">startSpiderProcess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getRawHTML</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/** 获取原始 HTML 内容 */</span>
+  <span class="token keyword">private</span> <span class="token keyword">async</span> <span class="token function">getRawHTML</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> spider <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TopNewsSpider</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+spider<span class="token punctuation">.</span><span class="token function">startSpiderProcess</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>引入 <code>axios</code> 和 <code>iconv-lite</code>：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">import</span> iconv <span class="token keyword">from</span> <span class="token string">'iconv-lite'</span>
+</code></pre></div></li> <li><p>修改 <code>getRawHTML</code> 实现<strong>请求网页数据</strong>并完成 <strong>GBK 解码</strong>，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/** 获取原始 HTML 内容 */</span>
+<span class="token keyword">private</span> <span class="token keyword">async</span> <span class="token function">getRawHTML</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> data <span class="token punctuation">}</span><span class="token operator">:</span> <span class="token punctuation">{</span> data<span class="token operator">:</span> Buffer <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    responseType<span class="token operator">:</span> <span class="token string">'arraybuffer'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> iconv<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token string">'gbk'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>responseType</code> 表示服务器响应的数据类型，可以是：'arraybuffer' / 'blob' / 'document' / 'json' / 'text' / 'stream'；</li> <li>默认响应的数据类型是：'json'。</li></ul></li> <li><p>运行 <code>npm run dev</code> 确认能够获取网易新闻的<strong>首页 HTML</strong> 并能够<strong>正确解码</strong>（控制台输出没有乱码）。</p></li></ol> <h3 id="_4-2-使用-cheerio-解析-html"><a href="#_4-2-使用-cheerio-解析-html" class="header-anchor">#</a> 4.2 使用 cheerio 解析 HTML</h3> <ol><li><p>引入 <code>cheerio</code>：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> cheerio <span class="token keyword">from</span> <span class="token string">'cheerio'</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>由于 cheerio 是用 JavaScript 开发的，要在 TypeScript 中使用 cheerio，还需要根据系统提示安装一个<strong>类型定义</strong>文件（<code>*.d.ts</code>）—— <code>@types/cheerio</code>，命令如下：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> @types/cheerio -D
+</code></pre></div></div></li> <li><p>新建 <code>getTopNews</code> 方法，负责从 HTML 中读取「热点排行」列表，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/** 开始爬取工作 */</span>
+<span class="token keyword">async</span> <span class="token function">startSpiderProcess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getRawHTML</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getTopNews</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/** 获取新闻排行列表 */</span>
+<span class="token keyword">private</span> <span class="token function">getTopNews</span><span class="token punctuation">(</span>html<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> $ <span class="token operator">=</span> cheerio<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.mod_hot_rank ul li'</span><span class="token punctuation">)</span>
+
+  list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>idx<span class="token punctuation">,</span> el<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> title <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span> <span class="token operator">??</span> <span class="token string">''</span>
+    <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>title<span class="token punctuation">,</span> url<span class="token punctuation">,</span> count<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>运行 <code>npm run dev</code> 确认能够在控制台输出 10 条热点<strong>新闻标题</strong>、<strong>URL</strong> 和<strong>点击数量</strong>。</li></ul></li> <li><p>在 <code>index.ts</code> 中定义<strong>新闻信息接口</strong>和<strong>新闻数据接口</strong>，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/** 新闻信息接口 */</span>
+<span class="token keyword">interface</span> <span class="token class-name">NewsInfo</span> <span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token builtin">string</span>
+  url<span class="token operator">:</span> <span class="token builtin">string</span>
+  count<span class="token operator">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/** 新闻数据接口（记录爬虫返回结果） */</span>
+<span class="token keyword">interface</span> <span class="token class-name">NewsData</span> <span class="token punctuation">{</span>
+  time<span class="token operator">:</span> <span class="token builtin">number</span>
+  data<span class="token operator">:</span> NewsInfo<span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>继续修改 <code>getTopNews</code> 方法，生成并返回<strong>抓取时间</strong>及<strong>热点新闻数据</strong>，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/** 获取新闻排行列表 */</span>
+<span class="token keyword">private</span> <span class="token function">getTopNews</span><span class="token punctuation">(</span>html<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> NewsData <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> $ <span class="token operator">=</span> cheerio<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.mod_hot_rank ul li'</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> news<span class="token operator">:</span> NewsInfo<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>            <span class="token comment">// 新增</span>
+
+  list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>idx<span class="token punctuation">,</span> el<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> title <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span> <span class="token operator">??</span> <span class="token string">''</span>
+    <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    news<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> title<span class="token punctuation">,</span> url<span class="token punctuation">,</span> count <span class="token punctuation">}</span><span class="token punctuation">)</span>     <span class="token comment">// 新增</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// 以下新增</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    time<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    data<span class="token operator">:</span> news<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ol> <h3 id="_4-3-保存热点新闻数据"><a href="#_4-3-保存热点新闻数据" class="header-anchor">#</a> 4.3 保存热点新闻数据</h3> <ol><li><p>定义<strong>新闻列表的 JSON 数据接口</strong>，方便后续使用，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/** 新闻列表的 JSON 数据接口 */</span>
+<span class="token keyword">interface</span> <span class="token class-name">NewsJSONData</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>time<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">]</span><span class="token operator">:</span> NewsInfo<span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>引入 <code>fs</code> 和 <code>path</code> 核心模块，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> fs <span class="token keyword">from</span> <span class="token string">'fs'</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span>
+</code></pre></div></li> <li><p>定义私有变量 <code>dir</code> 和 <code>filePath</code> 以便将抓取的数据保存成文件，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/// 数据文件保存目录</span>
+<span class="token keyword">private</span> dir <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../data'</span><span class="token punctuation">)</span>
+<span class="token comment">/// 数据文件路径</span>
+<span class="token keyword">private</span> filePath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>dir<span class="token punctuation">,</span> <span class="token string">'news.json'</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>定义私有方法 <code>generateJSONData</code> 负责生成 JSON 数据，并修改 <code>startSpiderProcess</code> 中的方法调用，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/** 开始爬取工作 */</span>
+<span class="token keyword">async</span> <span class="token function">startSpiderProcess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getRawHTML</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getTopNews</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> json <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">generateJSONData</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+
+  fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>filePath<span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>json<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/** 生成 JSON 数据 */</span>
+<span class="token keyword">private</span> <span class="token function">generateJSONData</span><span class="token punctuation">(</span>data<span class="token operator">:</span> NewsData<span class="token punctuation">)</span><span class="token operator">:</span> NewsJSONData <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>实现 <code>generateJSONData</code> 方法并运行测试，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/** 生成 JSON 数据 */</span>
+<span class="token keyword">private</span> <span class="token function">generateJSONData</span><span class="token punctuation">(</span>data<span class="token operator">:</span> NewsData<span class="token punctuation">)</span><span class="token operator">:</span> NewsJSONData <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> content<span class="token operator">:</span> NewsJSONData <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token comment">// 1. 判断目录是否存在，如果不存在新建目录</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fs<span class="token punctuation">.</span><span class="token function">existsSync</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>dir<span class="token punctuation">)</span><span class="token punctuation">)</span> fs<span class="token punctuation">.</span><span class="token function">mkdirSync</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>dir<span class="token punctuation">)</span>
+
+  <span class="token comment">// 2. 如果文件存在，先读取之前保存过的内容</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>fs<span class="token punctuation">.</span><span class="token function">existsSync</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>filePath<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    content <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>filePath<span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 3. 追加新的爬取内容</span>
+  content<span class="token punctuation">[</span>data<span class="token punctuation">.</span>time<span class="token punctuation">]</span> <span class="token operator">=</span> data<span class="token punctuation">.</span>data
+
+  <span class="token keyword">return</span> content
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>运行 <code>npm run dev</code> 确认能够把爬取到的新闻数据正确的保存在 <code>/data/news.json</code> 中。</li></ul></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.bc1a357f.js" defer></script><script src="/assets/js/2.fd7d4a37.js" defer></script><script src="/assets/js/8.5b7c39c7.js" defer></script>
+  </body>
+</html>
