@@ -101,7 +101,7 @@ print(quotient)
 print(remainder)
 ```
 
-### 3. 控制流
+## 3. 控制流
 
 ### 3.1 条件语句
 
