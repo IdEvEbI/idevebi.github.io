@@ -4,3 +4,4 @@
 
 1. [基础语法与简单计算器案例](./swift/swift-quick-start-part1-basic-syntax-calculator.md)
 2. [集合类型与学生成绩管理案例](./swift/swift-quick-start-part2-collection-types.md)
+3. [面向对象、结构体与图书馆案例](./swift/swift-quick-start-part3-oop-and-structs.md)
