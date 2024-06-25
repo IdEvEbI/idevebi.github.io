@@ -101,6 +101,23 @@ print(quotient)
 print(remainder)
 ```
 
+### 2.4 逻辑运算
+
+Swift 支持基本的逻辑运算，用于布尔值的运算。
+
+```swift
+let isAdult = true
+let hasPermission = false
+
+let canEnter = isAdult && hasPermission  // 逻辑与
+let canVote = isAdult || hasPermission   // 逻辑或
+let isMinor = !isAdult                   // 逻辑非
+
+print("Can Enter: \(canEnter)")  // 输出 false
+print("Can Vote: \(canVote)")    // 输出 true
+print("Is Minor: \(isMinor)")    // 输出 false
+```
+
 ## 3. 控制流
 
 ### 3.1 条件语句
@@ -322,4 +339,4 @@ if let result = calculate(number1, number2, operation: operation) {
 
 在这篇文章中，我们介绍了 Swift 的基础语法，并通过一个简单的计算器案例将所学知识应用到实践中。希望你对 Swift 有了初步的了解。下一篇文章将进一步探讨 Swift 的进阶概念，敬请期待！
 
-> 提示：本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
+> 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。

@@ -62,6 +62,19 @@ let doubleValue = Double(sum)  // 类型转换
 print(quotient)
 print(remainder)
 
+//: ### 2.4 逻辑运算
+//: Swift 支持基本的逻辑运算，用于布尔值的运算。
+let isAdult = true
+let hasPermission = false
+
+let canEnter = isAdult && hasPermission  // 逻辑与
+let canVote = isAdult || hasPermission   // 逻辑或
+let isMinor = !isAdult                   // 逻辑非
+
+print("Can Enter: \(canEnter)")  // 输出 false
+print("Can Vote: \(canVote)")    // 输出 true
+print("Is Minor: \(isMinor)")    // 输出 false
+
 //: ## 3. 控制流
 //: ### 3.1 条件语句
 //: 使用 `if` 和 `switch` 语句可以实现条件控制。
