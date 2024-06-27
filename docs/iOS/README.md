@@ -9,3 +9,4 @@
 5. [错误处理与文件处理器](./swift//swift-quick-start-part5-error-handling.md)
 6. [泛型编程与泛型队列案例](./swift/swift-quick-start-part6-generic-programming.md)
 7. [协议和扩展](./swift/swift-quick-start-part7-protocols-and-extensions.md)
+8. [Swift 的高级特性与并发任务管理器](./swift/swift-quick-start-part8-advanced-features.md)
