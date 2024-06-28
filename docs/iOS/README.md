@@ -1,5 +1,7 @@
 # ChatGPT iOS 学习日志
 
+> 本专栏的内容提纲及文章全部基于 ChatGPT 生成。
+
 ## Swift 快速入门
 
 1. [基础语法与简单计算器案例](./swift/swift-quick-start-part1-basic-syntax-calculator.md)

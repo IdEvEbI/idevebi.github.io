@@ -1,4 +1,4 @@
-# ChatGPT SwiftUI 学习日志（1）：SwiftUI 基础
+# SwiftUI 学习日志（1）：SwiftUI 基础
 
 在本篇文章中，咱们将探讨 SwiftUI 的**基础概念**和**基本结构**。SwiftUI 是苹果公司推出的一种全新 UI 框架，用于构建跨平台的用户界面。通过 SwiftUI，我们可以使用简洁直观的声明式语法，快速构建复杂的用户界面。
 
