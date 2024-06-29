@@ -110,7 +110,7 @@ HStack(spacing: 20) {
 
 在上面的代码中，我们通过 `alignmentGuide` 修饰符自定义了视图的对齐方式，将右侧文本的对齐锚点设置为其自身的尾部，以便更好地控制其位置。
 
-![对齐和间距代码和效果](./assets/swiftui-quick-start-part2-alignment-space.png)
+![对齐和间距代码及效果](./assets/swiftui-quick-start-part2-alignment-space.png)
 
 ## 4. 自定义容器视图
 

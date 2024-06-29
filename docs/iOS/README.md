@@ -16,7 +16,8 @@
 ## SwiftUI 快速入门
 
 1. [SwiftUI 基础与个人简介卡片案例](./swiftui/swiftui-quick-start-part1-basics.md)
-2. [SwiftUI 视图布局与响应式视图案例](./swiftui/swiftui-quick-start-part2-layouts.md)
+2. [视图布局与响应式视图案例](./swiftui/swiftui-quick-start-part2-layouts.md)
+3. [数据绑定和状态管理与任务管理器案例](./swiftui/swiftui-quick-start-part3-state-management.md)
 
 ## 其他
 
