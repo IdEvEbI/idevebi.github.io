@@ -20,6 +20,7 @@
 3. [数据绑定和状态管理与任务管理器案例](./swiftui/swiftui-quick-start-part3-state-management.md)
 4. [动画和手势及动画和手势结合案例](./swiftui/swiftui-quick-start-part4-animation-gestures.md)
 5. [自定义视图和修饰符与照片展示案例](./swiftui/swiftui-quick-start-part5-custom-views-modifiers.md)
+6. [列表和导航与联系人列表案例](./swiftui/swiftui-quick-start-part6-list-and-navigation.md)
 
 ## 其他
 
