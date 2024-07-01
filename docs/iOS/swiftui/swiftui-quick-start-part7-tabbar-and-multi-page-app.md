@@ -449,7 +449,7 @@ struct ContentView: View {
 }
 ```
 
-![综合案例效果](./assets/swiftui-quick-start-part7-comprehensive-example.png)
+![综合案例效果](./assets/swiftui-quick-start-part7-comprehensive-example.gif)
 
 在这个综合案例中，我们创建了一个包含三个页面的应用程序，通过 `TabView` 来管理多个页面，并实现了页面之间的数据共享和生命周期管理。
 
