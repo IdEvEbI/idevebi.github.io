@@ -246,9 +246,7 @@ app.listen(PORT, () => {
     function testGetRequest() {
       fetch('http://localhost:3000/api/data')
         .then(response => response.json())
-        .then(data =>
-
- document.getElementById('getResponse').textContent = JSON.stringify(data, null, 2));
+        .then(data => document.getElementById('getResponse').textContent = JSON.stringify(data, null, 2));
     }
 
     function testPostRequest() {
