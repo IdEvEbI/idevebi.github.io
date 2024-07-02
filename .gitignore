@@ -67,3 +67,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Node.js
+node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log*

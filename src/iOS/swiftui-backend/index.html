@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试页面</title>
+</head>
+
+<body>
+  <h1>测试 GET 请求</h1>
+  <button onclick="testGetRequest()">发送 GET 请求</button>
+  <pre id="getResponse"></pre>
+
+  <h1>测试 POST 请求</h1>
+  <form id="postForm">
+    <label for="name">姓名:</label>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">邮箱:</label>
+    <input type="email" id="email" name="email"><br>
+    <button type="button" onclick="testPostRequest()">发送 POST 请求</button>
+  </form>
+  <pre id="postResponse"></pre>
+
+  <h1>测试表单提交</h1>
+  <form id="formSubmit">
+    <label for="username">用户名:</label>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">密码:</label>
+    <input type="password" id="password" name="password"><br>
+    <button type="button" onclick="testFormSubmit()">提交表单</button>
+  </form>
+  <pre id="formResponse"></pre>
+
+  <h1>测试文件上传</h1>
+  <form id="uploadForm">
+    <label for="file">选择文件:</label>
+    <input type="file" id="file" name="file"><br>
+    <button type="button" onclick="testFileUpload()">上传文件</button>
+  </form>
+  <pre id="uploadResponse"></pre>
+
+  <h1>测试头像上传</h1>
+  <form id="avatarForm">
+    <label for="avatar">选择头像:</label>
+    <input type="file" id="avatar" name="avatar"><br>
+    <button type="button" onclick="testAvatarUpload()">上传头像</button>
+  </form>
+  <pre id="avatarResponse"></pre>
+
+  <h1>测试文件下载</h1>
+  <input type="text" id="filename" placeholder="输入文件名"><br>
+  <button onclick="testFileDownload()">下载文件</button>
+
+  <h1>测试复杂 JSON 数据 (GET)</h1>
+  <button onclick="testComplexGetRequest()">发送 GET 请求</button>
+  <pre id="complexGetResponse"></pre>
+
+  <h1>测试复杂 JSON 数据 (POST)</h1>
+  <form id="complexPostForm">
+    <label for="postName">姓名:</label>
+    <input type="text" id="postName" name="name"><br>
+    <label for="postAge">年龄:</label>
+    <input type="text" id="postAge" name="age"><br>
+    <label for="postEmail">邮箱:</label>
+    <input type="email" id="postEmail" name="email"><br>
+    <button type="button" onclick="testComplexPostRequest()">发送 POST 请求</button>
+  </form>
+  <pre id="complexPostResponse"></pre>
+
+  <script>
+    function testGetRequest() {
+      fetch('http://localhost:3000/api/data')
+        .then(response => response.json())
+        .then(data =>
+
+          document.getElementById('getResponse').textContent = JSON.stringify(data, null, 2));
+    }
+
+    function testPostRequest() {
+      const form = document.getElementById('postForm');
+      const formData = new FormData(form);
+      const jsonData = {};
+      formData.forEach((value, key) => {
+        jsonData[key] = value;
+      });
+
+      fetch('http://localhost:3000/api/data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonData)
+      })
+        .then(response => response.json())
+        .then(data => document.getElementById('postResponse').textContent = JSON.stringify(data, null, 2));
+    }
+
+    function testFormSubmit() {
+      const form = document.getElementById('formSubmit');
+      const formData = new FormData(form);
+      const jsonData = {};
+      formData.forEach((value, key) => {
+        jsonData[key] = value;
+      });
+
+      fetch('http://localhost:3000/api/form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonData)
+      })
+        .then(response => response.json())
+        .then(data => document.getElementById('formResponse').textContent = JSON.stringify(data, null, 2));
+    }
+
+    function testFileUpload() {
+      const form = document.getElementById('uploadForm');
+      const formData = new FormData(form);
+
+      fetch('http://localhost:3000/api/upload', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => document.getElementById('uploadResponse').textContent = JSON.stringify(data, null, 2));
+    }
+
+    function testAvatarUpload() {
+      const form = document.getElementById('avatarForm');
+      const formData = new FormData(form);
+
+      fetch('http://localhost:3000/api/avatar', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => document.getElementById('avatarResponse').textContent = JSON.stringify(data, null, 2));
+    }
+
+    function testFileDownload() {
+      const filename = document.getElementById('filename').value;
+
+      fetch(`http://localhost:3000/api/download/${filename}`)
+        .then(response => response.blob())
+        .then(blob => {
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.style.display = 'none';
+          a.href = url;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+        })
+        .catch(err => console.error('下载出错:', err));
+    }
+
+    function testComplexGetRequest() {
+      fetch('http://localhost:3000/api/complex-data')
+        .then(response => response.json())
+        .then(data => document.getElementById('complexGetResponse').textContent = JSON.stringify(data, null, 2));
+    }
+
+    function testComplexPostRequest() {
+      const form = document.getElementById('complexPostForm');
+      const formData = new FormData(form);
+      const jsonData = {};
+      formData.forEach((value, key) => {
+        jsonData[key] = value;
+      });
+
+      fetch('http://localhost:3000/api/complex-data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonData)
+      })
+        .then(response => response.json())
+        .then(data => document.getElementById('complexPostResponse').textContent = JSON.stringify(data, null, 2));
+    }
+  </script>
+</body>
+
+</html>

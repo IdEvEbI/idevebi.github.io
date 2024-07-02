@@ -1,0 +1,30 @@
+{
+  "name": "swiftui-backend",
+  "version": "1.0.0",
+  "description": "A backend server for supporting SwiftUI networking and data processing tutorial",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "swiftui",
+    "backend",
+    "nodejs",
+    "express",
+    "multer",
+    "body-parser",
+    "cors",
+    "crypto",
+    "file-upload",
+    "image-upload"
+  ],
+  "author": "idevebi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
