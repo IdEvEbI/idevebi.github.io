@@ -22,8 +22,10 @@
 5. [自定义视图和修饰符与照片展示案例](./swiftui/swiftui-quick-start-part5-custom-views-modifiers.md)
 6. [列表和导航与联系人列表案例](./swiftui/swiftui-quick-start-part6-list-and-navigation.md)
 7. [TabBar 与多页面应用](./swiftui/swiftui-quick-start-part7-tabbar-and-multi-page-app.md)
+8. [表单和用户输入与用户注册表单](./swiftui/swiftui-quick-start-part8-forms-and-user-input.md)
 
 ## 其他
 
 1. [Xcode 项目名称命名规范](./swiftui/xcode-project-naming-conventions.md)
 2. [商业级 SwiftUI 项目的结构设计与最佳实践](./swiftui/commercial-swiftui-project-structure.md)
+3. [SwiftUI 屏幕适配：底层机制、设计规格与最佳实践](./swiftui/swiftui-screen-adaptation-guide.md)
