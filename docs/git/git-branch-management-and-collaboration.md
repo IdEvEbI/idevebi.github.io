@@ -269,6 +269,9 @@ git status
 # 拉取远程仓库的更新
 git pull origin main 
 
+# 查看状态，明确具体冲突的文件
+git status
+
 # 查看 README.md 内容
 cat README.md
 ```
@@ -294,10 +297,12 @@ git commit -m '合并并解决 README 冲突'
 git push origin main
 ```
 
+![添加、提交、推送到远程仓库](./assets/git-branch-and-collaboration/git-add-commit-push.png)
+
 ![合并冲突后远程仓库的内容](./assets/git-branch-and-collaboration/github-after-merge-conflict..png)
 
 ## 5. 结语
 
-在本篇文章中，总结了个人在 Git 分支管理和协作开发中的经验，包括分支的**创建**、**切换**、**合并**和**删除**，以及**如何使用远程仓库进行协作开发**。通过这些内容，希望你能够更好地掌握 Git 的分支管理和协作开发技巧。在接下来的文章中，我们将深入探讨 Git 的更多高级功能和最佳实践，期待与你继续交流。
+在本篇文章中，总结了个人在 Git 分支管理和协作开发中的经验，包括分支的**创建**、**切换**、**合并**和**删除**，以及**如何使用远程仓库进行协作开发**。通过这些内容，希望你能够更好地掌握 Git 的分支管理和协作开发技巧。在接下来的文章中，我们将深入探讨 Git 的更多**高级操作和最佳实践**，期待与你继续交流。
 
 > 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
