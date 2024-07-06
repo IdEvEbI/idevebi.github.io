@@ -233,6 +233,54 @@ git flow hotfix start login-bug
 git flow hotfix finish login-bug
 ```
 
+### 5.5 推送分支和标签到远程仓库
+
+在完成本地的分支操作后，需要将分支和标签推送到远程仓库，以便团队其他成员能够获取最新的代码和版本信息。
+
+#### 推送分支
+
+使用 `git push` 命令可以将本地分支推送到远程仓库。
+
+```bash
+git push origin <分支名称>
+```
+
+**示例：**
+
+```bash
+git push origin develop
+```
+
+#### 推送所有分支
+
+使用以下命令将所有本地分支推送到远程仓库：
+
+```bash
+git push --all origin
+```
+
+#### 推送标签
+
+使用 `git push` 命令可以将本地标签推送到远程仓库。
+
+```bash
+git push origin <标签名称>
+```
+
+**示例：**
+
+```bash
+git push origin 1.0.0
+```
+
+#### 推送所有标签
+
+使用以下命令将所有本地标签推送到远程仓库：
+
+```bash
+git push origin --tags
+```
+
 ## 6. 结语
 
 在本篇文章中，总结了个人在 Git Flow 工作流和实战项目中的经验，包括 Git Flow 的基本概念、使用方法和最佳实践。通过这些内容，希望你能够更好地理解和应用 Git Flow，提高项目的管理和协作效率。在接下来的文章中，我们将继续探讨 **Git Hooks 和自动化流程**，期待与你继续交流。
