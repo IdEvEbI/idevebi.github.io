@@ -7,3 +7,4 @@
 3. [Git 实战（3）：高级操作和最佳实践](./git-advanced-operations-and-best-practices.md)
 4. [Git 实战（4）：Git Flow 和实战项目案例](./git-flow-and-real-world-project-cases.md)
 5. [Git 实战（5）：Git Hooks 和自动化流程](./git-hooks-and-automation.md)
+6. [Git 实战（6）：Git 的 CI/CD 实践](./git-ci-cd-practices.md)
