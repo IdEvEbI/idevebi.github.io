@@ -8,4 +8,5 @@
 4. [Git 实战（4）：Git Flow 和实战项目案例](./git-flow-and-real-world-project-cases.md)
 5. [Git 实战（5）：Git Hooks 和自动化流程](./git-hooks-and-automation.md)
 6. [Git 实战（6）：Git 的 CI/CD 实践](./git-ci-cd-practices.md)
-7. [# Git 实战（7）：Git 与 GitHub/GitLab 集成使用](git-integration-with-github-gitlab.md)
+7. [Git 实战（7）：Git 与 GitHub/GitLab 集成使用](git-integration-with-github-gitlab.md)
+8. [Git 实战（8）：大型项目的 Git 管理策略](git-management-strategies-for-large-projects.md)
