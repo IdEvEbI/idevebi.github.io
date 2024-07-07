@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIProfileCardApp: App {
     var body: some Scene {
         WindowGroup {
-            ProfileView()
+            ProfileView()       // 将 ContentView 替换为 ProfileView
         }
     }
 }

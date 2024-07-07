@@ -55,9 +55,9 @@
 			children = (
 				ECAED45C2C2D04B400B76DE5 /* SwiftUIProfileCardApp.swift */,
 				ECAED45E2C2D04B400B76DE5 /* ContentView.swift */,
+				ECAED46A2C2D0EF500B76DE5 /* ProfileView.swift */,
 				ECAED4602C2D04B700B76DE5 /* Assets.xcassets */,
 				ECAED4622C2D04B700B76DE5 /* Preview Content */,
-				ECAED46A2C2D0EF500B76DE5 /* ProfileView.swift */,
 			);
 			path = SwiftUIProfileCard;
 			sourceTree = "<group>";
