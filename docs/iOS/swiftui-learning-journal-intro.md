@@ -31,7 +31,6 @@
 - **Swift 基础**：讲解 Swift 语言的基础语法和核心概念，帮助读者打好语言基础。
 - **SwiftUI 基础**：介绍 SwiftUI 的基本概念和设计理念，并与 UIKit 进行对比。
 - **SwiftUI 布局**：详细讲解 SwiftUI 的布局系统，包括 VStack、HStack 和 ZStack 的使用。
-- **视图和控件**：学习如何使用 SwiftUI 提供的各种视图和控件，创建丰富的用户界面。
 - **状态管理**：介绍 SwiftUI 的状态管理方法，包括 @State、@Binding 和 @ObservedObject 的使用。
 - **表单和用户输入**：学习如何使用表单和各种输入控件，收集和处理用户输入的数据。
 - **动画和手势**：掌握 SwiftUI 中的动画和手势操作，提升应用的交互体验。

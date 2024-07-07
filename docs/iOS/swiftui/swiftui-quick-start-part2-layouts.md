@@ -1,54 +1,68 @@
 # SwiftUI 学习日志（2）：SwiftUI 视图布局
 
-在本篇文章中，咱们将探讨 SwiftUI 的**视图布局**。SwiftUI 提供了多种布局工具和修饰符，帮助我们构建灵活且自适应的用户界面。
+在《SwiftUI 学习日志》的第二篇文章中，我们将深入探讨 SwiftUI 中的视图布局。在实际开发中，布局是非常重要的一环。通过本文的学习，您将了解如何使用 SwiftUI 提供的布局组件来构建复杂而灵活的用户界面。
 
-## 1. SwiftUI 布局简介
+## 1. SwiftUI 视图布局简介
 
-SwiftUI 使用声明式语法，通过组合不同的布局容器（如 VStack、HStack 和 ZStack）和修饰符，构建出复杂的用户界面。我们可以轻松地定义视图的排列、对齐方式和间距。
+### 1.1 声明式布局
+
+SwiftUI 使用**声明式语法**进行视图布局，通过**描述视图的层级关系**和**布局规则**，让系统自动管理视图的排列和更新。声明式布局使得代码更加简洁和可读，同时减少了手动管理视图状态和布局的复杂性。
+
+### 1.2 布局组件
+
+SwiftUI 提供了多种布局组件，包括 **VStack**、**HStack**、**ZStack**、**Spacer**、**Divider** 等。这些组件可以组合使用，以实现复杂的布局效果。
 
 ## 2. VStack、HStack 和 ZStack
 
 ### 2.1 VStack
 
-**VStack** 用于垂直堆叠视图。
+**VStack** 用于垂直堆叠视图，使多个子视图在垂直方向上排列。
 
 ```swift
+/// ### 2.1 VStack
 VStack {
     Text("上方文本")
+    Text("中间文本")
     Text("下方文本")
 }
-.padding()  // 为 VStack 添加内边距
-.background(Color.blue) // 设置背景色
+.padding()                      // 为 VStack 添加内边距
+.background(.blue)              // 设置背景色
 ```
 
 ### 2.2 HStack
 
-**HStack** 用于水平排列视图。
+**HStack** 用于水平排列视图，使多个子视图在水平方向上排列。
 
 ```swift
+/// ### 2.2 HStack
 HStack {
     Text("左侧文本")
+    Text("中间文本")
     Text("右侧文本")
 }
-.padding()  // 为 HStack 添加内边距
-.background(Color.green) // 设置背景色
+.padding()                      // 为 HStack 添加内边距
+.background(.green)             // 设置背景色
 ```
 
 ### 2.3 ZStack
 
-**ZStack** 用于重叠视图。
+**ZStack** 用于重叠视图，使多个子视图在同一平面上重叠排列。
 
 ```swift
+/// ### 2.3 ZStack
 ZStack {
-    Text("底层文本")
-    Text("顶层文本")
-        .foregroundColor(.red)  // 设置顶层文本颜色为红色
+    Image(systemName: "star")
+        .resizable()
+        .frame(width: 100, height: 100)
+    Text("叠加文本")
+        .foregroundColor(.red)
+        .font(.largeTitle)
 }
-.padding()  // 为 ZStack 添加内边距
-.background(Color.yellow) // 设置背景色
+.padding()                      // 为 ZStack 添加内边距
+.background(.yellow)            // 设置背景色
 ```
 
-![VStack、HStack 和 ZStack 代码和效果](./assets/swiftui-quick-start-part2-stack-views.png)
+![VStack、HStack 和 ZStack 代码和效果](./assets/layouts/stack-views.png)
 
 ## 3. 对齐和间距
 
@@ -57,12 +71,14 @@ ZStack {
 可以使用 `alignment` 参数来设置 VStack 和 HStack 的对齐方式。
 
 ```swift
+/// ### 3.1 对齐方式
 VStack(alignment: .leading) {
     Text("上方文本")
+    Text("中间文本")
     Text("下方文本")
 }
-.padding()  // 为 VStack 添加内边距
-.background(Color.blue) // 设置背景色
+.padding()                      // 为 VStack 添加内边距
+.background(.blue)              // 设置背景色
 ```
 
 ### 3.2 间距
@@ -70,194 +86,204 @@ VStack(alignment: .leading) {
 可以使用 `spacing` 参数来设置 VStack 和 HStack 内部视图之间的间距。
 
 ```swift
+/// ### 3.2 间距
 HStack(spacing: 20) {
     Text("左侧文本")
+    Text("中间文本")
     Text("右侧文本")
 }
-.padding()  // 为 HStack 添加内边距
-.background(Color.green) // 设置背景色
+.padding()                      // 为 HStack 添加内边距
+.background(.green)             // 设置背景色
 ```
 
 ### 3.3 GeometryReader
 
-**GeometryReader** 用于创建自适应布局，获取父视图的尺寸并进行相应调整。
+**GeometryReader** 是一个强大的布局工具，它可以获取父视图的尺寸和位置，从而实现自适应布局。
 
 ```swift
+/// ### 3.3 GeometryReader
 GeometryReader { geometry in
     VStack {
-        Text("宽度: \(geometry.size.width)")
-        Text("高度: \(geometry.size.height)")
+        Text("父视图宽度: \(geometry.size.width)")
+        Text("父视图高度: \(geometry.size.height)")
+        Spacer()
     }
+    .frame(width: geometry.size.width, height: geometry.size.height)    // 设置 VStack 的宽度和高度与父视图一致
 }
 .padding()
-.background(Color.gray)
+.background(.gray)
 ```
 
-### 3.4 alignmentGuide 修饰符
-
-**alignmentGuide** 修饰符用于自定义视图的对齐方式，解决特定对齐需求。通过指定对齐的锚点，可以精确控制视图的对齐行为。
-
-```swift
-HStack(spacing: 20) {
-    Text("左侧文本")
-        .alignmentGuide(.leading) { d in d[.leading] }
-    Text("右侧文本")
-        .alignmentGuide(.leading) { d in d[.trailing] }
-}
-.padding()  // 为 HStack 添加内边距
-.background(Color.green) // 设置背景色
-```
-
-在上面的代码中，我们通过 `alignmentGuide` 修饰符自定义了视图的对齐方式，将右侧文本的对齐锚点设置为其自身的尾部，以便更好地控制其位置。
-
-![对齐和间距代码及效果](./assets/swiftui-quick-start-part2-alignment-space.png)
+![对齐、间距和 GeometryReader 代码及效果](./assets/layouts/alignment-spacing-geometry-reader.png)
 
 ## 4. 自定义容器视图
 
 ### 4.1 自定义容器视图简介
 
-我们可以通过组合现有的布局容器和修饰符，创建自定义容器视图。
+有时候，我们需要创建自定义的容器视图，以实现特殊的布局需求。自定义容器视图可以通过**组合现有的布局组件**来实现。
 
-### 4.2 实例代码
+### 4.2 实现自定义容器视图
 
-新建 `CustomContainer.swift` 文件，并输入以下代码：
+例如，我们可以创建一个自定义的两列布局视图，每一列都包含一个标题和多个项目。新建 `TwoColumnView.swift` 文件，并输入以下代码：
 
 ```swift
 import SwiftUI
 
-struct CustomContainer<Content: View>: View {
-    let content: Content
+/// ## 4. 自定义容器视图 - 两列布局视图
+struct TwoColumnView<Content: View>: View {
+    let leftTitle: String               // 左侧标题
+    let leftContent: Content            // 左侧内容
+    let rightTitle: String              // 右侧标题
+    let rightContent: Content           // 右侧内容
 
-    init(@ViewBuilder content: () -> Content) {
-        self.content = content()
+    init(leftTitle: String, rightTitle: String, @ViewBuilder leftContent: () -> Content, @ViewBuilder rightContent: () -> Content) {
+        self.leftTitle = leftTitle
+        self.rightTitle = rightTitle
+        self.leftContent = leftContent()
+        self.rightContent = rightContent()
     }
 
     var body: some View {
-        VStack {
-            content
-        }
-        .padding()
-        .background(Color.gray.opacity(0.4))
-        .cornerRadius(0)
-    }
-}
-
-struct CustomContainerExample: View {
-    var body: some View {
-        CustomContainer {
-            Text("自定义容器视图")
-            Text("SwiftUI")
+        HStack {
+            VStack(alignment: .leading) {
+                Text(leftTitle)
+                    .font(.headline)
+                leftContent
+            }
+            .padding()
+            .background(.gray)
+            Spacer()
+            VStack(alignment: .leading) {
+                Text(rightTitle)
+                    .font(.headline)
+                rightContent
+            }
+            .padding()
+            .background(.yellow)
         }
     }
 }
 
 #Preview {
-    CustomContainerExample()
+    TwoColumnView(leftTitle: "左列标题", rightTitle: "右列标题", leftContent: {
+        Text("左列项目 1")
+        Text("左列项目 2")
+    }, rightContent: {
+        Text("右列项目 1")
+        Text("右列项目 2")
+    })
 }
 ```
 
-![自定义视图及预览](./assets/swiftui-quick-start-part2-custom-container.png)
+![自定义容器视图](./assets/layouts/custom-container-view.png)
+
+### 4.3 使用自定义容器视图
 
 在其他视图中引入自定义容器视图时，可以像使用其他 SwiftUI 视图一样，直接在需要的位置使用自定义视图标签。例如：
 
 ```swift
-CustomContainer {
-    Text("在其他视图中使用自定义容器")
-    Text("SwiftUI 是很强大的")
-}
-```
-
-![使用自定义视图](./assets/swiftui-quick-start-part2-use-custom-container.png)
-
-## 5. 布局优先级和对齐
-
-### 5.1 布局优先级
-
-使用 `layoutPriority` 修饰符来设置视图的布局优先级。当空间不足时，优先级高的视图将获得更多的空间。这个修饰符解决了当多个视图在同一容器中争夺空间时如何分配的问题。
-
-```swift
-HStack {
-    Text("低优先级文本")
-        .layoutPriority(1)  // 设置低优先级
-    Text("高优先级文本")
-        .layoutPriority(2)  // 设置高优先级
-}
+/// ### 4.3 使用自定义容器视图
+TwoColumnView(leftTitle: "左列标题", rightTitle: "右列标题", leftContent: {
+    Text("左列项目 1")
+    Text("左列项目 2")
+}, rightContent: {
+    Text("右列项目 1")
+    Text("右列项目 2")
+})
 .padding()
-.background(Color.green)
+.background(.green)
 ```
 
-在上面的代码中，当空间不足时，高优先级的文本将获得更多的空间，而低优先级的文本将被压缩。
+![使用自定义容器视图](./assets/layouts/use-custom-container-view.png)
 
-### 5.2 对齐方式
+## 5. 布局优先级
 
-我们可以使用对齐修饰符来调整视图在父容器中的对齐方式。
+在 SwiftUI 中，**layoutPriority** 用于指定视图在其父容器中的布局优先级。当空间不足时，优先级高的视图将获得更多的空间。这个修饰符解决了当多个视图在同一容器中争夺空间时如何分配的问题。
+
+以下示例演示了如何使用 **layoutPriority** 来控制视图的布局优先级。
 
 ```swift
-VStack {
-    Text("顶部文本")
-    Spacer()
-    Text("底部文本")
+/// ## 5. 布局优先级
+HStack {
+    Text("低优先级").background(.red)
+    Text("低优先级").background(.green)
+    Text("低优先级").background(.yellow)
+    Text("低优先级").background(.orange)
+    Text("高优先级")
+        .layoutPriority(1)
+        .background(Color.blue)
 }
-.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+.frame(height: 50)
+.padding()                      // 为 HStack 添加内边距
 ```
 
-![优先级和对齐方式](./assets/swiftui-quick-start-part2-priority-frame.png)
+在上面的代码中，"高优先级" 视图设置了较高的布局优先级，因此它会比 "低优先级" 视图获得更多的空间。
+
+![布局优先级 layoutPriority 示例](./assets/layouts/layout-priority.png)
 
 ## 6. 综合案例：响应式布局
 
 ### 6.1 案例简介
 
-咱们将创建一个响应式布局视图，展示如何使用 VStack、HStack 和 GeometryReader 等布局工具来构建自适应的用户界面。
+我们将创建一个响应式布局的用户界面，通过使用 **VStack**、**HStack**、**ZStack**、**Spacer**、**Divider** 和 **GeometryReader** 等布局组件，实现不同屏幕尺寸下的灵活布局。
 
 ### 6.2 实现步骤
 
-1. 创建一个新的 SwiftUI 文件 `ResponsiveView.swift`。
-2. 实现响应式布局视图。
-
-### 6.3 代码示例
+1. 在左侧导航窗口中的 `SwiftUILayoutsExample` 上点击鼠标右键，然后在弹出菜单中选择 "New File..."。
+2. 选择 "Swift File"，并输入 `ResponsiveLayoutView.swift`，然后点击 "Create" 按钮。
+3. 在 `ResponsiveLayoutView.swift` 文件中输入以下代码：
 
 ```swift
-import SwiftUI
-
-struct ResponsiveView: View {
+/// 响应式视图案例
+struct ResponsiveLayoutView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                if geometry.size.width > 600 {
-                    HStack {
-                        Text("宽屏模式")
-                        Image(systemName: "tv")
-                    }
-                } else {
-                    VStack {
-                        Text("窄屏模式")
-                        Image(systemName: "iphone")
-                    }
+                Text("响应式布局示例")
+                    .font(.largeTitle)
+                    .padding()
+                HStack {
+                    Text("左侧视图")
+                        .frame(width: geometry.size.width * 0.3)
+                        .background(.red)
+                        .padding()
+                    Spacer()
+                    Text("右侧视图")
+                        .frame(width: geometry.size.width * 0.3)
+                        .background(.blue)
+                        .padding()
                 }
+                Spacer()
+                HStack {
+                    Spacer()
+                    Text("底部视图")
+                        .padding()
+                        .background(.green)
+                    Spacer()
+                }
+                .padding(.bottom, 20)
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
+            .background(Color(.systemGray6))
         }
-        .padding()
     }
 }
 
-struct ResponsiveView_Previews: PreviewProvider {
-    static var previews: some View {
-        ResponsiveView()
-    }
+#Preview {
+    ResponsiveLayoutView()
 }
 ```
 
-![响应式视图代码及效果](./assets/swiftui-quick-start-part2-responsive-view.png)
+![响应式视图代码及效果](./assets/layouts/responsive-layout.png)
 
-> 提示：点击预览区域下方的 "Device Settings" 按钮，在弹出的窗口中可以预览模拟器的显示方向。
+**提示**：点击预览区域下方的 `Device Settings` 按钮，在弹出的窗口中可以预览模拟器的显示方向。
 
-![响应式视图宽屏显示效果](./assets/swiftui-quick-start-part2-responsive-view-width.png)
+![响应式视图宽屏显示效果](./assets/layouts/responsive-layout-landscape.png)
 
-在这个综合案例中，我们创建了一个响应式布局的视图，展示了如何使用 VStack、HStack 和 GeometryReader 等布局工具来构建自适应的用户界面。通过这些布局工具和修饰符，我们可以轻松地创建复杂且灵活的布局。
+在这个综合案例中，我们创建了一个响应式布局的视图，展示了如何使用 `VStack`、`HStack` 和 `GeometryReader` 等布局工具实现了一个响应式布局的用户界面，能够根据父视图的尺寸灵活调整布局。通过这些布局工具和修饰符，我们可以轻松地创建复杂且灵活的布局。
 
 ## 7. 结语
 
-在这篇文章中，我们深入探讨了 SwiftUI 的**视图布局系统**，并展示了如何使用 VStack、HStack、ZStack、GeometryReader 等工具来创建复杂的布局。希望通过这篇文章，你对 SwiftUI 的布局系统有了更深入的了解。下一篇文章将进一步探讨 SwiftUI 的状态和数据绑定，敬请期待。
+在本篇文章中，我们深入探讨了 SwiftUI 的视图布局，包括 **VStack**、**HStack**、**ZStack**、**自定义容器视图** 和 **GeometryReader** 等布局组件。通过综合案例，我们将这些布局组件结合起来，实现了一个响应式布局的用户界面。希望通过这篇文章，你对 SwiftUI 的布局系统有了更深入的了解。下一篇文章将进一步探讨 **数据绑定与状态管理**，敬请期待。
 
 > 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
