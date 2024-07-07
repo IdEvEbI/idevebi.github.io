@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-/// 任务
+/// ## 3. 综合案例：任务管理器
+/// 任务模型
 class Task: Identifiable, ObservableObject {
     let id = UUID()                     // 唯一标识符
     @Published var title: String        // 任务标题
@@ -29,7 +30,7 @@ class TaskManager: ObservableObject {
     }
     
     func removeTask(at offsets: IndexSet) {
-        tasks.remove(atOffsets: offsets)    // 从任务数组中移除任务
+        tasks.remove(atOffsets: offsets)// 从任务数组中移除任务
     }
 }
 
@@ -47,7 +48,7 @@ struct TaskView: View {
                     Button(action: {
                         if !newTaskTitle.isEmpty {
                             taskManager.addTask(title: newTaskTitle)  // 添加新任务
-                            newTaskTitle = ""  // 清空文本输入框
+                            newTaskTitle = ""   // 清空文本输入框
                         }
                     }) {
                         Text("添加")
@@ -61,7 +62,7 @@ struct TaskView: View {
                 
                 List {
                     ForEach(taskManager.tasks) { task in
-                        TaskRow(task: task)  // 使用 TaskRow 组件来展示任务
+                        TaskRow(task: task)     // 使用 TaskRow 组件来展示任务
                     }
                     .onDelete(perform: taskManager.removeTask)  // 支持删除任务
                 }
@@ -71,8 +72,9 @@ struct TaskView: View {
     }
 }
 
+/// 任务行视图
 struct TaskRow: View {
-    @ObservedObject var task: Task  // 观察 Task 对象的变化
+    @ObservedObject var task: Task              // 观察 Task 对象的变化
     
     var body: some View {
         HStack {
@@ -88,7 +90,7 @@ struct TaskRow: View {
         }
         .contentShape(Rectangle())
         .onTapGesture {
-            task.isCompleted.toggle()  // 切换任务完成状态
+            task.isCompleted.toggle()           // 切换任务完成状态
         }
     }
 }

@@ -1,86 +1,128 @@
 # SwiftUI 学习日志（3）：数据绑定与状态管理
 
-在本篇文章中，咱们将探讨 SwiftUI 中的**数据绑定**和**状态管理**。数据绑定和状态管理是 SwiftUI 的核心概念，通过这些特性，我们可以简化数据的传递和处理，使应用程序更具响应性。
+欢迎来到《SwiftUI 学习日志》的第 3 篇文章。在本篇文章中，我们将深入探讨 SwiftUI 中的**数据绑定**与**状态管理**。数据绑定和状态管理是 SwiftUI 的核心概念，通过理解和掌握这些概念，您将能够构建出更加灵活和动态的用户界面。
 
-## 1. 状态和绑定的基础
+## 1. SwiftUI 数据绑定简介
 
-### 1.1 @State 属性包装器
+### 1.1 什么是数据绑定
 
-**@State** 属性包装器用于声明视图的本地**状态**。**当状态发生变化时，视图会自动重新渲染**。
+**数据绑定**是指在**视图**和**数据模型**之间建立一种**双向链接**，使得**视图能够实时反映数据模型的变化**，并且用户在视图上的操作也能直接更新数据模型。在 SwiftUI 中，数据绑定使得界面和数据保持同步，极大简化了开发过程。
 
-```swift
-@State private var count = 0  // 定义一个计数状态变量
+### 1.2 数据绑定的优势
 
-var body: some View {
-    VStack {
-        Text("计数: \(count)")
-            .font(.largeTitle)
-        Button(action: {
-            count += 1  // 点击按钮时修改计数状态变量
-        }) {
-            Text("增加计数")
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-        }
-    }
-}
-```
+- **实时更新**：视图和数据保持同步，数据变化时，视图会自动更新。
+- **简化代码**：减少手动更新视图和数据的代码，提升开发效率。
+- **提高可维护性**：通过数据绑定，视图逻辑和数据逻辑分离，代码更加清晰和可维护。
 
-![@State 属性包装器](./assets/swiftui-quick-start-part3-state.png)
+## 2. 数据绑定与状态管理
 
-### 1.2 @Binding 属性包装器
+### 2.1 @State 属性包装器
 
-**@Binding** 属性包装器用于**在多个视图之间共享状态**，使得**子视图可以读写父视图的状态**。
+**@State** 属性包装器用于**在视图内部声明状态变量**，当状态变量的值发生变化时，视图会自动刷新。
 
 ```swift
-struct ContentView: View {
-    @State private var isOn = false // ① 定义一个开关状态变量
-    
-    var body: some View {
-        ToggleView(isOn: $isOn) // ④ 使用 $isOn 将绑定的状态传递给子视图
-    }
-}
-
-struct ToggleView: View {
-    @Binding var isOn: Bool // ② 使用 @Binding 接收父视图传递的开关状态
-    
-    var body: some View {
-        Toggle("开关", isOn: $isOn)  // ③ 绑定状态到开关控件
-            .padding()
-    }
-}
-```
-
-> 提示：子视图使用 `@Binding` 属性包装器，可以**接收并绑定**父视图传递的状态，在子视图中对绑定状态做出修改后，父视图的状态值会同时发生变化。
-
-![@Binding 属性包装器](./assets/swiftui-quick-start-part3-binding.png)
-
-### 1.3 @ObservableObject 和 @StateObject 属性包装器
-
-**@ObservableObject** 和 **@StateObject** 用于管理复杂的状态对象。**@ObservableObject** 用于定义可被观察的状态对象，而 **@StateObject** 用于创建本地状态对象。
-
-```swift
-class TimerModel: ObservableObject {
-    @Published var time: Int = 0  // 定义一个发布的属性
-    
-    func start() {
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            self.time += 1  // 每秒增加一次计数
-        }
-    }
-}
-
-struct TimerView: View {
-    @StateObject private var timerModel = TimerModel()  // 创建一个本地状态对象
+/// ### 2.1 @State 属性包装器
+struct StateExampleView: View {
+    @State private var counter = 0      // 定义计数状态变量
     
     var body: some View {
         VStack {
-            Text("时间: \(timerModel.time)")
+            Text("计数器: \(counter)")
                 .font(.largeTitle)
             Button(action: {
-                timerModel.start()  // 点击按钮时启动计时器
+                counter += 1            // 点击按钮计数状态变量 + 1
+            }) {
+                Text("增加")
+                    .font(.title)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+        }
+    }
+}
+
+#Preview {
+    StateExampleView()
+}
+```
+
+![@State 属性包装器效果](./assets/state-management/state-example.png)
+
+#### @State 的使用场景
+
+- 需要在视图内部管理状态时使用。
+- 状态仅在当前视图中使用，不需要在多个视图之间共享。
+
+### 2.2 @Binding 属性包装器
+
+**@Binding** 属性包装器用于**在多个视图之间共享状态**，父视图将状态变量传递给子视图，子视图通过 `@Binding` 修改父视图的状态。
+
+```swift
+/// ### 2.2 @Binding 属性包装器
+struct BindingExampleView: View {
+    @State private var isOn = false         // 定义开关状态变量
+    
+    var body: some View {
+        VStack {
+            Text(isOn ? "开" : "关").font(.largeTitle)
+            BindingToggleView(isOn: $isOn)  // $状态名 向子视图传递状态
+        }
+    }
+}
+
+/// 绑定开关视图
+struct BindingToggleView: View {
+    @Binding var isOn: Bool                 // 接收父视图传递的状态
+    
+    var body: some View {
+        Toggle("开关", isOn: $isOn)          // 绑定状态到控件
+            .padding()
+    }
+}
+
+#Preview {
+    BindingExampleView()
+}
+```
+
+![@Binding 属性包装器效果](./assets/state-management/binding-example.png)
+
+#### @Binding 的使用场景
+
+- 在父视图和子视图之间共享状态时使用。
+- 需要在多个视图之间同步状态时使用。
+
+### 2.3 @ObservableObject 和 @StateObject 属性包装器
+
+- **@ObservableObject** 属性包装器用于**在多个视图之间共享数据模型**，数据模型通过 **@Published** 属性包装器声明的变量来触发视图更新。
+  - **@Published** 属性包装器用于声明可观察对象的属性，**当属性值变化时，会通知所有观察该对象的视图进行更新**。
+- **@StateObject** 用于创建本地状态对象。
+
+```swift
+/// ### 2.3 @ObservableObject 和 @StateObject 属性包装器
+/// 计时器模型
+class TimerModel: ObservableObject {
+    @Published var timer: Int = 0       // 定义计时器发布的属性
+    
+    func start() {
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            self.timer += 1             // 每秒计数器加一
+        }
+    }
+}
+
+/// 计时器视图
+struct TimerView: View {
+    @StateObject private var model = TimerModel()   // 本地计时器状态对象
+    
+    var body: some View {
+        VStack {
+            Text("时间: \(model.timer)")
+                .font(.largeTitle)
+            Button(action: {
+                model.start()           // 点击按钮时启动计时器
             }) {
                 Text("开始计时")
                     .padding()
@@ -91,132 +133,112 @@ struct TimerView: View {
         }
     }
 }
-```
 
-![@ObservableObject 和 @StateObject 属性包装器](./assets/swiftui-quick-start-part3-observable-object.png)
-
-## 2. 数据流动
-
-### 2.1 单向数据流
-
-在 SwiftUI 中，数据通常以**单向数据流**的方式从父视图传递到子视图。父视图负责管理状态，并将状态通过**属性传递**给子视图。
-
-```swift
-struct ParentView: View {
-    @State private var count = 0    // 定义一个本地状态变量
-    
-    var body: some View {
-        ChildView(count: count) // 传递状态给子视图
-    }
-}
-
-struct ChildView: View {
-    let count: Int  // 接收父视图传递的状态
-    
-    var body: some View {
-        Text("计数: \(count)")    // 显示计数值
-            .padding()
-    }
+#Preview {
+    TimerView()
 }
 ```
 
-### 2.2 双向绑定
+![@ObservedObject 和 @Published 属性包装器效果](./assets/state-management/observed-object-example.png)
 
-使用 **@Binding** 可以实现**双向绑定**，允许子视图修改父视图的状态。
+#### @ObservableObject 和 @StateObject 的使用场景
+
+- 需要在多个视图之间共享数据模型时使用。
+- 数据模型包含多个属性，且需要对属性变化进行监听和响应时使用。
+
+### 2.4. @EnvironmentObject 属性包装器
+
+**@EnvironmentObject** 属性包装器用于在应用程序的**多个视图之间共享全局数据模型**，**数据模型通过环境对象注入到视图中**。
 
 ```swift
-struct ParentView: View {
-    @State private var count = 0  // 定义一个本地状态变量
-    
-    var body: some View {
-        ChildView(count: $count)  // 传递绑定状态给子视图
-    }
+/// ### 2.4. @EnvironmentObject 属性包装器
+/// 全局计数器模型
+class GlobalCounterModel: ObservableObject {
+    @Published var counter = 0
 }
 
-struct ChildView: View {
-    @Binding var count: Int  // 接收父视图传递的绑定状态
+/// 环境对象实例视图
+struct EnvironmentObjectExampleView: View {
+    @StateObject private var model = GlobalCounterModel()
     
     var body: some View {
         VStack {
-            Text("计数: \(count)")  // 显示计数值
+            Text("计数器: \(model.counter)")
+                .font(.largeTitle)
             Button(action: {
-                count += 1  // 点击按钮时增加计数
+                model.counter += 1
             }) {
-                Text("增加计数")
+                Text("增加")
+                    .font(.title)
                     .padding()
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-        }
-    }
-}
-```
-
-![双向绑定](./assets/swiftui-quick-start-part3-two-way-binding.png)
-
-### 2.3 状态的传播与依赖
-
-通过使用 **@ObservedObject** 和 **@StateObject**，我们可以将状态对象在视图层次结构中传播，使得多个视图能够依赖同一个状态对象。
-
-```swift
-class SharedData: ObservableObject {
-    @Published var value: String = ""  // 定义一个发布的属性
-}
-
-struct ParentView: View {
-    @StateObject private var sharedData = SharedData()  // 创建一个本地状态对象
-    
-    var body: some View {
-        VStack {
-            ChildView1(sharedData: sharedData)  // 传递状态对象给子视图1
-            ChildView2(sharedData: sharedData)  // 传递状态对象给子视图2
+            Divider()
+            EnvironmentChildView()
+                .environmentObject(model)
         }
     }
 }
 
-struct ChildView1: View {
-    @ObservedObject var sharedData: SharedData  // 接收父视图传递的状态对象
+/// 环境子视图
+struct EnvironmentChildView: View {
+    @EnvironmentObject var model: GlobalCounterModel
     
     var body: some View {
-        TextField("输入一些文字", text: $sharedData.value)  // 绑定状态到文本输入框
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding()
+        Text("环境对象计数器: \(model.counter)")
+            .font(.title)
     }
 }
 
-struct ChildView2: View {
-    @ObservedObject var sharedData: SharedData  // 接收父视图传递的状态对象
-    
-    var body: some View {
-        Text("你输入的是: \(sharedData.value)")  // 显示输入的文字
-            .padding()
-    }
+#Preview {
+    EnvironmentObjectExampleView()
 }
 ```
 
-![状态的传播与依赖](./assets/swiftui-quick-start-part3-observed-object.png)
+![@EnvironmentObject 属性包装器效果](./assets/state-management/environment-object-example.png)
+
+#### 2.4.1 @EnvironmentObject 的使用场景
+
+- 需要在整个应用程序中共享全局数据时使用。
+- 视图层级较深，需要在多个层级之间传递数据时使用。
+
+#### 2.4.2 @StateObject 和 @EnvironmentObject 对比
+
+##### @StateObject
+
+- **作用**：用于在视图内部声明和管理可观察对象。
+- **使用场景**：当对象的生命周期与视图的生命周期一致时使用。
+
+##### @EnvironmentObject
+
+- **作用**：用于在应用程序的多个视图之间共享全局数据模型。
+- **使用场景**：需要在整个应用程序中共享全局数据时使用。
 
 ## 3. 综合案例：任务管理器
 
 ### 3.1 案例简介
 
-咱们将创建一个简单的任务管理器，展示如何使用数据绑定和状态管理来添加、删除和标记任务完成状态。
+在这个综合案例中，我们将创建一个简单的任务管理器，展示如何使用数据绑定和状态管理来添加、删除和标记任务完成状态。
 
 ### 3.2 实现步骤
 
-1. **定义任务模型**：定义一个 `Task` 类，包含任务的基本信息。
-2. **创建任务视图**：创建一个视图，用于显示和管理任务。
-3. **实现添加和删除任务的功能**。
+- **定义任务模型**：定义一个 `Task` 类，包含任务的基本信息。
+- **定义任务管理器模型**：定义一个 `TaskManager` 类，存储任务数组，并实现添加和删除任务操作。
+- **创建任务视图**：创建一个视图，用于显示和管理任务。
+- **定义任务行视图**：创建一个任务行视图，用于显示和操作每一项任务及状态。
+- **实现添加和删除任务的功能**。
 
 ### 3.3 代码示例
 
-新建 `TaskView.swift`  并输入以下代码：
+新建 `TaskView.swift` 并输入以下代码：
 
 ```swift
 import SwiftUI
 
-/// 任务
+/// ## 3. 综合案例：任务管理器
+/// 任务模型
 class Task: Identifiable, ObservableObject {
     let id = UUID()                     // 唯一标识符
     @Published var title: String        // 任务标题
@@ -238,7 +260,7 @@ class TaskManager: ObservableObject {
     }
     
     func removeTask(at offsets: IndexSet) {
-        tasks.remove(atOffsets: offsets)    // 从任务数组中移除任务
+        tasks.remove(atOffsets: offsets)// 从任务数组中移除任务
     }
 }
 
@@ -256,7 +278,7 @@ struct TaskView: View {
                     Button(action: {
                         if !newTaskTitle.isEmpty {
                             taskManager.addTask(title: newTaskTitle)  // 添加新任务
-                            newTaskTitle = ""  // 清空文本输入框
+                            newTaskTitle = ""   // 清空文本输入框
                         }
                     }) {
                         Text("添加")
@@ -270,7 +292,7 @@ struct TaskView: View {
                 
                 List {
                     ForEach(taskManager.tasks) { task in
-                        TaskRow(task: task)  // 使用 TaskRow 组件来展示任务
+                        TaskRow(task: task)     // 使用 TaskRow 组件来展示任务
                     }
                     .onDelete(perform: taskManager.removeTask)  // 支持删除任务
                 }
@@ -280,8 +302,9 @@ struct TaskView: View {
     }
 }
 
+/// 任务行视图
 struct TaskRow: View {
-    @ObservedObject var task: Task  // 观察 Task 对象的变化
+    @ObservedObject var task: Task              // 观察 Task 对象的变化
     
     var body: some View {
         HStack {
@@ -297,7 +320,7 @@ struct TaskRow: View {
         }
         .contentShape(Rectangle())
         .onTapGesture {
-            task.isCompleted.toggle()  // 切换任务完成状态
+            task.isCompleted.toggle()           // 切换任务完成状态
         }
     }
 }
@@ -307,12 +330,12 @@ struct TaskRow: View {
 }
 ```
 
-![任务管理器代码及预览效果](./assets/swiftui-quick-start-part3-task-manager.png)
+![任务管理器代码及预览效果](./assets/state-management/task-manager.png)
 
 在这个综合案例中，我们创建了一个简单的任务管理器，展示了如何使用 **@State**、**@Binding**、**@ObservedObject** 和 **@StateObject** 来管理和传递状态。通过这些技术，我们可以轻松地实现任务的添加、删除和状态更新。
 
 ## 4. 结语
 
-在这篇文章中，我们深入探讨了 SwiftUI 的**数据绑定**和**状态管理**，并通过一个简单的任务管理器案例将所学知识应用到实践中。希望你对 SwiftUI 的数据绑定和状态管理有了更深入的理解。下一篇文章将进一步探讨 SwiftUI 的动画和过渡效果，敬请期待。
+在这篇文章中，我们深入探讨了 SwiftUI 的**数据绑定**和**状态管理**，包括 **@State**、**@Binding**、**@ObservedObject**、**@Published** 和 **@EnvironmentObject** 等属性包装器。通过综合案例，我们展示了如何在多个视图之间共享数据和状态。希望你对 SwiftUI 的数据绑定和状态管理有了更深入的理解。下一篇文章将进一步探讨 **SwiftUI 的动画和手势**，敬请期待。
 
 > 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
