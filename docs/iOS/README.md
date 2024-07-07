@@ -1,4 +1,6 @@
-# iOS 学习日志
+# SwiftUI 学习日志
+
+欢迎来到 [SwiftUI 学习日志专栏](swiftui-learning-journal-intro.md)。本专栏旨在通过系统和深入的学习，帮助你掌握 Swift 和 SwiftUI 的开发技巧，提升你的 iOS 开发能力，从而开发出功能完善且界面美观的应用。本专栏来源于我在自学过程中不断摸索的经验记录，希望能与广大程序员爱好者，尤其是专注于 SwiftUI 方向的程序员朋友们交流经验，共同进步。
 
 ## Swift 快速入门
 
