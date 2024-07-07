@@ -26,6 +26,7 @@
 
 ## 其他
 
-1. [Xcode 项目名称命名规范](./swiftui/xcode-project-naming-conventions.md)
-2. [商业级 SwiftUI 项目的结构设计与最佳实践](./swiftui/commercial-swiftui-project-structure.md)
-3. [SwiftUI 屏幕适配：底层机制、设计规格与最佳实践](./swiftui/swiftui-screen-adaptation-guide.md)
+1. [Xcode 常用快捷键汇总](./swiftui/xcode-shortcuts-guide.md)
+2. [Xcode 项目名称命名规范](./swiftui/xcode-project-naming-conventions.md)
+3. [商业级 SwiftUI 项目的结构设计与最佳实践](./swiftui/commercial-swiftui-project-structure.md)
+4. [SwiftUI 屏幕适配：底层机制、设计规格与最佳实践](./swiftui/swiftui-screen-adaptation-guide.md)
