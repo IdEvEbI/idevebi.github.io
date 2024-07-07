@@ -285,5 +285,5 @@ struct ProfileView_Previews: PreviewProvider {
 
 在本篇文章中，我们介绍了 SwiftUI 的基本概念和设计理念，并通过与 UIKit 的对比，帮助大家更好地理解 SwiftUI 的优势。随后，我们展示了 SwiftUI 的基本组件及其使用方法，并展示了如何创建一个简单的 SwiftUI 项目。通过一个综合案例，我们将这些基本视图和布局结合起来，创建了一个简单的**个人简介卡片**。希望通过这篇文章，你对 SwiftUI 有了初步的了解。下一篇文章将进一步探讨 **SwiftUI 视图布局**，敬请期待。
 
-> 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
-> 本文档配套项目名称：`SwiftUIProfileCard`。
+> - 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
+> - 本文档配套项目名称：`SwiftUIProfileCard`。

@@ -286,5 +286,5 @@ struct ResponsiveLayoutView: View {
 
 在本篇文章中，我们深入探讨了 SwiftUI 的视图布局，包括 **VStack**、**HStack**、**ZStack**、**自定义容器视图** 和 **GeometryReader** 等布局组件。通过综合案例，我们将这些布局组件结合起来，实现了一个响应式布局的用户界面。希望通过这篇文章，你对 SwiftUI 的布局系统有了更深入的了解。下一篇文章将进一步探讨 **数据绑定与状态管理**，敬请期待。
 
-> 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
-> 本文档配套项目名称：`SwiftUILayoutsExample`。
+> - 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
+> - 本文档配套项目名称：`SwiftUILayoutsExample`。

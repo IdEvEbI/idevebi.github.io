@@ -338,5 +338,5 @@ struct TaskRow: View {
 
 在这篇文章中，我们深入探讨了 SwiftUI 的**数据绑定**和**状态管理**，包括 **@State**、**@Binding**、**@ObservedObject**、**@Published** 和 **@EnvironmentObject** 等属性包装器。通过综合案例，我们展示了如何在多个视图之间共享数据和状态。希望你对 SwiftUI 的数据绑定和状态管理有了更深入的理解。下一篇文章将进一步探讨 **SwiftUI 的动画和手势**，敬请期待。
 
-> 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
-> 本文档配套项目名称：`SwiftUITaskManager`。
+> - 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
+> - 本文档配套项目名称：`SwiftUITaskManager`。
