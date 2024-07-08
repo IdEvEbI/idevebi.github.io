@@ -7,24 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC76B6232C2FBF3A006A5EA6 /* SwiftUIInteractiveCircleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76B6222C2FBF3A006A5EA6 /* SwiftUIInteractiveCircleApp.swift */; };
-		EC76B6252C2FBF3A006A5EA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76B6242C2FBF3A006A5EA6 /* ContentView.swift */; };
-		EC76B6272C2FBF3C006A5EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC76B6262C2FBF3C006A5EA6 /* Assets.xcassets */; };
-		EC76B62A2C2FBF3C006A5EA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC76B6292C2FBF3C006A5EA6 /* Preview Assets.xcassets */; };
-		EC76B6312C2FCBC0006A5EA6 /* InteractiveCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76B6302C2FCBC0006A5EA6 /* InteractiveCircleView.swift */; };
+		EC7F96D42C3B792300214C37 /* SwiftUICardFlipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F96D32C3B792300214C37 /* SwiftUICardFlipApp.swift */; };
+		EC7F96D62C3B792300214C37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F96D52C3B792300214C37 /* ContentView.swift */; };
+		EC7F96D82C3B792500214C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7F96D72C3B792500214C37 /* Assets.xcassets */; };
+		EC7F96DB2C3B792500214C37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7F96DA2C3B792500214C37 /* Preview Assets.xcassets */; };
+		EC7F96E52C3B7A8F00214C37 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F96E42C3B7A8F00214C37 /* AnimationView.swift */; };
+		EC7F96E72C3B7D9500214C37 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F96E62C3B7D9500214C37 /* GestureView.swift */; };
+		EC7F96E92C3B84CA00214C37 /* CardFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F96E82C3B84CA00214C37 /* CardFlipView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC76B61F2C2FBF3A006A5EA6 /* SwiftUIInteractiveCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIInteractiveCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC76B6222C2FBF3A006A5EA6 /* SwiftUIInteractiveCircleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInteractiveCircleApp.swift; sourceTree = "<group>"; };
-		EC76B6242C2FBF3A006A5EA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EC76B6262C2FBF3C006A5EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EC76B6292C2FBF3C006A5EA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EC76B6302C2FCBC0006A5EA6 /* InteractiveCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCircleView.swift; sourceTree = "<group>"; };
+		EC7F96D02C3B792300214C37 /* SwiftUICardFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICardFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7F96D32C3B792300214C37 /* SwiftUICardFlipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICardFlipApp.swift; sourceTree = "<group>"; };
+		EC7F96D52C3B792300214C37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC7F96D72C3B792500214C37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC7F96DA2C3B792500214C37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC7F96E42C3B7A8F00214C37 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		EC7F96E62C3B7D9500214C37 /* GestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
+		EC7F96E82C3B84CA00214C37 /* CardFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EC76B61C2C2FBF3A006A5EA6 /* Frameworks */ = {
+		EC7F96CD2C3B792300214C37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,38 +38,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC76B6162C2FBF3A006A5EA6 = {
+		EC7F96C72C3B792300214C37 = {
 			isa = PBXGroup;
 			children = (
-				EC76B6212C2FBF3A006A5EA6 /* SwiftUIInteractiveCircle */,
-				EC76B6202C2FBF3A006A5EA6 /* Products */,
+				EC7F96D22C3B792300214C37 /* SwiftUICardFlip */,
+				EC7F96D12C3B792300214C37 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EC76B6202C2FBF3A006A5EA6 /* Products */ = {
+		EC7F96D12C3B792300214C37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC76B61F2C2FBF3A006A5EA6 /* SwiftUIInteractiveCircle.app */,
+				EC7F96D02C3B792300214C37 /* SwiftUICardFlip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC76B6212C2FBF3A006A5EA6 /* SwiftUIInteractiveCircle */ = {
+		EC7F96D22C3B792300214C37 /* SwiftUICardFlip */ = {
 			isa = PBXGroup;
 			children = (
-				EC76B6222C2FBF3A006A5EA6 /* SwiftUIInteractiveCircleApp.swift */,
-				EC76B6242C2FBF3A006A5EA6 /* ContentView.swift */,
-				EC76B6302C2FCBC0006A5EA6 /* InteractiveCircleView.swift */,
-				EC76B6262C2FBF3C006A5EA6 /* Assets.xcassets */,
-				EC76B6282C2FBF3C006A5EA6 /* Preview Content */,
+				EC7F96D32C3B792300214C37 /* SwiftUICardFlipApp.swift */,
+				EC7F96D52C3B792300214C37 /* ContentView.swift */,
+				EC7F96E42C3B7A8F00214C37 /* AnimationView.swift */,
+				EC7F96E62C3B7D9500214C37 /* GestureView.swift */,
+				EC7F96E82C3B84CA00214C37 /* CardFlipView.swift */,
+				EC7F96D72C3B792500214C37 /* Assets.xcassets */,
+				EC7F96D92C3B792500214C37 /* Preview Content */,
 			);
-			path = SwiftUIInteractiveCircle;
+			path = SwiftUICardFlip;
 			sourceTree = "<group>";
 		};
-		EC76B6282C2FBF3C006A5EA6 /* Preview Content */ = {
+		EC7F96D92C3B792500214C37 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				EC76B6292C2FBF3C006A5EA6 /* Preview Assets.xcassets */,
+				EC7F96DA2C3B792500214C37 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -73,39 +79,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC76B61E2C2FBF3A006A5EA6 /* SwiftUIInteractiveCircle */ = {
+		EC7F96CF2C3B792300214C37 /* SwiftUICardFlip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC76B62D2C2FBF3C006A5EA6 /* Build configuration list for PBXNativeTarget "SwiftUIInteractiveCircle" */;
+			buildConfigurationList = EC7F96DE2C3B792500214C37 /* Build configuration list for PBXNativeTarget "SwiftUICardFlip" */;
 			buildPhases = (
-				EC76B61B2C2FBF3A006A5EA6 /* Sources */,
-				EC76B61C2C2FBF3A006A5EA6 /* Frameworks */,
-				EC76B61D2C2FBF3A006A5EA6 /* Resources */,
+				EC7F96CC2C3B792300214C37 /* Sources */,
+				EC7F96CD2C3B792300214C37 /* Frameworks */,
+				EC7F96CE2C3B792300214C37 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftUIInteractiveCircle;
-			productName = SwiftUIInteractiveCircle;
-			productReference = EC76B61F2C2FBF3A006A5EA6 /* SwiftUIInteractiveCircle.app */;
+			name = SwiftUICardFlip;
+			productName = SwiftUICardFlip;
+			productReference = EC7F96D02C3B792300214C37 /* SwiftUICardFlip.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EC76B6172C2FBF3A006A5EA6 /* Project object */ = {
+		EC7F96C82C3B792300214C37 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					EC76B61E2C2FBF3A006A5EA6 = {
+					EC7F96CF2C3B792300214C37 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = EC76B61A2C2FBF3A006A5EA6 /* Build configuration list for PBXProject "SwiftUIInteractiveCircle" */;
+			buildConfigurationList = EC7F96CB2C3B792300214C37 /* Build configuration list for PBXProject "SwiftUICardFlip" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,43 +119,45 @@
 				en,
 				Base,
 			);
-			mainGroup = EC76B6162C2FBF3A006A5EA6;
-			productRefGroup = EC76B6202C2FBF3A006A5EA6 /* Products */;
+			mainGroup = EC7F96C72C3B792300214C37;
+			productRefGroup = EC7F96D12C3B792300214C37 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC76B61E2C2FBF3A006A5EA6 /* SwiftUIInteractiveCircle */,
+				EC7F96CF2C3B792300214C37 /* SwiftUICardFlip */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EC76B61D2C2FBF3A006A5EA6 /* Resources */ = {
+		EC7F96CE2C3B792300214C37 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC76B62A2C2FBF3C006A5EA6 /* Preview Assets.xcassets in Resources */,
-				EC76B6272C2FBF3C006A5EA6 /* Assets.xcassets in Resources */,
+				EC7F96DB2C3B792500214C37 /* Preview Assets.xcassets in Resources */,
+				EC7F96D82C3B792500214C37 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EC76B61B2C2FBF3A006A5EA6 /* Sources */ = {
+		EC7F96CC2C3B792300214C37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC76B6312C2FCBC0006A5EA6 /* InteractiveCircleView.swift in Sources */,
-				EC76B6252C2FBF3A006A5EA6 /* ContentView.swift in Sources */,
-				EC76B6232C2FBF3A006A5EA6 /* SwiftUIInteractiveCircleApp.swift in Sources */,
+				EC7F96E52C3B7A8F00214C37 /* AnimationView.swift in Sources */,
+				EC7F96D62C3B792300214C37 /* ContentView.swift in Sources */,
+				EC7F96E92C3B84CA00214C37 /* CardFlipView.swift in Sources */,
+				EC7F96E72C3B7D9500214C37 /* GestureView.swift in Sources */,
+				EC7F96D42C3B792300214C37 /* SwiftUICardFlipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EC76B62B2C2FBF3C006A5EA6 /* Debug */ = {
+		EC7F96DC2C3B792500214C37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		EC76B62C2C2FBF3C006A5EA6 /* Release */ = {
+		EC7F96DD2C3B792500214C37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,14 +276,14 @@
 			};
 			name = Release;
 		};
-		EC76B62E2C2FBF3C006A5EA6 /* Debug */ = {
+		EC7F96DF2C3B792500214C37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIInteractiveCircle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICardFlip/Preview Content\"";
 				DEVELOPMENT_TEAM = 635W7T767E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -289,7 +297,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUIInteractiveCircle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUICardFlip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -297,14 +305,14 @@
 			};
 			name = Debug;
 		};
-		EC76B62F2C2FBF3C006A5EA6 /* Release */ = {
+		EC7F96E02C3B792500214C37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIInteractiveCircle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICardFlip/Preview Content\"";
 				DEVELOPMENT_TEAM = 635W7T767E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -318,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUIInteractiveCircle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUICardFlip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -329,25 +337,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC76B61A2C2FBF3A006A5EA6 /* Build configuration list for PBXProject "SwiftUIInteractiveCircle" */ = {
+		EC7F96CB2C3B792300214C37 /* Build configuration list for PBXProject "SwiftUICardFlip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC76B62B2C2FBF3C006A5EA6 /* Debug */,
-				EC76B62C2C2FBF3C006A5EA6 /* Release */,
+				EC7F96DC2C3B792500214C37 /* Debug */,
+				EC7F96DD2C3B792500214C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC76B62D2C2FBF3C006A5EA6 /* Build configuration list for PBXNativeTarget "SwiftUIInteractiveCircle" */ = {
+		EC7F96DE2C3B792500214C37 /* Build configuration list for PBXNativeTarget "SwiftUICardFlip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC76B62E2C2FBF3C006A5EA6 /* Debug */,
-				EC76B62F2C2FBF3C006A5EA6 /* Release */,
+				EC7F96DF2C3B792500214C37 /* Debug */,
+				EC7F96E02C3B792500214C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EC76B6172C2FBF3A006A5EA6 /* Project object */;
+	rootObject = EC7F96C82C3B792300214C37 /* Project object */;
 }
