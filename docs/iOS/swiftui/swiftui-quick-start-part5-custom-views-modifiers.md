@@ -1,25 +1,37 @@
 # SwiftUI 学习日志（5）：自定义视图和修饰符
 
-在本篇文章中，咱们将探讨 SwiftUI 中的**自定义视图**和**修饰符**。通过自定义视图和修饰符，咱们可以创建可重用的组件，提高代码的可读性和可维护性。
+欢迎来到《SwiftUI 学习日志》的第 5 篇文章。在本篇文章中，我们将探讨 SwiftUI 中的**自定义视图**和**修饰符**。通过学习如何创建和使用自定义视图和修饰符，您可以构建出更加模块化和可复用的代码，提高开发效率和代码质量。
 
-## 1. 自定义视图
+## 1. SwiftUI 自定义视图简介
 
-### 1.1 定义自定义视图
+### 1.1 什么是自定义视图
 
-SwiftUI 允许我们通过组合现有视图来创建新的**自定义视图**。自定义视图是可重用的组件，可以在项目中多次使用。新建 `CustomButton.swift` 文件，然后输入以下代码：
+**自定义视图**是指开发者根据需求**封装了特定的功能或布局**的视图，可以在项目中被多次使用，是可重用的组件。自定义视图可以提高代码的复用性和可维护性，减少重复代码。
+
+### 1.2 自定义视图的优势
+
+- **提高复用性**：将常用的视图逻辑封装成自定义视图，便于在多个地方使用。
+- **提升可维护性**：通过模块化的视图组件，代码更加清晰和易于维护。
+- **简化代码**：减少视图层的代码冗余，使代码结构更加简洁。
+
+## 2. 创建自定义视图
+
+### 2.1 简单的自定义视图
+
+创建一个简单的自定义视图，只需要定义一个新的 Swift 结构体，并遵循 `View` 协议。
 
 ```swift
-import SwiftUI
-
+/// ### 2.1 简单的自定义视图
 struct CustomButton: View {
-    var title: String   // 按钮标题
-    var action: () -> Void  // 按钮点击事件
+    var title: String                   // 按钮标题
+    var action: () -> Void              // 按钮点击事件
     
     var body: some View {
         Button(action: action) {
             Text(title)
+                .font(.headline)
                 .padding()
-                .background(Color.blue)
+                .background(.blue)
                 .foregroundColor(.white)
                 .cornerRadius(10)
         }
@@ -27,239 +39,284 @@ struct CustomButton: View {
 }
 
 #Preview {
-    CustomButton(title: "点我") {
-        print("按钮被点击")
-    }
+    CustomButton(title: "点击我", action: {
+        print("按钮被点击了")
+    })
 }
 ```
 
-![自定义按钮](./assets/swiftui-quick-start-part5-custom-button.png)
+![简单的自定义视图效果](./assets/custom-views/simple-custom-view.png)
 
-### 1.2 使用自定义视图
+### 2.2 带有状态的自定义视图
 
-定义好自定义视图后，我们可以像使用系统视图一样，在其他地方使用它。
+自定义视图可以包含内部状态，通过 `@State` 属性包装器管理状态变化。
 
 ```swift
-struct ContentView: View {
+/// ### 2.2 带有状态的自定义视图
+struct CounterView: View {
+    @State private var count = 0
+    
     var body: some View {
         VStack {
-            CustomButton(title: "点点我") {
-                print("我被点了")
+            Text("计数器: \(count)")
+                .font(.largeTitle)
+            Button("增加") {
+                count += 1
             }
+            .font(.headline)
+            .padding()
+            .background(.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
         }
-        .padding()
-    }
-}
-```
-
-![使用自定义按钮](./assets/swiftui-quick-start-part5-use-custom-button.png)
-
-### 1.3 参数化自定义视图
-
-自定义视图可以接受参数，从而在不同情况下呈现不同的内容。新建 `CustomCard.swift` 文件，然后输入以下代码：
-
-```swift
-import SwiftUI
-
-struct CustomCard: View {
-    var title: String
-    var description: String
-
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(title)
-                .font(.headline)
-            Text(description)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-        }
-        .padding()
-        .background(Color.gray.opacity(0.1))
-        .cornerRadius(10)
-        .shadow(radius: 5)
     }
 }
 
 #Preview {
-    CustomCard(title: "标题", description: "描述信息")
+    CounterView()
 }
 ```
 
-![自定义卡片](./assets/swiftui-quick-start-part5-custom-card.png)
+![带有状态的自定义视图效果](./assets/custom-views/stateful-custom-view.png)
 
-### 1.4 使用参数化自定义视图
+### 2.3 带有绑定的自定义视图
+
+自定义视图可以通过 `@Binding` 属性包装器接收来自父视图的绑定状态，实现双向数据绑定。
 
 ```swift
-CustomCard(title: "SwiftUI", description: "一个强大的 UI 框架")
-CustomCard(title: "自定义视图", description: "提高代码复用性")
+/// ### 2.3 带有绑定的自定义视图
+/// 开关切换自定义视图
+struct ToggleSwitch: View {
+    @Binding var isOn: Bool
+    
+    var body: some View {
+        Toggle(isOn: $isOn) {
+            Text("开关状态: \(isOn ? "开" : "关")")
+        }
+        .padding()
+    }
+}
+
+/// 开关切换视图容器
+struct ToggleSwitchContainer: View {
+    @State private var isOn = true
+    
+    var body: some View {
+        ToggleSwitch(isOn: $isOn)
+    }
+}
+
+#Preview {
+    ToggleSwitchContainer()
+}
 ```
 
-![使用自定义卡片](./assets/swiftui-quick-start-part5-use-custom-card.png)
+![带有绑定的自定义视图效果](./assets/custom-views/binding-custom-view.png)
 
-## 2. 自定义修饰符
+## 3. 自定义修饰符
 
-### 2.1 定义自定义修饰符
+### 3.1 什么是修饰符
 
-SwiftUI 允许我们通过创建自定义修饰符来封装复杂的视图修饰逻辑。自定义修饰符需要遵循 `ViewModifier` 协议。
+**修饰符**是用于修改视图外观和行为的函数，**可以链式调用多个修饰符来组合效果**。SwiftUI 提供了大量的内置修饰符，同时我们也可以创建自定义修饰符。
+
+### 3.2 创建自定义修饰符
+
+创建自定义修饰符需要定义一个遵循 `ViewModifier` 协议的结构体，并实现 `body` 方法。
 
 ```swift
-struct CustomTitleModifier: ViewModifier {
+/// ### 3.2 创建自定义修饰符
+struct CustomModifier: ViewModifier {
+    var cornerRadius: CGFloat
+    var backgroundColor: Color
+    var foregroundColor: Color
+    
     func body(content: Content) -> some View {
         content
-            .font(.largeTitle)
-            .foregroundColor(.blue)
             .padding()
-            .background(Color.yellow)
-            .cornerRadius(10)
+            .background(backgroundColor)
+            .foregroundColor(foregroundColor)
+            .cornerRadius(cornerRadius)
             .shadow(radius: 5)
     }
 }
-```
 
-### 2.2 使用自定义修饰符
-
-定义好自定义修饰符后，我们可以使用 `.modifier` 方法将其应用到视图上。
-
-```swift
-struct ContentView: View {
-    var body: some View {
-        Text("自定义修饰符")
-            .modifier(CustomTitleModifier())
-    }
-}
-```
-
-![自定义修饰符](./assets/swiftui-quick-start-part5-custom-modifier.png)
-
-### 2.3 简化修饰符使用
-
-我们可以通过扩展 `View` 协议来简化自定义修饰符的使用。
-
-```swift
+/// 扩展 View 协议简化自定义修饰符的使用
 extension View {
-    func customTitleStyle() -> some View {
-        self.modifier(CustomTitleModifier())
+    func customStyle(cornerRadius: CGFloat, 
+                     backgroundColor: Color,
+                     foregroundColor: Color) -> some View {
+        self.modifier(CustomModifier(
+            cornerRadius: cornerRadius,
+            backgroundColor: backgroundColor,
+            foregroundColor: foregroundColor)
+        )
     }
 }
 
-struct ContentView: View {
-    var body: some View {
-        Text("简化修饰符使用")
-            .customTitleStyle()
-    }
+#Preview {
+    Text("自定义修饰符")
+        .customStyle(cornerRadius: 10, 
+                     backgroundColor: .blue,
+                     foregroundColor: .white)
 }
 ```
 
-![简化修饰符](./assets/swiftui-quick-start-part5-simplified-modifier.png)
+![自定义修饰符效果](./assets/custom-views/custom-modifier.png)
 
-## 3. 综合案例：照片展示视图
+### 3.3 使用自定义修饰符
 
-### 3.1 案例简介
-
-咱们将创建一个照片展示视图，展示如何通过自定义视图和修饰符来显示照片和照片信息。这个案例将展示如何传递 `Image` 和其他数据到自定义视图中。
-
-### 3.2 实现步骤
-
-1. **准备图片素材**：准备案例所需的图片素材，并导入到 `Assets.xcassets`。
-2. **定义照片数据模型**：定义一个 `Photo` 结构体，包含照片的基本信息。
-3. **创建自定义照片视图**：创建一个自定义视图，用于显示照片和照片信息。
-4. **实现主视图**：在主视图中使用自定义照片视图，展示多个照片。
-
-### 3.3 案例实现
-
-#### 3.3.1 导入图片素材
-
-点击并打开导航区域左侧的 `Assets.xcassets`，将案例素材拖拽到项目中，如下图所示：
-
-![准备案例图片素材](./assets/swiftui-quick-start-part5-prepare-assets.png)
-
-#### 3.3.2 定义照片数据模型
-
-新建 `Photo.swift` 并输入以下代码：
+自定义修饰符可以提高代码的复用性和一致性，便于在多个视图中复用相同的样式。
 
 ```swift
-import Foundation
-
-struct Photo: Identifiable {
-    var id = UUID()
-    var imageName: String
-    var title: String
-}
-```
-
-#### 3.3.3 创建自定义照片视图
-
-新建 `PhotoView.swift` 并输入以下代码：
-
-```swift
-import SwiftUI
-
-struct PhotoView: View {
-    var photo: Photo
-
+/// ### 3.3 使用自定义修饰符
+struct CustomModifierExampleView: View {
     var body: some View {
         VStack {
-            Image(photo.imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 200)
-                .cornerRadius(10)
-                .shadow(radius: 10)
-            Text(photo.title)
-                .font(.headline)
-                .padding(.top, 5)
+            Text("示例 1")
+                .customStyle(cornerRadius: 10, 
+                             backgroundColor: .red,
+                             foregroundColor: .white)
+            Text("示例 2")
+                .customStyle(cornerRadius: 20, 
+                             backgroundColor: .yellow,
+                             foregroundColor: .black)
+            Text("示例 3")
+                .customStyle(cornerRadius: 30, 
+                             backgroundColor: .blue,
+                             foregroundColor: .yellow)
         }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(15)
-        .shadow(radius: 10)
     }
 }
 
 #Preview {
-    PhotoView(photo: Photo(imageName: "example", title: "示例照片"))
+    CustomModifierExampleView()
 }
 ```
 
-![创建自定义照片视图](./assets/swiftui-quick-start-part5-photo-view.png)
+![使用自定义修饰符效果](./assets/custom-views/custom-modifier-example.png)
 
-#### 3.3.4 实现主视图
+## 4. 综合案例：个人信息卡片
 
-修改 `ContentView.swift` 并输入以下代码：
+### 4.1 案例简介
+
+在这个综合案例中，我们将创建一个包含个人信息的卡片，展示如何使用自定义视图和修饰符来构建模块化的界面。
+
+### 4.2 实现步骤
+
+1. **定义个人信息模型**：创建一个 `Person` 结构体，包含个人信息字段。
+2. **创建带有状态的个人信息视图**：创建一个带有内部状态的自定义视图，显示和编辑个人信息。
+3. **创建带有绑定的个人信息视图**：创建一个带有绑定状态的自定义视图，实现信息同步。
+4. **使用自定义修饰符**：为个人信息视图添加自定义样式。
+
+### 4.3 代码示例
+
+新建 `PersonCardView.swift` 并输入以下代码：
 
 ```swift
-import SwiftUI
+/// ## 4. 综合案例：个人信息卡片
+/// 个人信息模型
+struct Person {
+    var name: String                    // 姓名
+    var age: Int                        // 年龄
+    var occupation: String              // 职业
+}
 
-struct ContentView: View {
-    let photos = [
-        Photo(imageName: "photo1", title: "头像 1"),
-        Photo(imageName: "photo2", title: "头像 2"),
-        Photo(imageName: "photo3", title: "头像 3")
-    ]
+/// 自定义修饰符
+struct CardModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(.white)
+            .cornerRadius(15)
+            .shadow(radius: 5)
+            .padding()
+    }
+}
 
+extension View {
+    func cardStyle() -> some View {
+        self.modifier(CardModifier())
+    }
+}
+
+/// 带有状态的个人信息视图
+struct StatefulPersonCardView: View {
+    @State private var person: Person = Person(name: "壹刀流", 
+                                               age: 30,
+                                               occupation: "iOS 开发工程师")
+    
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(photos) { photo in
-                    PhotoView(photo: photo)
-                }
+        VStack(alignment: .leading) {
+            Text("姓名: \(person.name)")
+                .font(.headline)
+            Text("年龄: \(person.age)")
+                .font(.subheadline)
+            Text("职业: \(person.occupation)")
+                .font(.subheadline)
+            Button("修改信息") {
+                person.name = "新名字"
+                person.age = 25
+                person.occupation = "全栈开发工程师"
             }
             .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
+        .cardStyle()
+    }
+}
+
+/// 带有绑定的个人信息视图
+struct BindingPersonCardView: View {
+    @Binding var person: Person
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("姓名: \(person.name)")
+                .font(.headline)
+            Text("年龄: \(person.age)")
+                .font(.subheadline)
+            Text("职业: \(person.occupation)")
+                .font(.subheadline)
+        }
+        .cardStyle()
+    }
+}
+
+/// 综合示例视图
+struct PersonCardExampleView: View {
+    @State private var person = Person(name: "壹刀流", 
+                                       age: 30,
+                                       occupation: "iOS 开发工程师")
+    
+    var body: some View {
+        VStack {
+            StatefulPersonCardView()
+            BindingPersonCardView(person: $person)
+            Button("修改绑定信息") {
+                person.name = "新名字（绑定）"
+                person.age = 28
+                person.occupation = "后端开发工程师"
+            }
+            .padding()
+            .background(Color.green)
+            .foregroundColor(.white)
+            .cornerRadius(10)
         }
     }
 }
 
 #Preview {
-    ContentView()
+    PersonCardExampleView()
 }
 ```
 
-![综合案例效果](./assets/swiftui-quick-start-part5-photo-view-demo.png)
+![个人信息卡片效果](./assets/custom-views/person-card.png)
 
-在这个综合案例中，我们创建了一个**照片展示视图**，展示了如何通过自定义视图和修饰符来显示照片和照片信息。通过传递 `Image` 和其他数据到自定义视图中，我们可以轻松创建灵活和可复用的组件。
+## 5. 结语
 
-## 4. 结语
+在本篇文章中，我们深入探讨了 SwiftUI 中的**自定义视图**和**修饰符**，包括如何创建**简单的自定义视图**、**带有状态的自定义视图**和**带有绑定的自定义视图**。同时，我们还介绍了**自定义修饰符的创建和使用**。通过综合案例，我们展示了如何将这些技术结合起来，创建一个模块化的**个人信息卡片视图**。希望你对 SwiftUI 的自定义视图和修饰符有了更深入的理解。下一篇文章将进一步探讨**表单和用户输入**，敬请期待。
 
-在这篇文章中，我们深入探讨了 SwiftUI 的**自定义视图**和**修饰符**，并通过一个照片展示视图的综合案例将所学知识应用到实践中。希望你对 SwiftUI 的自定义视图和修饰符有了更深入的理解。下一篇文章将进一步探讨 SwiftUI 的列表与导航，敬请期待。
-
-> 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
+> - 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
+> - 本文档配套项目名称：`SwiftUIPersonCard`。
