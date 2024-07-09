@@ -7,32 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC7F970F2C3CD4C600214C37 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F970E2C3CD4C600214C37 /* FormView.swift */; };
+		EC7F97112C3CD7E300214C37 /* SubmitFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F97102C3CD7E300214C37 /* SubmitFormView.swift */; };
+		EC7F97152C3CFC8A00214C37 /* CustomFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F97142C3CFC8A00214C37 /* CustomFormView.swift */; };
+		EC7F97172C3D063500214C37 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F97162C3D063500214C37 /* RatingView.swift */; };
 		EC8161AD2C32CFCE0095EDEE /* SwiftUIUserRegistrationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8161AC2C32CFCE0095EDEE /* SwiftUIUserRegistrationApp.swift */; };
 		EC8161AF2C32CFCE0095EDEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8161AE2C32CFCE0095EDEE /* ContentView.swift */; };
 		EC8161B12C32CFD00095EDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8161B02C32CFD00095EDEE /* Assets.xcassets */; };
 		EC8161B42C32CFD00095EDEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8161B32C32CFD00095EDEE /* Preview Assets.xcassets */; };
-		EC8161BB2C32DC9A0095EDEE /* BasicFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8161BA2C32DC9A0095EDEE /* BasicFormView.swift */; };
-		EC8161BD2C337EBB0095EDEE /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8161BC2C337EBB0095EDEE /* TextInputView.swift */; };
-		EC8161BF2C337FD50095EDEE /* PickerToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8161BE2C337FD50095EDEE /* PickerToggleView.swift */; };
-		EC8161C12C3380440095EDEE /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8161C02C3380440095EDEE /* RatingView.swift */; };
-		EC8161C32C3384790095EDEE /* CustomFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8161C22C3384790095EDEE /* CustomFormView.swift */; };
-		EC8161C52C33854F0095EDEE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8161C42C33854F0095EDEE /* User.swift */; };
-		EC8161C72C3385870095EDEE /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8161C62C3385870095EDEE /* RegistrationView.swift */; };
+		ECE7B8062C3D54990081D88B /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = ECE7B8052C3D54990081D88B /* AlertToast */; };
+		ECE7B8082C3D55120081D88B /* RegistrationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE7B8072C3D55120081D88B /* RegistrationFormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC7F970E2C3CD4C600214C37 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		EC7F97102C3CD7E300214C37 /* SubmitFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitFormView.swift; sourceTree = "<group>"; };
+		EC7F97142C3CFC8A00214C37 /* CustomFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormView.swift; sourceTree = "<group>"; };
+		EC7F97162C3D063500214C37 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		EC8161A92C32CFCE0095EDEE /* SwiftUIUserRegistration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIUserRegistration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8161AC2C32CFCE0095EDEE /* SwiftUIUserRegistrationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIUserRegistrationApp.swift; sourceTree = "<group>"; };
 		EC8161AE2C32CFCE0095EDEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC8161B02C32CFD00095EDEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC8161B32C32CFD00095EDEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EC8161BA2C32DC9A0095EDEE /* BasicFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFormView.swift; sourceTree = "<group>"; };
-		EC8161BC2C337EBB0095EDEE /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
-		EC8161BE2C337FD50095EDEE /* PickerToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerToggleView.swift; sourceTree = "<group>"; };
-		EC8161C02C3380440095EDEE /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
-		EC8161C22C3384790095EDEE /* CustomFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormView.swift; sourceTree = "<group>"; };
-		EC8161C42C33854F0095EDEE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		EC8161C62C3385870095EDEE /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		ECE7B8072C3D55120081D88B /* RegistrationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE7B8062C3D54990081D88B /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,13 +65,11 @@
 			children = (
 				EC8161AC2C32CFCE0095EDEE /* SwiftUIUserRegistrationApp.swift */,
 				EC8161AE2C32CFCE0095EDEE /* ContentView.swift */,
-				EC8161BA2C32DC9A0095EDEE /* BasicFormView.swift */,
-				EC8161BC2C337EBB0095EDEE /* TextInputView.swift */,
-				EC8161BE2C337FD50095EDEE /* PickerToggleView.swift */,
-				EC8161C02C3380440095EDEE /* RatingView.swift */,
-				EC8161C22C3384790095EDEE /* CustomFormView.swift */,
-				EC8161C42C33854F0095EDEE /* User.swift */,
-				EC8161C62C3385870095EDEE /* RegistrationView.swift */,
+				EC7F970E2C3CD4C600214C37 /* FormView.swift */,
+				EC7F97102C3CD7E300214C37 /* SubmitFormView.swift */,
+				EC7F97142C3CFC8A00214C37 /* CustomFormView.swift */,
+				EC7F97162C3D063500214C37 /* RatingView.swift */,
+				ECE7B8072C3D55120081D88B /* RegistrationFormView.swift */,
 				EC8161B02C32CFD00095EDEE /* Assets.xcassets */,
 				EC8161B22C32CFD00095EDEE /* Preview Content */,
 			);
@@ -104,6 +100,9 @@
 			dependencies = (
 			);
 			name = SwiftUIUserRegistration;
+			packageProductDependencies = (
+				ECE7B8052C3D54990081D88B /* AlertToast */,
+			);
 			productName = SwiftUIUserRegistration;
 			productReference = EC8161A92C32CFCE0095EDEE /* SwiftUIUserRegistration.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +131,9 @@
 				Base,
 			);
 			mainGroup = EC8161A02C32CFCD0095EDEE;
+			packageReferences = (
+				ECE7B8042C3D54990081D88B /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = EC8161AA2C32CFCE0095EDEE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,15 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC8161BF2C337FD50095EDEE /* PickerToggleView.swift in Sources */,
-				EC8161BB2C32DC9A0095EDEE /* BasicFormView.swift in Sources */,
-				EC8161C32C3384790095EDEE /* CustomFormView.swift in Sources */,
-				EC8161C72C3385870095EDEE /* RegistrationView.swift in Sources */,
+				EC7F970F2C3CD4C600214C37 /* FormView.swift in Sources */,
 				EC8161AF2C32CFCE0095EDEE /* ContentView.swift in Sources */,
-				EC8161C52C33854F0095EDEE /* User.swift in Sources */,
-				EC8161C12C3380440095EDEE /* RatingView.swift in Sources */,
-				EC8161BD2C337EBB0095EDEE /* TextInputView.swift in Sources */,
+				ECE7B8082C3D55120081D88B /* RegistrationFormView.swift in Sources */,
+				EC7F97112C3CD7E300214C37 /* SubmitFormView.swift in Sources */,
 				EC8161AD2C32CFCE0095EDEE /* SwiftUIUserRegistrationApp.swift in Sources */,
+				EC7F97152C3CFC8A00214C37 /* CustomFormView.swift in Sources */,
+				EC7F97172C3D063500214C37 /* RatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECE7B8042C3D54990081D88B /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECE7B8052C3D54990081D88B /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECE7B8042C3D54990081D88B /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC8161A12C32CFCD0095EDEE /* Project object */;
 }

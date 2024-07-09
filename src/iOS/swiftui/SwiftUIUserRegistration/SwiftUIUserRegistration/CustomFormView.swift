@@ -2,35 +2,61 @@
 //  CustomFormView.swift
 //  SwiftUIUserRegistration
 //
-//  Created by 黑马程序员 on 2024/7/2.
+//  Created by 黑马程序员 on 2024/7/9.
 //
 
 import SwiftUI
 
-/// ### 2.2 与表单交互
-struct CustomFormView: View {
-    @State private var name = ""
-    @State private var rating = 3
+/// ### 4.2 创建自定义密码控件
+struct CustomPasswordField: View {
+    var placeholder = "请输入密码"            // 占位符
+    @Binding var password: String           // 密码
+    @State var isSecure = true              // 是否显示密文
     
     var body: some View {
-        Form {
-            Section(header: Text("基本信息")) {
-                TextField("姓名", text: $name)
-                HStack {
-                    Text("评分")
-                    RatingView(rating: $rating)
-                }
+        HStack {
+            if isSecure {
+                SecureField(placeholder, text: $password)
+                    .padding(.leading, 10)
+            } else {
+                TextField(placeholder, text: $password)
+                    .padding(.leading, 10)
             }
             
-            Section {
-                Button("提交") {
-                    print("提交信息：\(name), 评分：\(rating)")
-                }
+            Button(action: {
+                isSecure.toggle()
+            }) {
+                Image(systemName: isSecure ? "eye.slash" : "eye")
+                    .foregroundColor(isSecure ? .gray : .blue)
+                    .padding(.trailing, 10)
             }
+        }
+        .padding()
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.gray, lineWidth: 1)
+        )
+        .padding(.horizontal)
+    }
+}
+
+/// 测试自定义密码控件
+struct TestCustomPasswordField: View {
+    @State private var password = ""
+    
+    var body: some View {
+        VStack {
+            CustomPasswordField(placeholder: "请输入口令",
+                                password: $password,
+                                isSecure: true)
+            .padding()
+            Text("您输入的密码是: \(password)")
+                .padding()
+            Spacer()
         }
     }
 }
 
 #Preview {
-    CustomFormView()
+    TestCustomPasswordField()
 }
