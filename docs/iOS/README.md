@@ -20,9 +20,10 @@
 3. [数据绑定和状态管理与任务管理器案例](./swiftui/swiftui-quick-start-part3-state-management.md)
 4. [动画和手势与卡片翻转动画案例](./swiftui/swiftui-quick-start-part4-animation-gestures.md)
 5. [自定义视图和修饰符与个人信息卡片案例](./swiftui/swiftui-quick-start-part5-custom-views-modifiers.md)
-6. [表单和用户输入与用户注册表单](./swiftui/swiftui-quick-start-part6-forms-and-user-input.md)
-7. [列表和导航与联系人列表案例](./swiftui/swiftui-quick-start-part6-list-and-navigation.md)
-8. [TabBar 与多页面应用](./swiftui/swiftui-quick-start-part7-tabbar-and-multi-page-app.md)
+6. [表单和用户输入与用户注册表单案例](./swiftui/swiftui-quick-start-part6-forms-and-user-input.md)
+7. [网络请求和数据处理与知心天气案例](./swiftui/swiftui-quick-start-part7-networking-data-processing.md)
+8. [列表和导航与联系人列表案例](./swiftui/swiftui-quick-start-part6-list-and-navigation.md)
+9. [TabBar 与多页面应用](./swiftui/swiftui-quick-start-part7-tabbar-and-multi-page-app.md)
 
 ## 其他
 
