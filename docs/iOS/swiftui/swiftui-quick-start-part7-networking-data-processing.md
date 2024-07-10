@@ -576,9 +576,3 @@ struct WeatherView: View {
 ## 6. 结语
 
 在本篇文章中，我们深入探讨了 SwiftUI 中的**网络请求**和**数据处理**，包括使用 **Alamofire** 进行**GET 请求**和**POST 请求**、**处理复杂 JSON 数据**以及**文件上传和下载**。通过综合案例，我们展示了如何结合这些技术构建一个简单的**天气应用**。希望您对 SwiftUI 的网络请求和数据处理有了更深入的理解。下一篇文章将进一步探讨 **SwiftUI 的列表和导航**，敬请期待。
-
-> - 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
-> - 本文档配套项目名称：`SwiftUIWeatherApp`。
-
-- **英文文件名**：swiftui-quick-start-part7-networking-data-processing.md
-- **Git commit message**：Add article on SwiftUI networking and data processing in SwiftUI Learning Journal
