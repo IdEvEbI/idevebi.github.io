@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC9DC7452C44E2CE00ECB973 /* SwiftUICartNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7442C44E2CE00ECB973 /* SwiftUICartNavigationApp.swift */; };
+		EC9DC7472C44E2CE00ECB973 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7462C44E2CE00ECB973 /* ContentView.swift */; };
+		EC9DC7492C44E2D000ECB973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC7482C44E2D000ECB973 /* Assets.xcassets */; };
+		EC9DC74C2C44E2D000ECB973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC74B2C44E2D000ECB973 /* Preview Assets.xcassets */; };
+		EC9DC7532C44E3A100ECB973 /* CustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7522C44E3A100ECB973 /* CustomListView.swift */; };
+		EC9DC7552C44EC6700ECB973 /* NavigationExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7542C44EC6700ECB973 /* NavigationExampleView.swift */; };
+		EC9DC7572C450F6D00ECB973 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7562C450F6D00ECB973 /* Product.swift */; };
+		EC9DC75B2C45101600ECB973 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC75A2C45101600ECB973 /* ProductDetailView.swift */; };
+		EC9DC75D2C452D5600ECB973 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC75C2C452D5600ECB973 /* CartView.swift */; };
+		EC9DC75F2C45305500ECB973 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC75E2C45305500ECB973 /* ProductListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC9DC7412C44E2CE00ECB973 /* SwiftUICartNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICartNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9DC7442C44E2CE00ECB973 /* SwiftUICartNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICartNavigationApp.swift; sourceTree = "<group>"; };
+		EC9DC7462C44E2CE00ECB973 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC9DC7482C44E2D000ECB973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC9DC74B2C44E2D000ECB973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC9DC7522C44E3A100ECB973 /* CustomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
+		EC9DC7542C44EC6700ECB973 /* NavigationExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExampleView.swift; sourceTree = "<group>"; };
+		EC9DC7562C450F6D00ECB973 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		EC9DC75A2C45101600ECB973 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		EC9DC75C2C452D5600ECB973 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		EC9DC75E2C45305500ECB973 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC9DC73E2C44E2CE00ECB973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC9DC7382C44E2CD00ECB973 = {
+			isa = PBXGroup;
+			children = (
+				EC9DC7432C44E2CE00ECB973 /* SwiftUICartNavigation */,
+				EC9DC7422C44E2CE00ECB973 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC9DC7422C44E2CE00ECB973 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC9DC7412C44E2CE00ECB973 /* SwiftUICartNavigation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC9DC7432C44E2CE00ECB973 /* SwiftUICartNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				EC9DC7442C44E2CE00ECB973 /* SwiftUICartNavigationApp.swift */,
+				EC9DC7462C44E2CE00ECB973 /* ContentView.swift */,
+				EC9DC7522C44E3A100ECB973 /* CustomListView.swift */,
+				EC9DC7542C44EC6700ECB973 /* NavigationExampleView.swift */,
+				EC9DC7562C450F6D00ECB973 /* Product.swift */,
+				EC9DC75A2C45101600ECB973 /* ProductDetailView.swift */,
+				EC9DC75C2C452D5600ECB973 /* CartView.swift */,
+				EC9DC75E2C45305500ECB973 /* ProductListView.swift */,
+				EC9DC7482C44E2D000ECB973 /* Assets.xcassets */,
+				EC9DC74A2C44E2D000ECB973 /* Preview Content */,
+			);
+			path = SwiftUICartNavigation;
+			sourceTree = "<group>";
+		};
+		EC9DC74A2C44E2D000ECB973 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC9DC74B2C44E2D000ECB973 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC9DC7402C44E2CE00ECB973 /* SwiftUICartNavigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC9DC74F2C44E2D000ECB973 /* Build configuration list for PBXNativeTarget "SwiftUICartNavigation" */;
+			buildPhases = (
+				EC9DC73D2C44E2CE00ECB973 /* Sources */,
+				EC9DC73E2C44E2CE00ECB973 /* Frameworks */,
+				EC9DC73F2C44E2CE00ECB973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftUICartNavigation;
+			productName = SwiftUICartNavigation;
+			productReference = EC9DC7412C44E2CE00ECB973 /* SwiftUICartNavigation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC9DC7392C44E2CD00ECB973 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					EC9DC7402C44E2CE00ECB973 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = EC9DC73C2C44E2CD00ECB973 /* Build configuration list for PBXProject "SwiftUICartNavigation" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC9DC7382C44E2CD00ECB973;
+			productRefGroup = EC9DC7422C44E2CE00ECB973 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC9DC7402C44E2CE00ECB973 /* SwiftUICartNavigation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC9DC73F2C44E2CE00ECB973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9DC74C2C44E2D000ECB973 /* Preview Assets.xcassets in Resources */,
+				EC9DC7492C44E2D000ECB973 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC9DC73D2C44E2CE00ECB973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9DC75F2C45305500ECB973 /* ProductListView.swift in Sources */,
+				EC9DC75B2C45101600ECB973 /* ProductDetailView.swift in Sources */,
+				EC9DC75D2C452D5600ECB973 /* CartView.swift in Sources */,
+				EC9DC7472C44E2CE00ECB973 /* ContentView.swift in Sources */,
+				EC9DC7552C44EC6700ECB973 /* NavigationExampleView.swift in Sources */,
+				EC9DC7572C450F6D00ECB973 /* Product.swift in Sources */,
+				EC9DC7532C44E3A100ECB973 /* CustomListView.swift in Sources */,
+				EC9DC7452C44E2CE00ECB973 /* SwiftUICartNavigationApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EC9DC74D2C44E2D000ECB973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC9DC74E2C44E2D000ECB973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC9DC7502C44E2D000ECB973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICartNavigation/Preview Content\"";
+				DEVELOPMENT_TEAM = 635W7T767E;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUICartNavigation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC9DC7512C44E2D000ECB973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICartNavigation/Preview Content\"";
+				DEVELOPMENT_TEAM = 635W7T767E;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUICartNavigation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC9DC73C2C44E2CD00ECB973 /* Build configuration list for PBXProject "SwiftUICartNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC9DC74D2C44E2D000ECB973 /* Debug */,
+				EC9DC74E2C44E2D000ECB973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC9DC74F2C44E2D000ECB973 /* Build configuration list for PBXNativeTarget "SwiftUICartNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC9DC7502C44E2D000ECB973 /* Debug */,
+				EC9DC7512C44E2D000ECB973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC9DC7392C44E2CD00ECB973 /* Project object */;
+}
