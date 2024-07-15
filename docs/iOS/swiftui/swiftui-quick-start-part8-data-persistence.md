@@ -104,7 +104,7 @@ struct UserDefaultsExampleView: View {
 }
 ```
 
-![使用 UserDefaults 存储和读取用户设置](./assets/user-defaults-user-settings.png)
+![使用 UserDefaults 存储和读取用户设置](./assets/data-persistence/user-defaults-user-settings.png)
 
 ### 3.3 在沙盒中查看被持久化的数据
 
@@ -113,7 +113,7 @@ struct UserDefaultsExampleView: View {
 1. 打开 **Finder** 并按 `Cmd+Shift+G`，**粘贴**从控制台**复制**的路径。
 2. 进入 `Library/Preferences` 目录，找到以应用 `Bundle Identifier` 命名的 `plist` 文件，双击使用 **Xcode** 打开查看 `UserDefaults` 存储的数据。
 
-![查看 UserDefaults 存储的数据](./assets/view-user-defaults-plist.png)
+![查看 UserDefaults 存储的数据](./assets/data-persistence/view-user-defaults-plist.png)
 
 ## 4. 使用文件系统进行数据持久化
 
@@ -182,7 +182,7 @@ struct FileSystemExampleView: View {
 }
 ```
 
-![常规文件读写示例](./assets/write-to-file-read-from-file.png)
+![常规文件读写示例](./assets/data-persistence/write-to-file-read-from-file.png)
 
 ### 4.3 对象的序列化和反序列化
 
@@ -254,7 +254,7 @@ struct ObjectSerializationExampleView: View {
 }
 ```
 
-![对象的序列化和反序列化效果](./assets/encode-decode.png)
+![对象的序列化和反序列化效果](./assets/data-persistence/encode-decode.png)
 
 ## 5. 使用 SQLite 进行数据持久化
 
@@ -270,7 +270,7 @@ struct ObjectSerializationExampleView: View {
 - 输入并搜索 <https://github.com/stephencelis/SQLite.swift>。
 - 点击 `Add Package` 按钮添加依赖包。
 
-![添加 SQLite.swift 包](./assets/add-sqlite-swift-package.png)
+![添加 SQLite.swift 包](./assets/data-persistence/add-sqlite-swift-package.png)
 
 ### 5.3 示例代码（使用第三方框架）
 
@@ -362,7 +362,7 @@ struct SQLiteExampleView: SwiftUI.View {
 }
 ```
 
-![用 SQLite 存储和读取用户名效果](./assets/sqlite-example-view.png)
+![用 SQLite 存储和读取用户名效果](./assets/data-persistence/sqlite-example-view.png)
 
 **提示**：在使用 `SQLite.swift` 框架操作 `SQLite` 数据库时，需要解决 **`View` 的歧义问题**。这种歧义通常是因为有**多个库或者框架定义了相同的类型名称**。在这种情况下，你需要明确地指定类型的完全限定名称，如：`SwiftUI.View`。
 
