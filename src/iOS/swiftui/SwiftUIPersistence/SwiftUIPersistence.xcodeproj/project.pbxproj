@@ -7,71 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC49DDF12C2E48900041A4EF /* SwiftUILayoutsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49DDF02C2E48900041A4EF /* SwiftUILayoutsExampleApp.swift */; };
-		EC49DDF32C2E48900041A4EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49DDF22C2E48900041A4EF /* ContentView.swift */; };
-		EC49DDF52C2E48920041A4EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC49DDF42C2E48920041A4EF /* Assets.xcassets */; };
-		EC49DDF82C2E48920041A4EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC49DDF72C2E48920041A4EF /* Preview Assets.xcassets */; };
-		EC7B712F2C3A6D3E00C1CB01 /* LayoutDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B712E2C3A6D3E00C1CB01 /* LayoutDemoView.swift */; };
-		EC7B71312C3A71D700C1CB01 /* TwoColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B71302C3A71D700C1CB01 /* TwoColumnView.swift */; };
-		EC7B71332C3A780900C1CB01 /* ResponsiveLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B71322C3A780900C1CB01 /* ResponsiveLayoutView.swift */; };
+		EC9DC7192C40D74000ECB973 /* SwiftUIPersistenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7182C40D74000ECB973 /* SwiftUIPersistenceApp.swift */; };
+		EC9DC71B2C40D74000ECB973 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC71A2C40D74000ECB973 /* ContentView.swift */; };
+		EC9DC71D2C40D74300ECB973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC71C2C40D74300ECB973 /* Assets.xcassets */; };
+		EC9DC7202C40D74300ECB973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC71F2C40D74300ECB973 /* Preview Assets.xcassets */; };
+		EC9DC7272C40D89700ECB973 /* UserDefaultsExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7262C40D89700ECB973 /* UserDefaultsExampleView.swift */; };
+		EC9DC7292C40E15300ECB973 /* FileSystemExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7282C40E15300ECB973 /* FileSystemExampleView.swift */; };
+		EC9DC72B2C44B2B200ECB973 /* ObjectSerializationExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC72A2C44B2B200ECB973 /* ObjectSerializationExampleView.swift */; };
+		EC9DC72E2C44B50700ECB973 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = EC9DC72D2C44B50700ECB973 /* SQLite */; };
+		EC9DC7302C44B5EC00ECB973 /* SQLiteExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC72F2C44B5EC00ECB973 /* SQLiteExampleView.swift */; };
+		EC9DC7322C44B96A00ECB973 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7312C44B96A00ECB973 /* Article.swift */; };
+		EC9DC7342C44BA0C00ECB973 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC7332C44BA0C00ECB973 /* NewsView.swift */; };
+		EC9DC7372C44BA5300ECB973 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EC9DC7362C44BA5300ECB973 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC49DDED2C2E48900041A4EF /* SwiftUILayoutsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILayoutsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC49DDF02C2E48900041A4EF /* SwiftUILayoutsExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILayoutsExampleApp.swift; sourceTree = "<group>"; };
-		EC49DDF22C2E48900041A4EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EC49DDF42C2E48920041A4EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EC49DDF72C2E48920041A4EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EC7B712E2C3A6D3E00C1CB01 /* LayoutDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDemoView.swift; sourceTree = "<group>"; };
-		EC7B71302C3A71D700C1CB01 /* TwoColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnView.swift; sourceTree = "<group>"; };
-		EC7B71322C3A780900C1CB01 /* ResponsiveLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveLayoutView.swift; sourceTree = "<group>"; };
+		EC9DC7152C40D74000ECB973 /* SwiftUIPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9DC7182C40D74000ECB973 /* SwiftUIPersistenceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPersistenceApp.swift; sourceTree = "<group>"; };
+		EC9DC71A2C40D74000ECB973 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC9DC71C2C40D74300ECB973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC9DC71F2C40D74300ECB973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC9DC7262C40D89700ECB973 /* UserDefaultsExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExampleView.swift; sourceTree = "<group>"; };
+		EC9DC7282C40E15300ECB973 /* FileSystemExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemExampleView.swift; sourceTree = "<group>"; };
+		EC9DC72A2C44B2B200ECB973 /* ObjectSerializationExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectSerializationExampleView.swift; sourceTree = "<group>"; };
+		EC9DC72F2C44B5EC00ECB973 /* SQLiteExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteExampleView.swift; sourceTree = "<group>"; };
+		EC9DC7312C44B96A00ECB973 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		EC9DC7332C44BA0C00ECB973 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EC49DDEA2C2E48900041A4EF /* Frameworks */ = {
+		EC9DC7122C40D74000ECB973 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9DC72E2C44B50700ECB973 /* SQLite in Frameworks */,
+				EC9DC7372C44BA5300ECB973 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC49DDE42C2E48900041A4EF = {
+		EC9DC70C2C40D74000ECB973 = {
 			isa = PBXGroup;
 			children = (
-				EC49DDEF2C2E48900041A4EF /* SwiftUILayoutsExample */,
-				EC49DDEE2C2E48900041A4EF /* Products */,
+				EC9DC7172C40D74000ECB973 /* SwiftUIPersistence */,
+				EC9DC7162C40D74000ECB973 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EC49DDEE2C2E48900041A4EF /* Products */ = {
+		EC9DC7162C40D74000ECB973 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC49DDED2C2E48900041A4EF /* SwiftUILayoutsExample.app */,
+				EC9DC7152C40D74000ECB973 /* SwiftUIPersistence.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC49DDEF2C2E48900041A4EF /* SwiftUILayoutsExample */ = {
+		EC9DC7172C40D74000ECB973 /* SwiftUIPersistence */ = {
 			isa = PBXGroup;
 			children = (
-				EC49DDF02C2E48900041A4EF /* SwiftUILayoutsExampleApp.swift */,
-				EC49DDF22C2E48900041A4EF /* ContentView.swift */,
-				EC7B712E2C3A6D3E00C1CB01 /* LayoutDemoView.swift */,
-				EC7B71302C3A71D700C1CB01 /* TwoColumnView.swift */,
-				EC7B71322C3A780900C1CB01 /* ResponsiveLayoutView.swift */,
-				EC49DDF42C2E48920041A4EF /* Assets.xcassets */,
-				EC49DDF62C2E48920041A4EF /* Preview Content */,
+				EC9DC7182C40D74000ECB973 /* SwiftUIPersistenceApp.swift */,
+				EC9DC71A2C40D74000ECB973 /* ContentView.swift */,
+				EC9DC7262C40D89700ECB973 /* UserDefaultsExampleView.swift */,
+				EC9DC7282C40E15300ECB973 /* FileSystemExampleView.swift */,
+				EC9DC72A2C44B2B200ECB973 /* ObjectSerializationExampleView.swift */,
+				EC9DC72F2C44B5EC00ECB973 /* SQLiteExampleView.swift */,
+				EC9DC7312C44B96A00ECB973 /* Article.swift */,
+				EC9DC7332C44BA0C00ECB973 /* NewsView.swift */,
+				EC9DC71C2C40D74300ECB973 /* Assets.xcassets */,
+				EC9DC71E2C40D74300ECB973 /* Preview Content */,
 			);
-			path = SwiftUILayoutsExample;
+			path = SwiftUIPersistence;
 			sourceTree = "<group>";
 		};
-		EC49DDF62C2E48920041A4EF /* Preview Content */ = {
+		EC9DC71E2C40D74300ECB973 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				EC49DDF72C2E48920041A4EF /* Preview Assets.xcassets */,
+				EC9DC71F2C40D74300ECB973 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -79,39 +92,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC49DDEC2C2E48900041A4EF /* SwiftUILayoutsExample */ = {
+		EC9DC7142C40D74000ECB973 /* SwiftUIPersistence */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC49DDFB2C2E48920041A4EF /* Build configuration list for PBXNativeTarget "SwiftUILayoutsExample" */;
+			buildConfigurationList = EC9DC7232C40D74300ECB973 /* Build configuration list for PBXNativeTarget "SwiftUIPersistence" */;
 			buildPhases = (
-				EC49DDE92C2E48900041A4EF /* Sources */,
-				EC49DDEA2C2E48900041A4EF /* Frameworks */,
-				EC49DDEB2C2E48900041A4EF /* Resources */,
+				EC9DC7112C40D74000ECB973 /* Sources */,
+				EC9DC7122C40D74000ECB973 /* Frameworks */,
+				EC9DC7132C40D74000ECB973 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftUILayoutsExample;
-			productName = SwiftUILayoutsExample;
-			productReference = EC49DDED2C2E48900041A4EF /* SwiftUILayoutsExample.app */;
+			name = SwiftUIPersistence;
+			packageProductDependencies = (
+				EC9DC72D2C44B50700ECB973 /* SQLite */,
+				EC9DC7362C44BA5300ECB973 /* Alamofire */,
+			);
+			productName = SwiftUIPersistence;
+			productReference = EC9DC7152C40D74000ECB973 /* SwiftUIPersistence.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EC49DDE52C2E48900041A4EF /* Project object */ = {
+		EC9DC70D2C40D74000ECB973 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					EC49DDEC2C2E48900041A4EF = {
+					EC9DC7142C40D74000ECB973 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = EC49DDE82C2E48900041A4EF /* Build configuration list for PBXProject "SwiftUILayoutsExample" */;
+			buildConfigurationList = EC9DC7102C40D74000ECB973 /* Build configuration list for PBXProject "SwiftUIPersistence" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,45 +136,52 @@
 				en,
 				Base,
 			);
-			mainGroup = EC49DDE42C2E48900041A4EF;
-			productRefGroup = EC49DDEE2C2E48900041A4EF /* Products */;
+			mainGroup = EC9DC70C2C40D74000ECB973;
+			packageReferences = (
+				EC9DC72C2C44B50700ECB973 /* XCRemoteSwiftPackageReference "SQLite" */,
+				EC9DC7352C44BA5300ECB973 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = EC9DC7162C40D74000ECB973 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC49DDEC2C2E48900041A4EF /* SwiftUILayoutsExample */,
+				EC9DC7142C40D74000ECB973 /* SwiftUIPersistence */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EC49DDEB2C2E48900041A4EF /* Resources */ = {
+		EC9DC7132C40D74000ECB973 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC49DDF82C2E48920041A4EF /* Preview Assets.xcassets in Resources */,
-				EC49DDF52C2E48920041A4EF /* Assets.xcassets in Resources */,
+				EC9DC7202C40D74300ECB973 /* Preview Assets.xcassets in Resources */,
+				EC9DC71D2C40D74300ECB973 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EC49DDE92C2E48900041A4EF /* Sources */ = {
+		EC9DC7112C40D74000ECB973 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC49DDF32C2E48900041A4EF /* ContentView.swift in Sources */,
-				EC7B71312C3A71D700C1CB01 /* TwoColumnView.swift in Sources */,
-				EC49DDF12C2E48900041A4EF /* SwiftUILayoutsExampleApp.swift in Sources */,
-				EC7B71332C3A780900C1CB01 /* ResponsiveLayoutView.swift in Sources */,
-				EC7B712F2C3A6D3E00C1CB01 /* LayoutDemoView.swift in Sources */,
+				EC9DC7322C44B96A00ECB973 /* Article.swift in Sources */,
+				EC9DC7342C44BA0C00ECB973 /* NewsView.swift in Sources */,
+				EC9DC72B2C44B2B200ECB973 /* ObjectSerializationExampleView.swift in Sources */,
+				EC9DC7302C44B5EC00ECB973 /* SQLiteExampleView.swift in Sources */,
+				EC9DC71B2C40D74000ECB973 /* ContentView.swift in Sources */,
+				EC9DC7272C40D89700ECB973 /* UserDefaultsExampleView.swift in Sources */,
+				EC9DC7292C40E15300ECB973 /* FileSystemExampleView.swift in Sources */,
+				EC9DC7192C40D74000ECB973 /* SwiftUIPersistenceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EC49DDF92C2E48920041A4EF /* Debug */ = {
+		EC9DC7212C40D74300ECB973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -220,7 +244,7 @@
 			};
 			name = Debug;
 		};
-		EC49DDFA2C2E48920041A4EF /* Release */ = {
+		EC9DC7222C40D74300ECB973 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -276,14 +300,14 @@
 			};
 			name = Release;
 		};
-		EC49DDFC2C2E48920041A4EF /* Debug */ = {
+		EC9DC7242C40D74300ECB973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILayoutsExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPersistence/Preview Content\"";
 				DEVELOPMENT_TEAM = 635W7T767E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -297,7 +321,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUILayoutsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUIPersistence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,14 +329,14 @@
 			};
 			name = Debug;
 		};
-		EC49DDFD2C2E48920041A4EF /* Release */ = {
+		EC9DC7252C40D74300ECB973 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILayoutsExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPersistence/Preview Content\"";
 				DEVELOPMENT_TEAM = 635W7T767E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -326,7 +350,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUILayoutsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUIPersistence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -337,25 +361,57 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC49DDE82C2E48900041A4EF /* Build configuration list for PBXProject "SwiftUILayoutsExample" */ = {
+		EC9DC7102C40D74000ECB973 /* Build configuration list for PBXProject "SwiftUIPersistence" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC49DDF92C2E48920041A4EF /* Debug */,
-				EC49DDFA2C2E48920041A4EF /* Release */,
+				EC9DC7212C40D74300ECB973 /* Debug */,
+				EC9DC7222C40D74300ECB973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC49DDFB2C2E48920041A4EF /* Build configuration list for PBXNativeTarget "SwiftUILayoutsExample" */ = {
+		EC9DC7232C40D74300ECB973 /* Build configuration list for PBXNativeTarget "SwiftUIPersistence" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC49DDFC2C2E48920041A4EF /* Debug */,
-				EC49DDFD2C2E48920041A4EF /* Release */,
+				EC9DC7242C40D74300ECB973 /* Debug */,
+				EC9DC7252C40D74300ECB973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC9DC72C2C44B50700ECB973 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+		EC9DC7352C44BA5300ECB973 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC9DC72D2C44B50700ECB973 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC9DC72C2C44B50700ECB973 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+		EC9DC7362C44BA5300ECB973 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC9DC7352C44BA5300ECB973 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = EC49DDE52C2E48900041A4EF /* Project object */;
+	rootObject = EC9DC70D2C40D74000ECB973 /* Project object */;
 }
