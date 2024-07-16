@@ -300,8 +300,6 @@ struct ChildView: View {
             .cornerRadius(10)
         }
     }
-
-
 }
 
 #Preview {
@@ -637,6 +635,3 @@ struct ProductDetailView: View {
 
 > - 本专栏文档及配套代码的 GitHub 地址：[壹刀流的技术人生](https://github.com/IdEvEbI/idevebi.github.io)。
 > - 本文档配套项目名称：`SwiftUIMultiPageApp`。
-
-- **英文文件名**：swiftui-quick-start-part10-tabbar-multipage.md
-- **Git commit message**：Add article on SwiftUI TabBar and multipage applications in SwiftUI Learning Journal
