@@ -87,7 +87,7 @@ MyApp/
 
 ### 4.3 SwiftUI-Notes
 
-- 项目地址：[SwiftUI-Notes](https://github.com/maunsell/SwiftUI-Notes)
+- 项目地址：[SwiftUI-Notes](https://github.com/heckj/SwiftUI-Notes)
 - 说明：一个简单的笔记应用，展示了 SwiftUI 的基本用法和架构设计。
 
 ### 4.4 Fruta
