@@ -7,32 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC0738032C3299CF00DBA5CE /* SwiftUITabBarAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0738022C3299CF00DBA5CE /* SwiftUITabBarAppApp.swift */; };
-		EC0738052C3299CF00DBA5CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0738042C3299CF00DBA5CE /* ContentView.swift */; };
-		EC0738072C3299D200DBA5CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0738062C3299D200DBA5CE /* Assets.xcassets */; };
-		EC07380A2C3299D200DBA5CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0738092C3299D200DBA5CE /* Preview Assets.xcassets */; };
-		EC0738132C329A0200DBA5CE /* BasicTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0738122C329A0200DBA5CE /* BasicTabView.swift */; };
-		EC07381B2C32ACA100DBA5CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07381A2C32ACA100DBA5CE /* HomeView.swift */; };
-		EC07381D2C32ACBB00DBA5CE /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07381C2C32ACBB00DBA5CE /* SharedData.swift */; };
-		EC07381F2C32AD0A00DBA5CE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07381E2C32AD0A00DBA5CE /* SearchView.swift */; };
-		EC0738212C32AD3300DBA5CE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0738202C32AD3300DBA5CE /* SettingsView.swift */; };
+		EC9DC78D2C46048200ECB973 /* SwiftUIMultiPageAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC78C2C46048200ECB973 /* SwiftUIMultiPageAppApp.swift */; };
+		EC9DC78F2C46048200ECB973 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC78E2C46048200ECB973 /* ContentView.swift */; };
+		EC9DC7912C46048400ECB973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC7902C46048400ECB973 /* Assets.xcassets */; };
+		EC9DC7942C46048400ECB973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC7932C46048400ECB973 /* Preview Assets.xcassets */; };
+		EC9DC79B2C46051F00ECB973 /* SimpleTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC79A2C46051F00ECB973 /* SimpleTabBarView.swift */; };
+		EC9DC79D2C4605D200ECB973 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC79C2C4605D200ECB973 /* CustomTabBarView.swift */; };
+		EC9DC79F2C46087F00ECB973 /* CustomStyledTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC79E2C46087F00ECB973 /* CustomStyledTabView.swift */; };
+		ECC35B0A2C462CE800E38181 /* NavigableTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC35B092C462CE800E38181 /* NavigableTabBarView.swift */; };
+		ECC35B0C2C462E5000E38181 /* SharedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC35B0B2C462E5000E38181 /* SharedDataView.swift */; };
+		ECC35B0E2C462FB300E38181 /* LifecycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC35B0D2C462FB300E38181 /* LifecycleView.swift */; };
+		ECC35B102C46319300E38181 /* MultiPageAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC35B0F2C46319300E38181 /* MultiPageAppView.swift */; };
+		ECC35B122C4633BF00E38181 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC35B112C4633BF00E38181 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC0737FF2C3299CF00DBA5CE /* SwiftUITabBarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITabBarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC0738022C3299CF00DBA5CE /* SwiftUITabBarAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITabBarAppApp.swift; sourceTree = "<group>"; };
-		EC0738042C3299CF00DBA5CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EC0738062C3299D200DBA5CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EC0738092C3299D200DBA5CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EC0738122C329A0200DBA5CE /* BasicTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTabView.swift; sourceTree = "<group>"; };
-		EC07381A2C32ACA100DBA5CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		EC07381C2C32ACBB00DBA5CE /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
-		EC07381E2C32AD0A00DBA5CE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		EC0738202C32AD3300DBA5CE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		EC9DC7892C46048200ECB973 /* SwiftUIMultiPageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMultiPageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9DC78C2C46048200ECB973 /* SwiftUIMultiPageAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMultiPageAppApp.swift; sourceTree = "<group>"; };
+		EC9DC78E2C46048200ECB973 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC9DC7902C46048400ECB973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC9DC7932C46048400ECB973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC9DC79A2C46051F00ECB973 /* SimpleTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTabBarView.swift; sourceTree = "<group>"; };
+		EC9DC79C2C4605D200ECB973 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		EC9DC79E2C46087F00ECB973 /* CustomStyledTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyledTabView.swift; sourceTree = "<group>"; };
+		ECC35B092C462CE800E38181 /* NavigableTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigableTabBarView.swift; sourceTree = "<group>"; };
+		ECC35B0B2C462E5000E38181 /* SharedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDataView.swift; sourceTree = "<group>"; };
+		ECC35B0D2C462FB300E38181 /* LifecycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleView.swift; sourceTree = "<group>"; };
+		ECC35B0F2C46319300E38181 /* MultiPageAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPageAppView.swift; sourceTree = "<group>"; };
+		ECC35B112C4633BF00E38181 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EC0737FC2C3299CF00DBA5CE /* Frameworks */ = {
+		EC9DC7862C46048200ECB973 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,42 +48,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC0737F62C3299CF00DBA5CE = {
+		EC9DC7802C46048200ECB973 = {
 			isa = PBXGroup;
 			children = (
-				EC0738012C3299CF00DBA5CE /* SwiftUITabBarApp */,
-				EC0738002C3299CF00DBA5CE /* Products */,
+				EC9DC78B2C46048200ECB973 /* SwiftUIMultiPageApp */,
+				EC9DC78A2C46048200ECB973 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EC0738002C3299CF00DBA5CE /* Products */ = {
+		EC9DC78A2C46048200ECB973 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC0737FF2C3299CF00DBA5CE /* SwiftUITabBarApp.app */,
+				EC9DC7892C46048200ECB973 /* SwiftUIMultiPageApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC0738012C3299CF00DBA5CE /* SwiftUITabBarApp */ = {
+		EC9DC78B2C46048200ECB973 /* SwiftUIMultiPageApp */ = {
 			isa = PBXGroup;
 			children = (
-				EC0738022C3299CF00DBA5CE /* SwiftUITabBarAppApp.swift */,
-				EC0738042C3299CF00DBA5CE /* ContentView.swift */,
-				EC07381C2C32ACBB00DBA5CE /* SharedData.swift */,
-				EC07381A2C32ACA100DBA5CE /* HomeView.swift */,
-				EC07381E2C32AD0A00DBA5CE /* SearchView.swift */,
-				EC0738202C32AD3300DBA5CE /* SettingsView.swift */,
-				EC0738122C329A0200DBA5CE /* BasicTabView.swift */,
-				EC0738062C3299D200DBA5CE /* Assets.xcassets */,
-				EC0738082C3299D200DBA5CE /* Preview Content */,
+				EC9DC78C2C46048200ECB973 /* SwiftUIMultiPageAppApp.swift */,
+				EC9DC78E2C46048200ECB973 /* ContentView.swift */,
+				EC9DC79A2C46051F00ECB973 /* SimpleTabBarView.swift */,
+				EC9DC79C2C4605D200ECB973 /* CustomTabBarView.swift */,
+				EC9DC79E2C46087F00ECB973 /* CustomStyledTabView.swift */,
+				ECC35B092C462CE800E38181 /* NavigableTabBarView.swift */,
+				ECC35B0B2C462E5000E38181 /* SharedDataView.swift */,
+				ECC35B0D2C462FB300E38181 /* LifecycleView.swift */,
+				ECC35B112C4633BF00E38181 /* Product.swift */,
+				ECC35B0F2C46319300E38181 /* MultiPageAppView.swift */,
+				EC9DC7902C46048400ECB973 /* Assets.xcassets */,
+				EC9DC7922C46048400ECB973 /* Preview Content */,
 			);
-			path = SwiftUITabBarApp;
+			path = SwiftUIMultiPageApp;
 			sourceTree = "<group>";
 		};
-		EC0738082C3299D200DBA5CE /* Preview Content */ = {
+		EC9DC7922C46048400ECB973 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				EC0738092C3299D200DBA5CE /* Preview Assets.xcassets */,
+				EC9DC7932C46048400ECB973 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -85,39 +94,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC0737FE2C3299CF00DBA5CE /* SwiftUITabBarApp */ = {
+		EC9DC7882C46048200ECB973 /* SwiftUIMultiPageApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC07380D2C3299D200DBA5CE /* Build configuration list for PBXNativeTarget "SwiftUITabBarApp" */;
+			buildConfigurationList = EC9DC7972C46048400ECB973 /* Build configuration list for PBXNativeTarget "SwiftUIMultiPageApp" */;
 			buildPhases = (
-				EC0737FB2C3299CF00DBA5CE /* Sources */,
-				EC0737FC2C3299CF00DBA5CE /* Frameworks */,
-				EC0737FD2C3299CF00DBA5CE /* Resources */,
+				EC9DC7852C46048200ECB973 /* Sources */,
+				EC9DC7862C46048200ECB973 /* Frameworks */,
+				EC9DC7872C46048200ECB973 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftUITabBarApp;
-			productName = SwiftUITabBarApp;
-			productReference = EC0737FF2C3299CF00DBA5CE /* SwiftUITabBarApp.app */;
+			name = SwiftUIMultiPageApp;
+			productName = SwiftUIMultiPageApp;
+			productReference = EC9DC7892C46048200ECB973 /* SwiftUIMultiPageApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EC0737F72C3299CF00DBA5CE /* Project object */ = {
+		EC9DC7812C46048200ECB973 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					EC0737FE2C3299CF00DBA5CE = {
+					EC9DC7882C46048200ECB973 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = EC0737FA2C3299CF00DBA5CE /* Build configuration list for PBXProject "SwiftUITabBarApp" */;
+			buildConfigurationList = EC9DC7842C46048200ECB973 /* Build configuration list for PBXProject "SwiftUIMultiPageApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -125,47 +134,50 @@
 				en,
 				Base,
 			);
-			mainGroup = EC0737F62C3299CF00DBA5CE;
-			productRefGroup = EC0738002C3299CF00DBA5CE /* Products */;
+			mainGroup = EC9DC7802C46048200ECB973;
+			productRefGroup = EC9DC78A2C46048200ECB973 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC0737FE2C3299CF00DBA5CE /* SwiftUITabBarApp */,
+				EC9DC7882C46048200ECB973 /* SwiftUIMultiPageApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EC0737FD2C3299CF00DBA5CE /* Resources */ = {
+		EC9DC7872C46048200ECB973 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC07380A2C3299D200DBA5CE /* Preview Assets.xcassets in Resources */,
-				EC0738072C3299D200DBA5CE /* Assets.xcassets in Resources */,
+				EC9DC7942C46048400ECB973 /* Preview Assets.xcassets in Resources */,
+				EC9DC7912C46048400ECB973 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EC0737FB2C3299CF00DBA5CE /* Sources */ = {
+		EC9DC7852C46048200ECB973 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC0738212C32AD3300DBA5CE /* SettingsView.swift in Sources */,
-				EC0738132C329A0200DBA5CE /* BasicTabView.swift in Sources */,
-				EC07381B2C32ACA100DBA5CE /* HomeView.swift in Sources */,
-				EC0738052C3299CF00DBA5CE /* ContentView.swift in Sources */,
-				EC07381D2C32ACBB00DBA5CE /* SharedData.swift in Sources */,
-				EC07381F2C32AD0A00DBA5CE /* SearchView.swift in Sources */,
-				EC0738032C3299CF00DBA5CE /* SwiftUITabBarAppApp.swift in Sources */,
+				ECC35B102C46319300E38181 /* MultiPageAppView.swift in Sources */,
+				ECC35B0A2C462CE800E38181 /* NavigableTabBarView.swift in Sources */,
+				ECC35B0E2C462FB300E38181 /* LifecycleView.swift in Sources */,
+				EC9DC78F2C46048200ECB973 /* ContentView.swift in Sources */,
+				EC9DC79F2C46087F00ECB973 /* CustomStyledTabView.swift in Sources */,
+				ECC35B0C2C462E5000E38181 /* SharedDataView.swift in Sources */,
+				EC9DC79B2C46051F00ECB973 /* SimpleTabBarView.swift in Sources */,
+				ECC35B122C4633BF00E38181 /* Product.swift in Sources */,
+				EC9DC78D2C46048200ECB973 /* SwiftUIMultiPageAppApp.swift in Sources */,
+				EC9DC79D2C4605D200ECB973 /* CustomTabBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EC07380B2C3299D200DBA5CE /* Debug */ = {
+		EC9DC7952C46048400ECB973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +240,7 @@
 			};
 			name = Debug;
 		};
-		EC07380C2C3299D200DBA5CE /* Release */ = {
+		EC9DC7962C46048400ECB973 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,14 +296,14 @@
 			};
 			name = Release;
 		};
-		EC07380E2C3299D200DBA5CE /* Debug */ = {
+		EC9DC7982C46048400ECB973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUITabBarApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMultiPageApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 635W7T767E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -305,7 +317,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUITabBarApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUIMultiPageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -313,14 +325,14 @@
 			};
 			name = Debug;
 		};
-		EC07380F2C3299D200DBA5CE /* Release */ = {
+		EC9DC7992C46048400ECB973 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUITabBarApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMultiPageApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 635W7T767E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -334,7 +346,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUITabBarApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUIMultiPageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -345,25 +357,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC0737FA2C3299CF00DBA5CE /* Build configuration list for PBXProject "SwiftUITabBarApp" */ = {
+		EC9DC7842C46048200ECB973 /* Build configuration list for PBXProject "SwiftUIMultiPageApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC07380B2C3299D200DBA5CE /* Debug */,
-				EC07380C2C3299D200DBA5CE /* Release */,
+				EC9DC7952C46048400ECB973 /* Debug */,
+				EC9DC7962C46048400ECB973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC07380D2C3299D200DBA5CE /* Build configuration list for PBXNativeTarget "SwiftUITabBarApp" */ = {
+		EC9DC7972C46048400ECB973 /* Build configuration list for PBXNativeTarget "SwiftUIMultiPageApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC07380E2C3299D200DBA5CE /* Debug */,
-				EC07380F2C3299D200DBA5CE /* Release */,
+				EC9DC7982C46048400ECB973 /* Debug */,
+				EC9DC7992C46048400ECB973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EC0737F72C3299CF00DBA5CE /* Project object */;
+	rootObject = EC9DC7812C46048200ECB973 /* Project object */;
 }

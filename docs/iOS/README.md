@@ -24,7 +24,7 @@
 7. [网络请求和数据处理与知心天气案例](./swiftui/swiftui-quick-start-part7-networking-data-processing.md)
 8. [数据持久化与新闻列表缓存案例](./swiftui/swiftui-quick-start-part8-data-persistence.md)
 9. [列表和导航与购物车案例](./swiftui/swiftui-quick-start-part9-list-and-navigation.md)
-10. [TabBar 与多页面应用](./swiftui/swiftui-quick-start-part7-tabbar-and-multi-page-app.md)
+10. [TabBar 与多页面应用](./swiftui/swiftui-quick-start-part10-tabbar-multipage.md)
 
 ## 其他
 
