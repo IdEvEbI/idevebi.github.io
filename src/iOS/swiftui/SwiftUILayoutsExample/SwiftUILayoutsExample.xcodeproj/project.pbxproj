@@ -7,24 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC9DC6FD2C3FC89000ECB973 /* SwiftUIPersistenceExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC6FC2C3FC89000ECB973 /* SwiftUIPersistenceExampleApp.swift */; };
-		EC9DC6FF2C3FC89000ECB973 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC6FE2C3FC89000ECB973 /* ContentView.swift */; };
-		EC9DC7012C3FC89200ECB973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC7002C3FC89200ECB973 /* Assets.xcassets */; };
-		EC9DC7042C3FC89200ECB973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC7032C3FC89200ECB973 /* Preview Assets.xcassets */; };
-		EC9DC70B2C3FC95B00ECB973 /* UserDefaultsExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC70A2C3FC95B00ECB973 /* UserDefaultsExampleView.swift */; };
+		EC9DC76D2C46009100ECB973 /* SwiftUILayoutsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC76C2C46009100ECB973 /* SwiftUILayoutsExampleApp.swift */; };
+		EC9DC76F2C46009100ECB973 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC76E2C46009100ECB973 /* ContentView.swift */; };
+		EC9DC7712C46009300ECB973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC7702C46009300ECB973 /* Assets.xcassets */; };
+		EC9DC7742C46009300ECB973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9DC7732C46009300ECB973 /* Preview Assets.xcassets */; };
+		EC9DC77B2C46010800ECB973 /* LayoutDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC77A2C46010800ECB973 /* LayoutDemoView.swift */; };
+		EC9DC77D2C46014000ECB973 /* TwoColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC77C2C46014000ECB973 /* TwoColumnView.swift */; };
+		EC9DC77F2C46021100ECB973 /* ResponsiveLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DC77E2C46021100ECB973 /* ResponsiveLayoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC9DC6F92C3FC89000ECB973 /* SwiftUIPersistenceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPersistenceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC9DC6FC2C3FC89000ECB973 /* SwiftUIPersistenceExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPersistenceExampleApp.swift; sourceTree = "<group>"; };
-		EC9DC6FE2C3FC89000ECB973 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EC9DC7002C3FC89200ECB973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EC9DC7032C3FC89200ECB973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EC9DC70A2C3FC95B00ECB973 /* UserDefaultsExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExampleView.swift; sourceTree = "<group>"; };
+		EC9DC7692C46009100ECB973 /* SwiftUILayoutsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILayoutsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9DC76C2C46009100ECB973 /* SwiftUILayoutsExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILayoutsExampleApp.swift; sourceTree = "<group>"; };
+		EC9DC76E2C46009100ECB973 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC9DC7702C46009300ECB973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC9DC7732C46009300ECB973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC9DC77A2C46010800ECB973 /* LayoutDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDemoView.swift; sourceTree = "<group>"; };
+		EC9DC77C2C46014000ECB973 /* TwoColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnView.swift; sourceTree = "<group>"; };
+		EC9DC77E2C46021100ECB973 /* ResponsiveLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveLayoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EC9DC6F62C3FC89000ECB973 /* Frameworks */ = {
+		EC9DC7662C46009100ECB973 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,38 +38,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC9DC6F02C3FC89000ECB973 = {
+		EC9DC7602C46009100ECB973 = {
 			isa = PBXGroup;
 			children = (
-				EC9DC6FB2C3FC89000ECB973 /* SwiftUIPersistenceExample */,
-				EC9DC6FA2C3FC89000ECB973 /* Products */,
+				EC9DC76B2C46009100ECB973 /* SwiftUILayoutsExample */,
+				EC9DC76A2C46009100ECB973 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EC9DC6FA2C3FC89000ECB973 /* Products */ = {
+		EC9DC76A2C46009100ECB973 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC9DC6F92C3FC89000ECB973 /* SwiftUIPersistenceExample.app */,
+				EC9DC7692C46009100ECB973 /* SwiftUILayoutsExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC9DC6FB2C3FC89000ECB973 /* SwiftUIPersistenceExample */ = {
+		EC9DC76B2C46009100ECB973 /* SwiftUILayoutsExample */ = {
 			isa = PBXGroup;
 			children = (
-				EC9DC6FC2C3FC89000ECB973 /* SwiftUIPersistenceExampleApp.swift */,
-				EC9DC6FE2C3FC89000ECB973 /* ContentView.swift */,
-				EC9DC70A2C3FC95B00ECB973 /* UserDefaultsExampleView.swift */,
-				EC9DC7002C3FC89200ECB973 /* Assets.xcassets */,
-				EC9DC7022C3FC89200ECB973 /* Preview Content */,
+				EC9DC76C2C46009100ECB973 /* SwiftUILayoutsExampleApp.swift */,
+				EC9DC76E2C46009100ECB973 /* ContentView.swift */,
+				EC9DC77A2C46010800ECB973 /* LayoutDemoView.swift */,
+				EC9DC77C2C46014000ECB973 /* TwoColumnView.swift */,
+				EC9DC77E2C46021100ECB973 /* ResponsiveLayoutView.swift */,
+				EC9DC7702C46009300ECB973 /* Assets.xcassets */,
+				EC9DC7722C46009300ECB973 /* Preview Content */,
 			);
-			path = SwiftUIPersistenceExample;
+			path = SwiftUILayoutsExample;
 			sourceTree = "<group>";
 		};
-		EC9DC7022C3FC89200ECB973 /* Preview Content */ = {
+		EC9DC7722C46009300ECB973 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				EC9DC7032C3FC89200ECB973 /* Preview Assets.xcassets */,
+				EC9DC7732C46009300ECB973 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -73,39 +79,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC9DC6F82C3FC89000ECB973 /* SwiftUIPersistenceExample */ = {
+		EC9DC7682C46009100ECB973 /* SwiftUILayoutsExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC9DC7072C3FC89200ECB973 /* Build configuration list for PBXNativeTarget "SwiftUIPersistenceExample" */;
+			buildConfigurationList = EC9DC7772C46009300ECB973 /* Build configuration list for PBXNativeTarget "SwiftUILayoutsExample" */;
 			buildPhases = (
-				EC9DC6F52C3FC89000ECB973 /* Sources */,
-				EC9DC6F62C3FC89000ECB973 /* Frameworks */,
-				EC9DC6F72C3FC89000ECB973 /* Resources */,
+				EC9DC7652C46009100ECB973 /* Sources */,
+				EC9DC7662C46009100ECB973 /* Frameworks */,
+				EC9DC7672C46009100ECB973 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftUIPersistenceExample;
-			productName = SwiftUIPersistenceExample;
-			productReference = EC9DC6F92C3FC89000ECB973 /* SwiftUIPersistenceExample.app */;
+			name = SwiftUILayoutsExample;
+			productName = SwiftUILayoutsExample;
+			productReference = EC9DC7692C46009100ECB973 /* SwiftUILayoutsExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EC9DC6F12C3FC89000ECB973 /* Project object */ = {
+		EC9DC7612C46009100ECB973 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					EC9DC6F82C3FC89000ECB973 = {
+					EC9DC7682C46009100ECB973 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = EC9DC6F42C3FC89000ECB973 /* Build configuration list for PBXProject "SwiftUIPersistenceExample" */;
+			buildConfigurationList = EC9DC7642C46009100ECB973 /* Build configuration list for PBXProject "SwiftUILayoutsExample" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,43 +119,45 @@
 				en,
 				Base,
 			);
-			mainGroup = EC9DC6F02C3FC89000ECB973;
-			productRefGroup = EC9DC6FA2C3FC89000ECB973 /* Products */;
+			mainGroup = EC9DC7602C46009100ECB973;
+			productRefGroup = EC9DC76A2C46009100ECB973 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC9DC6F82C3FC89000ECB973 /* SwiftUIPersistenceExample */,
+				EC9DC7682C46009100ECB973 /* SwiftUILayoutsExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EC9DC6F72C3FC89000ECB973 /* Resources */ = {
+		EC9DC7672C46009100ECB973 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC9DC7042C3FC89200ECB973 /* Preview Assets.xcassets in Resources */,
-				EC9DC7012C3FC89200ECB973 /* Assets.xcassets in Resources */,
+				EC9DC7742C46009300ECB973 /* Preview Assets.xcassets in Resources */,
+				EC9DC7712C46009300ECB973 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EC9DC6F52C3FC89000ECB973 /* Sources */ = {
+		EC9DC7652C46009100ECB973 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC9DC6FF2C3FC89000ECB973 /* ContentView.swift in Sources */,
-				EC9DC70B2C3FC95B00ECB973 /* UserDefaultsExampleView.swift in Sources */,
-				EC9DC6FD2C3FC89000ECB973 /* SwiftUIPersistenceExampleApp.swift in Sources */,
+				EC9DC77F2C46021100ECB973 /* ResponsiveLayoutView.swift in Sources */,
+				EC9DC77B2C46010800ECB973 /* LayoutDemoView.swift in Sources */,
+				EC9DC77D2C46014000ECB973 /* TwoColumnView.swift in Sources */,
+				EC9DC76F2C46009100ECB973 /* ContentView.swift in Sources */,
+				EC9DC76D2C46009100ECB973 /* SwiftUILayoutsExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EC9DC7052C3FC89200ECB973 /* Debug */ = {
+		EC9DC7752C46009300ECB973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		EC9DC7062C3FC89200ECB973 /* Release */ = {
+		EC9DC7762C46009300ECB973 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,14 +276,14 @@
 			};
 			name = Release;
 		};
-		EC9DC7082C3FC89200ECB973 /* Debug */ = {
+		EC9DC7782C46009300ECB973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPersistenceExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILayoutsExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 635W7T767E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -289,7 +297,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUIPersistenceExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUILayoutsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -297,14 +305,14 @@
 			};
 			name = Debug;
 		};
-		EC9DC7092C3FC89200ECB973 /* Release */ = {
+		EC9DC7792C46009300ECB973 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPersistenceExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILayoutsExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 635W7T767E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -318,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUIPersistenceExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idevebi.SwiftUILayoutsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -329,25 +337,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC9DC6F42C3FC89000ECB973 /* Build configuration list for PBXProject "SwiftUIPersistenceExample" */ = {
+		EC9DC7642C46009100ECB973 /* Build configuration list for PBXProject "SwiftUILayoutsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC9DC7052C3FC89200ECB973 /* Debug */,
-				EC9DC7062C3FC89200ECB973 /* Release */,
+				EC9DC7752C46009300ECB973 /* Debug */,
+				EC9DC7762C46009300ECB973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC9DC7072C3FC89200ECB973 /* Build configuration list for PBXNativeTarget "SwiftUIPersistenceExample" */ = {
+		EC9DC7772C46009300ECB973 /* Build configuration list for PBXNativeTarget "SwiftUILayoutsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC9DC7082C3FC89200ECB973 /* Debug */,
-				EC9DC7092C3FC89200ECB973 /* Release */,
+				EC9DC7782C46009300ECB973 /* Debug */,
+				EC9DC7792C46009300ECB973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EC9DC6F12C3FC89000ECB973 /* Project object */;
+	rootObject = EC9DC7612C46009100ECB973 /* Project object */;
 }
