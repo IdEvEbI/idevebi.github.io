@@ -542,6 +542,3 @@ HTML5 提供了一些新的标签，用于更好地定义文档结构和语义�
 > - **HTML 标签参考手册**：[HTML 标签参考手册](https://www.runoob.com/tags/html-reference.html)。
 
 **提示**：不建议死记硬背标签，用多了就记住了，想不起来可以随时查手册。
-
-- 英文文件名：exploring-html.md
-- Git commit message：Add article on exploring HTML in Frontend Learning Journal
