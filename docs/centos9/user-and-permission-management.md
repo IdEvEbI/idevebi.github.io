@@ -2,7 +2,7 @@
 
 ## 1. 引言
 
-欢迎来到《CentOS 9 实战之九阳神功》专栏的第 3 篇文章。在这里，我们将探讨 CentOS 9 中的用户和权限管理。用户和权限管理是系统安全和资源控制的重要组成部分。通过学习本篇文章，你将了解如何创建和管理用户、组，以及如何设置文件和目录的权限，确保系统的安全和高效运行。
+欢迎来到《CentOS 9 实战之九阳神功》专栏的第 3 篇文章。在这里，我们将探讨 CentOS 9 中的**用户和权限管理**。用户和权限管理是系统安全和资源控制的重要组成部分。通过学习本篇文章，你将了解如何创建和管理用户、组，以及如何设置文件和目录的权限，确保系统的安全和高效运行。
 
 ## 2. 用户管理
 
@@ -154,7 +154,7 @@ ls -l /path/to/file_or_directory
 - `Jun  1 12:34`：最后修改时间
 - `filename`：文件名
 
-### 4.2 扩展：创建硬链接和软链接
+### 4.2 创建硬链接和软链接
 
 硬链接和软链接（符号链接）是 Unix 文件系统的基本特性，用于创建文件的引用。
 
@@ -237,7 +237,48 @@ su -
 su username
 ```
 
-### 5.3 groups
+### 5.3 配置 sudo 权限
+
+在使用 `sudo` 命令时，如果遇到以下错误信息：
+
+```bash
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+xxx is not in the sudoers file.  This incident will be reported.
+```
+
+这是因为当前用户不在 `sudoers` 文件中。要解决这个问题，可以使用以下步骤：
+
+#### 切换到 root 用户
+
+```sh
+su -
+```
+
+#### 编辑 sudoers 文件
+
+使用 `visudo` 命令编辑 `/etc/sudoers` 文件：
+
+```sh
+visudo
+```
+
+在文件中找到如下行，并添加需要 sudo 权限的用户：
+
+```sh
+## Allow root to run any commands anywhere
+root    ALL=(ALL)       ALL
+yourusername  ALL=(ALL)       ALL
+```
+
+保存并退出编辑器。现在你应该可以使用 `sudo` 命令了。
+
+### 5.4 groups
 
 `groups` 命令用于显示用户所属的组。
 
@@ -251,4 +292,4 @@ groups username
 
 ## 6. 总结
 
-在这篇文章中，我们介绍了 CentOS 9 的用户和权限管理，包括用户和组的创建、修改和删除，`/etc/passwd` 和 `/etc/group` 文件的介绍，以及文件和目录的权限设置。我们还扩展了硬链接和软链接的创建和使用。通过掌握这些知识，你可以更好地控制和管理系统的用户和资源。在接下来的文章中，我们将深入探讨 **软件包管理与系统更新**，敬请期待。
+在这篇文章中，我们介绍了 CentOS 9 的用户和权限管理，包括用户和组的创建、修改和删除，`/etc/passwd` 和 `/etc/group` 文件的介绍，以及文件和目录的权限设置。我们还扩展了硬链接和软链接的创建和使用，并提供了解决 `sudo` 命令权限问题的方法。通过掌握这些知识，你可以更好地控制和管理系统的用户和资源。在接下来的文章中，我们将深入探讨 **软件包管理与系统更新**，敬请期待。
