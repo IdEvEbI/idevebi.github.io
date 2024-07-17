@@ -8,3 +8,4 @@
 4. [CentOS 9 实战（4）：软件包管理与系统更新](./package-management-and-system-updates.md)
 5. [CentOS 9 实战（5）：服务管理与 systemd](./service-management-and-systemd.md)
 6. [CentOS 9 实战（6）：文件系统管理与磁盘配额](./file-system-management-and-disk-quota.md)
+7. [CentOS 9 实战（7）：网络配置与管理](./network-configuration-and-management.md)
