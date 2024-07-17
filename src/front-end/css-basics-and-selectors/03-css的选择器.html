@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 的选择器</title>
+  <style>
+    /* 元素选择器 */
+    p {
+      color: green;
+    }
+
+    /* 类选择器 */
+    .highlight {
+      background-color: yellow;
+    }
+
+    /* ID 选择器 */
+    #header {
+      background-color: gray;
+    }
+
+    /* 属性选择器 */
+    a[target="_blank"] {
+      color: red;
+    }
+
+    /* 伪类选择器 */
+    a:hover {
+      color: orange;
+    }
+
+    /* 后代选择器 */
+    div p {
+      color: blue;
+    }
+
+    /* 子选择器 */
+    ul>li {
+      list-style-type: none;
+      color: orange;
+    }
+
+    /* 相邻兄弟选择器 */
+    h1+p {
+      color: pink;
+    }
+
+    /* 并集选择器 */
+    h1,
+    h2,
+    h3 {
+      color: purple;
+    }
+
+    /* 通用选择器 */
+    /* * {
+      margin: 0;
+      padding: 0;
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- 元素选择器示例 -->
+  <p>这是一个段落。</p>
+  <!-- 类选择器示例 -->
+  <p class="highlight">这是一个高亮段落的类选择器示例。</p>
+  <!-- ID 选择器示例 -->
+  <div id="header">这是一个 ID 选择器示例。</div>
+  <!-- 属性选择器示例 -->
+  <a href="https://www.example.com" target="_blank">这是一个属性选择器示例。</a>
+  <!-- 伪类选择器示例 -->
+  <a href="https://www.example.com">这是一个伪类选择器示例。</a>
+  <!-- 后代选择器示例 -->
+  <div>
+    <p>这是一个后代选择器示例。</p>
+  </div>
+  <!-- 子选择器示例 -->
+  <ul>
+    <li>这是第 1 个子选择器示例。</li>
+    <li>这是第 2 个子选择器示例。</li>
+    <li>这是第 3 个子选择器示例。</li>
+  </ul>
+  <!-- 相邻兄弟选择器示例 -->
+  <h1>标题</h1>
+  <p>这是一个相邻兄弟选择器示例。</p>
+  <p>隔了一个就不是相邻兄弟元素了。</p>
+  <!-- 并集选择器示例 -->
+  <h1>一级标题</h1>
+  <h2>二级标题</h2>
+  <h3>三级标题</h3>
+</body>
+
+</html>
