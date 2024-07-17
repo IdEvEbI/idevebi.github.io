@@ -5,6 +5,7 @@
 1. [前端学习日志](./docs/front-end/README.md)
 2. [SwiftUI 学习日志](./docs/iOS/README.md)
 
-## 工具篇
+## 系统工具篇
 
 1. [Git 实战之九阴真经](./docs/git/README.md)
+2. [CentOS 9 实战之九阳神功](./docs/centos9/README.md)
