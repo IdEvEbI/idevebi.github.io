@@ -9,3 +9,4 @@
 5. [CentOS 9 实战（5）：服务管理与 systemd](./service-management-and-systemd.md)
 6. [CentOS 9 实战（6）：文件系统管理与磁盘配额](./file-system-management-and-disk-quota.md)
 7. [CentOS 9 实战（7）：网络配置与管理](./network-configuration-and-management.md)
+8. [# CentOS 9 实战（8）：系统监控与性能优化](./system-monitoring-and-performance-optimization.md)
