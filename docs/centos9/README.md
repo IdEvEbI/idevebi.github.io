@@ -5,3 +5,4 @@
 1. [CentOS 9 实战（1）：系统简介与安装](./system-introduction-and-installation.md)
 2. [CentOS 9 实战（2）：系统配置与基础命令](./system-configuration-and-basic-commands.md)
 3. [CentOS 9 实战（3）：用户和权限管理](./user-and-permission-management.md)
+4. [CentOS 9 实战（4）：软件包管理与系统更新](./package-management-and-system-updates.md)
