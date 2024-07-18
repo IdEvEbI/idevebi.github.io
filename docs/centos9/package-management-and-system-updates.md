@@ -78,10 +78,10 @@ dnf list installed
 
 ```sh
 # 安装 EPEL 仓库
-sudo dnf install epel-release
+sudo dnf install -y epel-release
 
 # 更新仓库元数据
-sudo dnf update
+sudo dnf update -y
 ```
 
 ### 2.2 安装 EPEL 软件包
