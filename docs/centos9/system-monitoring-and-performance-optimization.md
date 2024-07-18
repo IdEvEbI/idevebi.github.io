@@ -32,7 +32,7 @@ top
 
 ```sh
 # 安装 htop
-sudo dnf install htop
+sudo dnf install -y htop
 ```
 
 #### 使用 htop 查看系统性能
@@ -74,7 +74,7 @@ vmstat 2 5
 
 ```sh
 # 安装 sysstat
-sudo dnf install sysstat
+sudo dnf install -y sysstat
 ```
 
 #### 查看 I/O 统计信息
@@ -155,7 +155,7 @@ sudo sync; echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 ```sh
 # 安装 iotop
-sudo dnf install iotop
+sudo dnf install -y iotop
 ```
 
 #### 查看磁盘 I/O
