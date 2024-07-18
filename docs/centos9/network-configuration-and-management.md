@@ -184,7 +184,7 @@ netstat -r
 
 ```sh
 # 安装 traceroute
-sudo dnf install traceroute
+sudo dnf install -y traceroute
 ```
 
 #### 跟踪路由路径

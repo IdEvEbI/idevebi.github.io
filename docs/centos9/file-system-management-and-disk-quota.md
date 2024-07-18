@@ -90,7 +90,7 @@ du -sh /mnt/data
 
 ```sh
 # 安装 quota 工具
-sudo dnf install quota
+sudo dnf install -y quota
 ```
 
 ### 2.2 启用磁盘配额
