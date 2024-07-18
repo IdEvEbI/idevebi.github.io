@@ -1,16 +1,14 @@
 # CentOS 9 实战（2）：系统配置与基础命令
 
-## 1. 引言
+欢迎来到《CentOS 9 实战速查手册》专栏的第 2 篇文章。在这里，我们将继续深入学习 **CentOS 9**，了解系统配置和一些常用的基础命令。这些知识将帮助你更好地管理和操作 **CentOS** 系统，无论你是刚接触 **Linux** 的新手，还是已经有一些经验的系统管理员，这篇文章将为你提供实用的指导。
 
-欢迎来到《CentOS 9 实战之九阳神功》专栏的第 2 篇文章。在这里，我们将继续深入学习 CentOS 9，了解系统配置和一些常用的基础命令。这些知识将帮助你更好地管理和操作 CentOS 系统，无论你是刚接触 Linux 的新手，还是已经有一些经验的系统管理员，希望这篇文章能为你提供实用的指导。
+## 1. 系统配置
 
-## 2. 系统配置
+在完成 **CentOS 9** 的安装后，进行一些基础的系统配置是非常重要的。这包括网络配置、主机名设置、时间和日期配置等。
 
-在完成 CentOS 9 的安装后，进行一些基础的系统配置是非常重要的。这包括网络配置、主机名设置、时间和日期配置等。
+### 1.1 网络配置
 
-### 2.1 网络配置
-
-使用 `nmcli` 工具来配置网络连接。`nmcli` 是 NetworkManager 的命令行接口，允许你从终端管理网络连接。
+使用 **`nmcli`** 工具来配置网络连接。**`nmcli`** 是 **NetworkManager** 的命令行接口，允许你从终端管理网络连接。
 
 ```sh
 # 查看当前网络连接状态
@@ -24,9 +22,9 @@ nmcli con mod "System eth0" ipv4.method manual  # 设置为手动 IP 配置模�
 nmcli con up "System eth0"  # 启动网络连接
 ```
 
-### 2.2 设置主机名
+### 1.2 设置主机名
 
-使用 `hostnamectl` 命令来设置主机名：
+使用 **`hostnamectl`** 命令来设置主机名：
 
 ```sh
 # 查看当前主机名
@@ -36,9 +34,9 @@ hostnamectl status
 sudo hostnamectl set-hostname new-hostname
 ```
 
-### 2.3 配置时间和日期
+### 1.3 配置时间和日期
 
-使用 `timedatectl` 命令来配置时间和日期：
+使用 **`timedatectl`** 命令来配置时间和日期：
 
 ```sh
 # 查看当前时间和日期设置
@@ -51,11 +49,11 @@ sudo timedatectl set-timezone Asia/Shanghai
 sudo timedatectl set-ntp true
 ```
 
-## 3. 基础命令
+## 2. 基础命令
 
-掌握一些基础命令对于管理和操作 CentOS 系统至关重要。下面是一些常用的基础命令：
+掌握一些基础命令对于管理和操作 **CentOS** 系统至关重要。下面是一些常用的基础命令：
 
-### 3.1 文件和目录操作
+### 2.1 文件和目录操作
 
 ```sh
 # 列出目录内容
@@ -74,7 +72,7 @@ cp -r /path/to/source /path/to/destination
 mv /path/to/source /path/to/destination
 ```
 
-### 3.2 文件权限管理
+### 2.2 文件权限管理
 
 ```sh
 # 修改文件权限
@@ -87,7 +85,7 @@ sudo chown user:group /path/to/file
 ls -l /path/to/file
 ```
 
-### 3.3 系统信息查看
+### 2.3 系统信息查看
 
 ```sh
 # 查看系统内存使用情况
@@ -106,7 +104,7 @@ ps aux
 uptime
 ```
 
-### 3.4 软件包管理
+### 2.4 软件包管理
 
 ```sh
 # 安装软件包
@@ -122,13 +120,13 @@ sudo dnf remove package_name
 dnf search package_name
 ```
 
-## 4. 实用工具
+## 3. 实用工具
 
-以下是一些在日常管理 CentOS 系统中非常有用的工具：
+以下是一些在日常管理 **CentOS** 系统中非常有用的工具：
 
-### 4.1 vim 编辑器
+### 3.1 vim 编辑器
 
-`vim` 是一个强大的文本编辑器，适用于编辑配置文件和脚本：
+**`vim`** 是一个强大的文本编辑器，适用于编辑配置文件和脚本：
 
 ```sh
 # 安装 vim
@@ -138,9 +136,9 @@ sudo dnf install -y vim
 vim /path/to/file
 ```
 
-### 4.2 wget 和 curl
+### 3.2 wget 和 curl
 
-这两个工具用于从命令行下载文件和进行 HTTP 请求：
+这两个工具用于从命令行下载文件和进行 **HTTP 请求**：
 
 ```sh
 # 安装 wget 和 curl
@@ -153,9 +151,9 @@ wget http://example.com/file
 curl -O http://example.com/file
 ```
 
-### 4.3 git
+### 3.3 git
 
-`git` 是一个流行的版本控制系统，用于管理代码和项目：
+**`git`** 是一个流行的版本控制系统，用于管理代码和项目：
 
 ```sh
 # 安装 git
@@ -165,9 +163,9 @@ sudo dnf install -y git
 git clone https://github.com/user/repository.git
 ```
 
-### 4.4 net-tools
+### 3.4 net-tools
 
-`net-tools` 包含一组基本的网络命令，用于网络配置和故障排除。常用的命令包括 `ifconfig`、`netstat`、`route` 和 `arp`。
+**`net-tools`** 包含一组基本的网络命令，用于网络配置和故障排除。常用的命令包括 **`ifconfig`**、**`netstat`**、**`route`** 和 **`arp`**。
 
 ```sh
 # 安装 net-tools
@@ -186,6 +184,6 @@ route -n
 arp -a
 ```
 
-## 5. 总结
+## 4. 总结
 
-在这篇文章中，我们介绍了 CentOS 9 的基本系统配置和一些常用的基础命令。通过掌握这些知识，你可以更高效地管理和操作你的 CentOS 系统。在接下来的文章中，我们将深入探讨 **用户和权限管理**，敬请期待。
+在这篇文章中，我们介绍了 **CentOS 9** 的基本系统配置和一些常用的基础命令。通过掌握这些知识，你可以更高效地管理和操作你的 **CentOS** 系统。在接下来的文章中，我们将深入探讨 **用户和权限管理**，敬请期待。

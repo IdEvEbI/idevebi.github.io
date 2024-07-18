@@ -8,4 +8,4 @@
 ## 系统工具篇
 
 1. [Git 实战之九阴真经](./docs/git/README.md)
-2. [CentOS 9 实战之九阳神功](./docs/centos9/README.md)
+2. [CentOS 9 实战速查手册](./docs/centos9/README.md)
