@@ -57,7 +57,7 @@ sudo timedatectl set-ntp true
 
 ```sh
 # 列出目录内容
-ls -al
+ls -la
 
 # 创建目录
 mkdir /path/to/directory
@@ -118,6 +118,21 @@ sudo dnf remove package_name
 
 # 搜索软件包
 dnf search package_name
+```
+
+### 2.5 关机与重启
+
+```sh
+# 关机命令
+sudo shutdown -h now  # 立即关机
+sudo shutdown -h +10  # 10 分钟后关机
+sudo shutdown -h 20:30  # 在指定时间关机
+
+# 重启命令
+sudo shutdown -r now  # 立即重启
+sudo shutdown -r +10  # 10 分钟后重启
+sudo reboot  # 立即重启
+sudo init 6  # 立即重启，等同于 reboot
 ```
 
 ## 3. 实用工具
