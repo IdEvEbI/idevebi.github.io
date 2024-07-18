@@ -135,6 +135,22 @@ sudo reboot  # 立即重启
 sudo init 6  # 立即重启，等同于 reboot
 ```
 
+### 2.6 压缩与解压缩
+
+```sh
+# 压缩文件为 tar.gz 格式
+tar -czvf archive.tar.gz /path/to/directory_or_file
+
+# 解压 tar.gz 文件
+tar -xzvf archive.tar.gz
+
+# 压缩文件为 zip 格式
+zip -r archive.zip /path/to/directory_or_file
+
+# 解压 zip 文件
+unzip archive.zip
+```
+
 ## 3. 实用工具
 
 以下是一些在日常管理 **CentOS** 系统中非常有用的工具：
