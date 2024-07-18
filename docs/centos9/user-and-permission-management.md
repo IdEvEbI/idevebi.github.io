@@ -266,7 +266,7 @@ su -
 visudo
 ```
 
-在文件中找到如下行，并添加需要 sudo 权限的用户：
+在文件中找到如下行，并添加需要 **`sudo`** 权限的用户：
 
 ```sh
 ## Allow root to run any commands anywhere
@@ -286,6 +286,15 @@ groups
 
 # 显示指定用户所属的组
 groups username
+```
+
+### 4.5 whoami
+
+**`whoami`** 命令用于显示当前用户的用户名。
+
+```sh
+# 显示当前用户的用户名
+whoami
 ```
 
 ## 5. 总结
