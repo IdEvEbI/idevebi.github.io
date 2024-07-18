@@ -241,6 +241,21 @@ curl -O http://example.com/file
 wget http://example.com/file
 ```
 
+### 2.6 lsof 命令
+
+**`lsof`** 命令用于列出打开的文件，包括正在使用的网络端口。**lsof** 需要单独安装：
+
+```sh
+# 安装 lsof
+sudo dnf install -y lsof
+
+# 查看当前被占用的端口
+sudo lsof -i -P -n
+
+# 检查端口是否被占用
+sudo lsof -i:8080
+```
+
 ## 3. 防火墙配置
 
 在 **CentOS 9** 中，默认的防火墙管理工具是 **firewalld**。
