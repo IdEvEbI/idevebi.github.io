@@ -13,3 +13,4 @@
 9. [CentOS 9 实战（9）：SSH 服务配置与使用](./ssh-service-configuration-and-usage.md)
 10. [CentOS 9 实战（10）：Web 服务器配置：Apache 与 Nginx](./web-server-configuration-apache-and-nginx.md)
 11. [CentOS 9 实战（11）：数据库服务配置之 MySQL 与 MariaDB](./database-service-configuration-mariadb-and-mysql.md)
+12. [CentOS 9 实战（12）：FTP 与 SFTP 服务配置](ftp-and-sftp-service-configuration.md)
