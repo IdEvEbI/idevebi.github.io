@@ -15,3 +15,4 @@
 11. [CentOS 9 实战（11）：数据库服务配置之 MySQL 与 MariaDB](./database-service-configuration-mariadb-and-mysql.md)
 12. [CentOS 9 实战（12）：FTP 与 SFTP 服务配置](./ftp-and-sftp-service-configuration.md)
 13. [CentOS 9 实战（13）：邮件服务器基础配置](./basic-mail-server-configuration.md)
+14. [CentOS 9 实战（14）：KVM 虚拟化与管理](./kvm-virtualization-and-management.md)
