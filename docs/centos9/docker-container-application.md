@@ -1,369 +1,269 @@
 # CentOS 9 实战（12）：Docker 容器化应用
 
-欢迎来到《CentOS 9 实战速查手册》专栏的第 12 篇文章。在这里，我们将深入探讨 **Docker 容器化应用**。Docker 是一个开源的容器化平台，允许开发人员和运维人员轻松地创建、部署和运行应用程序。通过学习 Docker 的安装和使用，你可以提升应用的开发和运维效率。
+欢迎来到《CentOS 9 实战速查手册》专栏的第 12 篇文章。在这里，我们将探讨 **Docker 容器化应用**，包括 **Docker** 的基本概念和工作流程，以及在 **CentOS 9** 上安装和使用 **Docker** 的具体步骤。
 
-## 1. Docker 简介
+## 1. Docker 的基本概念和流程
 
-**Docker** 是一个开源的容器化平台，提供了一个轻量级的虚拟化解决方案。与传统的虚拟机不同，Docker 容器共享主机的操作系统内核，这使得容器启动更快，占用资源更少。
+### 1.1 Docker 基本概念
 
-### 1.1 Docker 的优势
+**Docker** 是一种开源的容器化平台，能够将应用程序及其依赖打包到一个可移植的容器中，然后可以在任何支持 Docker 的系统上运行。Docker 容器相比传统的虚拟机更加轻量，启动速度快，占用资源少。
 
-- **快速部署**：Docker 容器可以在几秒钟内启动，大大提高了应用的部署速度。
-- **一致的运行环境**：通过 Docker，开发和生产环境可以保持一致，减少环境差异带来的问题。
-- **高效的资源利用**：Docker 容器共享主机的操作系统资源，比虚拟机更加轻量级。
-- **易于扩展和管理**：通过 Docker Compose 和 Kubernetes 等工具，Docker 容器的编排和管理变得更加简单。
+### 1.2 Docker 的基本流程
 
-## 2. Docker 安装
+以下是使用 Docker 的基本流程：
 
-在 **CentOS 9** 中，我们将使用阿里云的 Docker 镜像源来安装 Docker，以解决网络连接问题。
+1. **拉取镜像**：从 Docker Hub 或其他镜像仓库中拉取一个基础镜像，例如 `ubuntu:latest`。
+2. **运行容器**：基于拉取的镜像运行一个容器。这个容器相当于一个轻量级、隔离的操作系统实例。
+3. **在容器中安装和部署软件**：在运行的容器中，你可以根据开发需求安装和配置各种软件和依赖。例如，在 Ubuntu 容器中安装 Vim、Apache 或其他软件。
+4. **保存容器状态为新镜像**：对容器进行配置和软件安装后，可以将容器保存为新的镜像。这一步通常使用 `docker commit` 命令将容器的当前状态保存为镜像。
+5. **保存镜像到本地文件**：将创建好的镜像保存为本地文件，通常使用 `docker save` 命令。
+6. **推送镜像到 Docker Hub**：将镜像推送到 Docker Hub 或其他镜像仓库，使用 `docker push` 命令。这样，你就可以在其他机器上方便地拉取这个镜像。
+7. **在其他主机上部署**：在其他主机上，从 Docker Hub 拉取镜像，基于这个镜像运行新的容器，实现快速部署。
 
-### 2.1 删除现有 Docker 源
+## 2. 安装 Docker
 
-如果之前已经添加过 Docker 官方仓库源，可以先将其删除：
+### 2.1 卸载旧版本
 
-```sh
-sudo rm -f /etc/yum.repos.d/docker-ce.repo
-```
-
-### 2.2 添加阿里云 Docker 源
-
-创建一个新的 Docker 源配置文件：
+在安装新版本 Docker 之前，建议卸载任何旧版本：
 
 ```sh
-sudo vim /etc/yum.repos.d/docker-ce.repo
+sudo dnf remove docker \
+                docker-client \
+                docker-client-latest \
+                docker-common \
+                docker-latest \
+                docker-latest-logrotate \
+                docker-logrotate \
+                docker-engine
 ```
 
-添加以下内容到文件中：
+### 2.2 安装所需软件包
 
-```ini
-[docker-ce-stable]
-name=Docker CE Stable - $basearch
-baseurl=https://mirrors.aliyun.com/docker-ce/linux/centos/9/$basearch/stable
-enabled=1
-gpgcheck=1
-gpgkey=https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
-```
-
-保存并关闭文件。
-
-### 2.3 安装 Docker
-
-使用新的镜像源安装 Docker：
+安装一些必要的软件包以便于通过 HTTPS 进行仓库访问：
 
 ```sh
-sudo dnf install -y docker-ce docker-ce-cli containerd.io --nobest
+sudo dnf install -y yum-utils
 ```
 
-### 2.4 启动和启用 Docker 服务
+### 2.3 添加 Docker 仓库
+
+添加 Docker 的官方仓库：
+
+```sh
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+### 2.4 安装 Docker
+
+使用以下命令安装 Docker：
+
+```sh
+sudo dnf install -y docker-ce docker-ce-cli containerd.io
+```
+
+### 2.5 启动 Docker 并设置开机自启动
+
+启动 Docker 服务，并将其设置为开机自启动：
 
 ```sh
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
-### 2.5 检查 Docker 版本
+### 2.6 检查 Docker 安装状态
 
-验证 Docker 是否正确安装：
-
-```sh
-docker --version
-```
-
-### 2.6 配置用户权限
-
-为了让普通用户能够使用 Docker，将用户添加到 docker 组：
+使用以下命令检查 Docker 是否安装成功：
 
 ```sh
-sudo usermod -aG docker $(whoami)
-newgrp docker
+sudo docker run hello-world
 ```
 
 ### 2.7 配置 Docker 镜像加速
 
-为提高 Docker 镜像的下载速度，可以配置镜像加速器。在 `/etc/docker/daemon.json` 文件中添加以下内容：
+可以使用阿里云的 Docker 镜像加速地址，编辑或创建 `/etc/docker/daemon.json` 文件，添加如下内容：
 
 ```json
 {
-  "registry-mirrors": ["https://<your_id>.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://<your-accelerator-url>"]
 }
 ```
 
-将 `<your_id>` 替换为你的阿里云加速器 ID。你可以在阿里云控制台中找到这个 ID。
+### 2.8 再次测试 Docker
 
-保存文件后，重启 Docker 服务：
-
-```sh
-sudo systemctl restart docker
-```
-
-### 2.8 测试 Docker
-
-使用 Docker 运行一个测试容器，验证安装和配置是否成功：
+使用以下命令测试 Docker 是否安装成功：
 
 ```sh
-docker run hello-world
+sudo docker run hello-world
 ```
 
-成功运行后，你将看到如下信息：
+如果看到以下输出，说明 Docker 安装成功：
 
-```bash
+```plaintext
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
-
-To generate this message, Docker took the following steps:
- 1. The Docker client contacted the Docker daemon.
- 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
-    (amd64)
- 3. The Docker daemon created a new container from that image which runs the
-    executable that produces the output you are currently reading.
- 4. The Docker daemon streamed that output to the Docker client, which sent it
-    to your terminal.
-
-To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
-
-Share images, automate workflows, and more with a free Docker ID:
- https://hub.docker.com/
-
-For more examples and ideas, visit:
- https://docs.docker.com/get-started/
+...
 ```
 
 ## 3. Docker 基本操作
 
 ### 3.1 拉取镜像
 
-从 Docker Hub 拉取一个镜像：
+使用 `docker pull` 命令从 Docker Hub 拉取一个镜像，例如：
 
 ```sh
-docker pull ubuntu:latest
+sudo docker pull ubuntu:latest
+```
+
+拉取的镜像会保存在本地的 Docker 镜像库中，可以使用以下命令查看已拉取的镜像：
+
+```sh
+sudo docker images
 ```
 
 ### 3.2 运行容器
 
-运行一个 Docker 容器：
+使用 `docker run` 命令基于拉取的镜像运行一个容器，例如运行一个 Ubuntu 容器：
 
 ```sh
-docker run -it ubuntu:latest /bin/bash
+sudo docker run -it ubuntu:latest bash
 ```
 
-在这条命令中：
+### 3.3 查看容器 ID
 
-- **`-it`**：表示以交互模式运行容器，并连接到容器的终端。
-- **`ubuntu:latest`**：表示使用 Ubuntu 最新版本的镜像。
-- **`/bin/bash`**：表示运行容器后执行 `/bin/bash`，进入容器的命令行。
-
-在容器中，你可以像在普通的 Linux 系统中一样执行命令。例如，安装一个软件包：
+使用 `docker ps` 命令查看正在运行的容器及其 ID：
 
 ```sh
-apt update
-apt install -y vim
+sudo docker ps
 ```
 
-安装完成后，你可以使用 `vim` 编辑文件。退出容器命令行时，可以输入 `exit`。
+输出示例：
 
-### 3.3 列出容器
-
-列出所有正在运行的容器：
-
-```sh
-docker ps
+```plaintext
+CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS          PORTS     NAMES
+abc123         ubuntu:latest  "bash"        10 minutes ago   Up 10 minutes             friendly_fermi
 ```
 
-列出所有容器（包括未运行的）：
+### 3.4 进入正在运行的容器
+
+使用 `docker exec` 命令进入正在运行的容器，以便进行进一步的配置和操作：
 
 ```sh
-docker ps -a
+sudo docker exec -it abc123 bash
 ```
 
-### 3.4 停止和删除容器
+### 3.5 保存容器状态为新镜像
 
-停止一个正在运行的容器：
+配置完容器后，可以将其保存为新的镜像：
 
 ```sh
-docker stop <container_id>
+sudo docker commit abc123 my_custom_ubuntu
 ```
 
-删除一个容器：
+### 3.6 保存镜像到本地文件
+
+使用 `docker save` 命令将镜像保存为本地文件：
 
 ```sh
-docker rm <container_id>
+sudo docker save -o my_custom_ubuntu.tar my_custom_ubuntu
 ```
 
-### 3.5 查看日志
+### 3.7 推送镜像到 Docker Hub
 
-查看容器的日志：
+首先需要登录 Docker Hub：
 
 ```sh
-docker logs <container_id>
+sudo docker login
 ```
 
-### 3.6 进入运行中的容器
-
-进入一个正在运行的容器：
+然后将镜像推送到 Docker Hub：
 
 ```sh
-docker exec -it <container_id> /bin/bash
+sudo docker tag my_custom_ubuntu your_dockerhub_username/my_custom_ubuntu
+sudo docker push your_dockerhub_username/my_custom_ubuntu
 ```
 
-在这里，`<container_id>` 是容器的 ID，通过 `docker ps` 命令可以获取。
+### 3.8 在其他主机上部署
 
-### 3.7 保存和加载镜像
-
-保存一个镜像到本地文件：
+在其他主机上，从 Docker Hub 拉取镜像并运行容器：
 
 ```sh
-docker save -o ubuntu_latest.tar ubuntu:latest
+sudo docker pull your_dockerhub_username/my_custom_ubuntu
+sudo docker run -it your_dockerhub_username/my_custom_ubuntu bash
 ```
 
-从本地文件加载一个镜像：
+### 3.9 根据 ID 进入容器
+
+你可以根据容器 ID 进入正在运行的容器，方便对容器进行继续配置：
 
 ```sh
-docker load -i ubuntu_latest.tar
-```
-
-### 3.8 推送镜像到 Docker Hub
-
-登录 Docker Hub：
-
-```sh
-docker login
-```
-
-标记镜像：
-
-```sh
-docker tag ubuntu:latest your_dockerhub_username/ubuntu:latest
-```
-
-推送镜像到 Docker Hub：
-
-```sh
-docker push your_dockerhub_username/ubuntu:latest
+sudo docker exec -it <container_id> bash
 ```
 
 ## 4. Docker Compose
 
-**Docker Compose** 是一个用于定义和运行多容器 Docker 应用程序的工具。你可以使用 YAML 文件来配置应用程序需要的所有服务。
+### 4.1 Docker Compose 简介
 
-### 4.1 安装 Docker Compose
+**Docker Compose** 是一个用于定义和运行多容器 Docker 应用程序的工具。通过使用 Docker Compose，可以在一个 YAML 文件中配置应用程序的服务，然后通过简单的命令就可以启动、停止和管理这些服务。
 
-在 **CentOS 9** 中，可以使用以下命令来安装 Docker Compose：
+### 4.2 安装 Docker Compose
+
+使用以下命令在 **CentOS 9** 上安装 Docker Compose：
 
 ```sh
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+sudo dnf install -y docker-compose
 ```
 
-### 4.2 创建 Docker Compose 文件
+### 4.3 创建 Docker Compose 文件
 
-创建一个名为 `docker-compose.yml` 的文件：
+创建一个名为 `docker-compose.yml` 的文件，定义你的应用程序服务。例如，以下是一个简单的 Docker Compose 文件，它定义了一个使用 MySQL 数据库的 WordPress 服务：
 
 ```yaml
 version: '3'
 services:
-  web:
-    image: nginx
-    ports:
-      - "80:80"
   db:
-    image: mysql
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_PASSWORD: example
+volumes:
+  db_data:
 ```
 
-### 4.3 启动应用
+### 4.4 启动服务
 
-使用 Docker Compose 启动应用：
+在包含 `docker-compose.yml` 文件的目录中，使用以下命令启动服务：
 
 ```sh
-docker-compose up -d
+sudo docker-compose up -d
 ```
 
-### 4.4 停止应用
+### 4.5 查看服务状态
 
-使用 Docker Compose 停止应用：
+使用以下命令查看服务的运行状态：
 
 ```sh
-docker-compose down
+sudo docker-compose ps
 ```
 
-## 5. Kubernetes 简介
+### 4.6 停止服务
 
-**Kubernetes**（简称 K8s）是一个开源的容器编排平台，用于自动化应用程序的部署、扩展和管理。Kubernetes 提供了一个集中的平台，可以帮助你轻松管理多个容器。
-
-### 5.1 Kubernetes 的优势
-
-- **自动化部署和管理**：Kubernetes 可以自动部署和管理容器化应用，简化运维流程。
-- **弹性伸缩**：Kubernetes 提供了弹性伸缩功能，可以根据负载自动扩展或缩减容器数量。
-- **服务发现和负载均衡**：Kubernetes 内置服务发现和负载均衡功能，确保应用的高可用性和稳定性。
-- **自我修复**：Kubernetes 可以自动监控应用的运行状态，自动重启失败的容器，确保应用的持续运行。
-
-### 5.2 安装 Kubernetes
-
-Kubernetes 的安装可以使用 `kubectl` 和 `minikube` 工具。这里以 `minikube` 为例：
-
-#### 安装 kubectl
+使用以下命令停止服务：
 
 ```sh
-curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
-chmod +x ./kubectl
-sudo mv ./kubectl /usr/local/bin/kubectl
+sudo docker-compose down
 ```
 
-#### 安装 Minikube
+## 5. 在 Docker Hub 上查找和下载镜像
 
-```sh
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-chmod +x minikube-linux-amd64
-sudo mv minikube-linux-amd64 /usr/local/bin/minikube
-```
-
-#### 启动 Minikube
-
-```sh
-minikube start
-```
-
-### 5.3 使用 Kubernetes 部署应用
-
-创建一个部署文件 `deployment.yaml`：
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
-```
-
-使用 kubectl 创建部署：
-
-```sh
-kubectl apply -f deployment.yaml
-```
-
-查看部署状态：
-
-```sh
-kubectl get deployments
-kubectl get pods
-```
-
-## 6. 总结
-
-在这篇文章中，我们介绍了 **Docker 容器化应用** 的基本概念、安装步骤以及常见操作。我们还简要介绍了 Kubernetes，这个强大的容器编排平台，可以帮助你在大规模环境中管理容器化应用。在接下来的文章中，我们将深入探讨 **Podman 容器管理**，敬请期待。
+访问 [Docker Hub](https://hub.docker.com/) 网站，使用搜索功能查找所需的镜像。Docker Hub 提供了各种官方和社区维护的镜像，可以根据需求选择适合的镜像进行下载和使用。
