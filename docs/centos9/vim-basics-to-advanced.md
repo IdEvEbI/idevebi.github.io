@@ -225,9 +225,7 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ### 6.4 安装 C 及 Python 语言开发相关插件
 
-在 **`~/.vimrc`** 中添加以下内容来
-
-安装 C 及 Python 语言开发相关的插件：
+在 **`~/.vimrc`** 中添加以下内容来安装 C 及 Python 语言开发相关的插件：
 
 ```vim
 " 加载插件管理器
@@ -289,20 +287,66 @@ let g:ycm_global_ycm_extra_conf = expand('~/.vim/.ycm_extra_conf.py')
 
 在 **CentOS** 上：
 
+- 下载配置 `vim` 所需要的软件：
+
 ```sh
-sudo dnf install -y cmake gcc-c++ make python3-devel
+sudo dnf install -y cmake gcc-c++ make cpython3-devel go
 ```
 
-在 **Ubuntu** 上：
+- 设置 `Go` 环境变量（添加到你的 `~/.bashrc` 或 `~/.zshrc` 文件中）：
 
 ```sh
-sudo apt install -y cmake g++ make python3-dev
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export GOPROXY=https://goproxy.cn,direct
+
+source ~/.bashrc  # 或者 source ~/.zshrc
+```
+
+- 手动安装 `gopls`：
+
+```sh
+go install golang.org/x/tools/gopls@latest
+```
+
+- 编辑 `YouCompleteMe` 的 `CMakeLists.txt` 文件：
+
+```sh
+cd ~/.vim/plugged/YouCompleteMe/third_party/ycmd
+vim CMakeLists.txt
+```
+
+- 找到以下内容：
+
+```cmake
+FetchContent_Declare(
+  absl
+  GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
+  GIT_TAG        absl-20210324.2
+)
+```
+
+- 将 `GIT_REPOSITORY` 替换为 `TUNA` 镜像地址：
+
+```cmake
+FetchContent_Declare(
+  absl
+  GIT_REPOSITORY https://mirrors.tuna.tsinghua.edu.cn/git/abseil-cpp.git
+  GIT_TAG        absl-20210324.2
+)
+```
+
+- 下载并安装 `Node.js`：
+
+```sh
+curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo bash -
+sudo dnf install -y nodejs
 ```
 
 在 **MacOS** 上：
 
 ```sh
-brew install cmake python
+brew install cmake python go
 ```
 
 然后，编译 **YouCompleteMe** 插件：
