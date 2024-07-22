@@ -88,7 +88,15 @@ sudo docker run hello-world
 }
 ```
 
-### 2.8 再次测试 Docker
+例如使用阿里云的加速器：
+
+```json
+{
+  "registry-mirrors": ["https://<your-accelerator-url>"]
+}
+```
+
+### 2.8 测试 Docker
 
 使用以下命令测试 Docker 是否安装成功：
 
@@ -120,7 +128,22 @@ sudo docker pull ubuntu:latest
 sudo docker images
 ```
 
-### 3.2 运行容器
+### 3.2 删除镜像
+
+如果需要删除本地的 Docker 镜像，可以使用 `docker rmi` 命令：
+
+```sh
+sudo docker rmi <image_id>
+```
+
+在删除镜像之前，需要停止并删除所有基于该镜像运行的容器：
+
+```sh
+sudo docker stop <container_id>
+sudo docker rm <container_id>
+```
+
+### 3.3 运行容器
 
 使用 `docker run` 命令基于拉取的镜像运行一个容器，例如运行一个 Ubuntu 容器：
 
@@ -128,12 +151,13 @@ sudo docker images
 sudo docker run -it ubuntu:latest bash
 ```
 
-### 3.3 查看容器 ID
+### 3.4 查看容器 ID
 
-使用 `docker ps` 命令查看正在运行的容器及其 ID：
+使用 `docker ps` 或 `docker ps -a` 命令查看正在运行或已停止的容器及其 ID：
 
 ```sh
 sudo docker ps
+sudo docker ps -a
 ```
 
 输出示例：
@@ -143,7 +167,7 @@ CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS          POR
 abc123         ubuntu:latest  "bash"        10 minutes ago   Up 10 minutes             friendly_fermi
 ```
 
-### 3.4 进入正在运行的容器
+### 3.5 进入正在运行的容器
 
 使用 `docker exec` 命令进入正在运行的容器，以便进行进一步的配置和操作：
 
@@ -151,7 +175,7 @@ abc123         ubuntu:latest  "bash"        10 minutes ago   Up 10 minutes      
 sudo docker exec -it abc123 bash
 ```
 
-### 3.5 保存容器状态为新镜像
+### 3.6 保存容器状态为新镜像
 
 配置完容器后，可以将其保存为新的镜像：
 
@@ -159,7 +183,7 @@ sudo docker exec -it abc123 bash
 sudo docker commit abc123 my_custom_ubuntu
 ```
 
-### 3.6 保存镜像到本地文件
+### 3.7 保存镜像到本地文件
 
 使用 `docker save` 命令将镜像保存为本地文件：
 
@@ -167,7 +191,7 @@ sudo docker commit abc123 my_custom_ubuntu
 sudo docker save -o my_custom_ubuntu.tar my_custom_ubuntu
 ```
 
-### 3.7 推送镜像到 Docker Hub
+### 3.8 推送镜像到 Docker Hub
 
 首先需要登录 Docker Hub：
 
@@ -182,7 +206,7 @@ sudo docker tag my_custom_ubuntu your_dockerhub_username/my_custom_ubuntu
 sudo docker push your_dockerhub_username/my_custom_ubuntu
 ```
 
-### 3.8 在其他主机上部署
+### 3.9 在其他主机上部署
 
 在其他主机上，从 Docker Hub 拉取镜像并运行容器：
 
@@ -191,7 +215,7 @@ sudo docker pull your_dockerhub_username/my_custom_ubuntu
 sudo docker run -it your_dockerhub_username/my_custom_ubuntu bash
 ```
 
-### 3.9 根据 ID 进入容器
+### 3.10 根据 ID 进入容器
 
 你可以根据容器 ID 进入正在运行的容器，方便对容器进行继续配置：
 
@@ -199,13 +223,179 @@ sudo docker run -it your_dockerhub_username/my_custom_ubuntu bash
 sudo docker exec -it <container_id> bash
 ```
 
-## 4. Docker Compose
+### 3.11 查看 Docker Hub 下载的镜像并进行最小化定制
 
-### 4.1 Docker Compose 简介
+在 Docker Hub 上查找并下载需要的 Docker 镜像，可以根据需求进行最小化定制，例如：
+
+```sh
+sudo docker search centos
+sudo docker pull centos:latest
+```
+
+然后基于下载的镜像进行定制和配置。
+
+### 3.12 停止当前容器
+
+如果需要删除镜像时遇到容器冲突，可以先停止正在运行的容器：
+
+```sh
+sudo docker stop <container_id>
+```
+
+## 4. Docker 实战：基于 CentOS 镜像构建自定义容器
+
+以下是一个具体示例，展示如何基于 CentOS 镜像安装 Vim、Nginx 和 Node.js，并配置一个基础的 Web 服务。
+
+### 4.1 拉取 CentOS 镜像
+
+```sh
+sudo docker pull centos:latest
+```
+
+### 4.2 运行 CentOS 容器并查看系统版本
+
+```sh
+sudo docker run -it centos:latest bash
+
+# 在容器中执行以下命令
+cat /etc/centos-release
+```
+
+### 4.3 使用 dnf 替代 yum 并更新系统
+
+```sh
+# 在容器中执行以下命令
+dnf install -y dnf
+
+# 更新系统镜像源
+sed -i 's|mirrorlist=|#mirrorlist=|g' /etc/yum.repos.d/CentOS-* 
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+
+dnf update -y
+```
+
+### 4.4 安装 Vim 和 Nginx
+
+```sh
+# 在容器中执行以下命令
+dnf install -y vim nginx
+```
+
+### 4.5 配置 Nginx
+
+编辑 Nginx 配置文件：
+
+```sh
+vim /etc/nginx/nginx.conf
+```
+
+在配置文件中，确保包含以下内容：
+
+```
+
+plaintext
+server {
+    listen       80;
+    server_name  localhost;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+
+    error_page  404              /404.html;
+    location = /40x.html {
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+    }
+
+    # 启用 SSI 模块
+    ssi on;
+}
+```
+
+### 4.6 启动 Nginx 并测试
+
+```sh
+# 在容器中执行以下命令
+nginx
+
+# 在主机上执行以下命令，确保端口映射不会与主机上的 Nginx 冲突
+sudo docker run -d -p 8080:80 centos:latest nginx
+```
+
+在浏览器中访问 `http://your_host_ip:8080`，确认 Nginx 已经成功启动。
+
+### 4.7 保存容器状态为新镜像
+
+```sh
+sudo docker ps  # 获取容器 ID
+sudo docker commit <container_id> my_custom_centos
+```
+
+### 4.8 运行新的自定义容器并安装 Node.js
+
+```sh
+sudo docker run -it my_custom_centos bash
+
+# 在容器中执行以下命令
+curl -sL https://rpm.nodesource.com/setup_20.x | bash -
+dnf install -y nodejs
+```
+
+### 4.9 配置基础 Web 服务并测试
+
+创建一个简单的 Node.js Web 服务：
+
+```sh
+mkdir /var/www
+cd /var/www
+vim server.js
+```
+
+在 `server.js` 文件中添加以下内容：
+
+```javascript
+const http = require('http');
+
+const hostname = '0.0.0.0';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+```
+
+启动 Node.js Web 服务：
+
+```sh
+node /var/www/server.js
+```
+
+在浏览器中访问 `http://your_host_ip:3000`，确认 Node.js Web 服务已成功启动。
+
+### 4.10 保存新镜像
+
+```sh
+sudo docker ps  # 获取容器 ID
+sudo docker commit <container_id> my_custom_centos_node
+```
+
+## 5. Docker Compose
+
+### 5.1 Docker Compose 简介
 
 **Docker Compose** 是一个用于定义和运行多容器 Docker 应用程序的工具。通过使用 Docker Compose，可以在一个 YAML 文件中配置应用程序的服务，然后通过简单的命令就可以启动、停止和管理这些服务。
 
-### 4.2 安装 Docker Compose
+### 5.2 安装 Docker Compose
 
 使用以下命令在 **CentOS 9** 上安装 Docker Compose：
 
@@ -213,7 +403,7 @@ sudo docker exec -it <container_id> bash
 sudo dnf install -y docker-compose
 ```
 
-### 4.3 创建 Docker Compose 文件
+### 5.3 创建 Docker Compose 文件
 
 创建一个名为 `docker-compose.yml` 的文件，定义你的应用程序服务。例如，以下是一个简单的 Docker Compose 文件，它定义了一个使用 MySQL 数据库的 WordPress 服务：
 
@@ -240,7 +430,7 @@ volumes:
   db_data:
 ```
 
-### 4.4 启动服务
+### 5.4 启动服务
 
 在包含 `docker-compose.yml` 文件的目录中，使用以下命令启动服务：
 
@@ -248,7 +438,7 @@ volumes:
 sudo docker-compose up -d
 ```
 
-### 4.5 查看服务状态
+### 5.5 查看服务状态
 
 使用以下命令查看服务的运行状态：
 
@@ -256,7 +446,7 @@ sudo docker-compose up -d
 sudo docker-compose ps
 ```
 
-### 4.6 停止服务
+### 5.6 停止服务
 
 使用以下命令停止服务：
 
@@ -264,6 +454,8 @@ sudo docker-compose ps
 sudo docker-compose down
 ```
 
-## 5. 在 Docker Hub 上查找和下载镜像
+## 6. 总结
 
-访问 [Docker Hub](https://hub.docker.com/) 网站，使用搜索功能查找所需的镜像。Docker Hub 提供了各种官方和社区维护的镜像，可以根据需求选择适合的镜像进行下载和使用。
+在这篇文章中，我们介绍了 **Docker 容器化应用**，包括 Docker 的基本概念和工作流程，在 **CentOS 9** 上安装和使用 Docker 的具体步骤，以及 Docker 的基本操作和 Docker Compose 的使用。通过学习这些内容，你可以更好地利用 Docker 进行容器化应用的开发和部署。如果有任何问题或建议，请随时与我联系。
+
+- 英文文件名：**docker-container-application.md**
