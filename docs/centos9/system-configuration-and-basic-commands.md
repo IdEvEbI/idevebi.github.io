@@ -151,6 +151,25 @@ zip -r archive.zip /path/to/directory_or_file
 unzip archive.zip
 ```
 
+### 2.7 常用系统命令
+
+```sh
+# 查看系统版本
+cat /etc/os-release
+
+# 查看当前目录
+pwd
+
+# 切换到上一个目录
+cd -
+
+# 查看当前登录用户
+whoami
+
+# 查看当前所有在线用户
+w
+```
+
 ## 3. 实用工具
 
 以下是一些在日常管理 **CentOS** 系统中非常有用的工具：
