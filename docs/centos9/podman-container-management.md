@@ -1,6 +1,6 @@
-# CentOS 9 实战（13）：Podman 容器管理
+# CentOS 9 实战（17）：Podman 容器管理
 
-欢迎来到《CentOS 9 实战速查手册》专栏的第 13 篇文章。在这里，我们将探讨 **Podman 容器管理**，并详细介绍 **Kubernetes** 以及如何将 **Podman** 与 **Kubernetes** 集成。
+欢迎来到《CentOS 9 实战速查手册》专栏的第 17 篇文章。在这里，我们将探讨 **Podman 容器管理**，并详细介绍 **Kubernetes** 以及如何将 **Podman** 与 **Kubernetes** 集成。
 
 ## 1. Podman 简介
 

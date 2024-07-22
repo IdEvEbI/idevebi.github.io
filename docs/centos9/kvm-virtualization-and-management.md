@@ -1,6 +1,6 @@
-# CentOS 9 实战（14）：KVM 虚拟化与管理
+# CentOS 9 实战（15）：KVM 虚拟化与管理
 
-欢迎来到《CentOS 9 实战速查手册》专栏的第 14 篇文章。在这里，我们将探讨 **CentOS 9** 中的 **KVM 虚拟化与管理**。**KVM**（Kernel-based Virtual Machine）是一种开源的虚拟化技术，可以将 **Linux** 系统转化为一个虚拟机监控器（Hypervisor）。通过学习 **KVM** 的安装和配置，你将能够在 **CentOS 9** 上创建和管理虚拟机，为开发、测试和生产环境提供灵活的解决方案。
+欢迎来到《CentOS 9 实战速查手册》专栏的第 15 篇文章。在这里，我们将探讨 **CentOS 9** 中的 **KVM 虚拟化与管理**。**KVM**（Kernel-based Virtual Machine）是一种开源的虚拟化技术，可以将 **Linux** 系统转化为一个虚拟机监控器（Hypervisor）。通过学习 **KVM** 的安装和配置，你将能够在 **CentOS 9** 上创建和管理虚拟机，为开发、测试和生产环境提供灵活的解决方案。
 
 ## 1. 安装和配置 KVM
 

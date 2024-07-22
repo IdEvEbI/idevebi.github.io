@@ -1,6 +1,6 @@
-# CentOS 9 实战（12）：FTP 与 SFTP 服务配置
+# CentOS 9 实战（13）：FTP 与 SFTP 服务配置
 
-欢迎来到《CentOS 9 实战速查手册》专栏的第 12 篇文章。在这里，我们将探讨 **CentOS 9** 中的 **FTP 与 SFTP 服务配置**。FTP（File Transfer Protocol）和 SFTP（SSH File Transfer Protocol）是两种常见的文件传输协议，通过学习它们的配置，你将能够为你的服务器提供高效、安全的文件传输服务。
+欢迎来到《CentOS 9 实战速查手册》专栏的第 13 篇文章。在这里，我们将探讨 **CentOS 9** 中的 **FTP 与 SFTP 服务配置**。FTP（File Transfer Protocol）和 SFTP（SSH File Transfer Protocol）是两种常见的文件传输协议，通过学习它们的配置，你将能够为你的服务器提供高效、安全的文件传输服务。
 
 ## 1. FTP 与 SFTP 对比
 
