@@ -291,9 +291,7 @@ vim /etc/nginx/nginx.conf
 
 在配置文件中，确保包含以下内容：
 
-```
-
-plaintext
+```plaintext
 server {
     listen       80;
     server_name  localhost;
