@@ -455,5 +455,3 @@ sudo docker-compose down
 ## 6. 总结
 
 在这篇文章中，我们介绍了 **Docker 容器化应用**，包括 Docker 的基本概念和工作流程，在 **CentOS 9** 上安装和使用 Docker 的具体步骤，以及 Docker 的基本操作和 Docker Compose 的使用。通过学习这些内容，你可以更好地利用 Docker 进行容器化应用的开发和部署。如果有任何问题或建议，请随时与我联系。
-
-- 英文文件名：**docker-container-application.md**
