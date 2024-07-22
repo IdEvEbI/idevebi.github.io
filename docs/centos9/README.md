@@ -18,3 +18,7 @@
 14. [CentOS 9 实战（14）：KVM 虚拟化与管理](./kvm-virtualization-and-management.md)
 15. [CentOS 9 实战（12）：Docker 容器化应用](./docker-container-application.md)
 16. [CentOS 9 实战（13）：Podman 容器管理](./podman-container-management.md)
+
+## 扩展
+
+1. [CentOS 9 实战速查手册：Vim 从入门到进阶](./vim-basics-to-advanced.md)
