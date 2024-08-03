@@ -415,7 +415,9 @@ sudo docker commit <container_id> my_custom_centos_node
 使用以下命令在 **CentOS 9** 上安装 Docker Compose：
 
 ```sh
-sudo dnf install -y docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/v2.9.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 ### 5.3 创建 Docker Compose 文件
