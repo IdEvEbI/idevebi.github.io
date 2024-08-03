@@ -80,20 +80,24 @@ sudo docker run hello-world
 
 ### 2.7 配置 Docker 镜像加速
 
-可以使用阿里云的 Docker 镜像加速地址，编辑或创建 `/etc/docker/daemon.json` 文件，添加如下内容：
+可以使用国内的 Docker 镜像加速地址，编辑或创建 `/etc/docker/daemon.json` 文件，添加如下内容：
 
 ```json
 {
-  "registry-mirrors": ["https://<your-accelerator-url>"]
+  "registry-mirrors": [
+    "https://docker.mirrors.ustc.edu.cn/",
+    "https://hub-mirror.c.163.com/",
+    "https://reg-mirror.qiniu.com/",
+    "https://registry.docker-cn.com"
+  ]
 }
 ```
 
-例如使用阿里云的加速器：
+重新启动 Docker 服务：
 
-```json
-{
-  "registry-mirrors": ["https://<your-accelerator-url>"]
-}
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 ```
 
 ### 2.8 测试 Docker
