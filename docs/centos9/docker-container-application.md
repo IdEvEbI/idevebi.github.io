@@ -59,10 +59,10 @@ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/dock
 sudo tee /etc/yum.repos.d/docker-ce.repo <<-'EOF'
 [docker-ce-stable]
 name=Docker CE Stable - $basearch
-baseurl=https://download.docker.com/linux/centos/9/$basearch/stable
+baseurl=https://mirrors.aliyun.com/docker-ce/linux/centos/9/$basearch/stable
 enabled=1
 gpgcheck=1
-gpgkey=https://download.docker.com/linux/centos/gpg
+gpgkey=https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
 EOF
 ```
 
