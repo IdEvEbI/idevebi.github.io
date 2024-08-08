@@ -187,4 +187,10 @@
    FLUSH PRIVILEGES;
    ```
 
+4. 重新启动之前的 MySQL 容器
+
+   ```sh
+   sudo docker start mysql-container
+   ```
+
 至此，我的 CentOS 9 虚拟机就配置好了 Docker 和 MySQL 环境，并且允许从主机远程访问 MySQL。
